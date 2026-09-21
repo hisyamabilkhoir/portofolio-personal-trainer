@@ -1177,6 +1177,30 @@ document.addEventListener('DOMContentLoaded', () => {
         "<strong>Scapular Biomechanics Correction:</strong> Mengoreksi rotasi scapula pada bench press sehingga nyeri bahu hilang total.",
         "<strong>RPE-Based Volume Periodization:</strong> 4-day Upper/Lower split dengan tracking RPE 7-9 untuk memaksimalkan hipertrofi mekanis."
       ]
+    },
+    "raka": {
+      name: "Raka Wiratama",
+      age: 27,
+      occupation: "Tech Startup Entrepreneur",
+      program: "Maximum Strength & Power Performance",
+      duration: "24 Weeks (6 Months)",
+      badge: "Strength & Power",
+      category: "strength",
+      beforeImg: "assets/images/trans_back_before.jpg",
+      afterImg: "assets/images/client_raka.jpg",
+      quote: "Fokus pada progresif overload dan mobilitas sendi. Beban squat naik 40kg dengan teknik solid dan bebas cedera pinggang.",
+      stats: {
+        weightChange: "+4.5 kg Athletic Mass (70 kg &rarr; 74.5 kg)",
+        bodyFatChange: "-8.0% (19% &rarr; 11%)",
+        waistChange: "-4 cm Core Tightening",
+        strengthGain: "Squat 80kg &rarr; 120kg (+40kg PR)"
+      },
+      challenge: "Kurang mobilitas ankle dan hip joint yang membatasi kedalaman squat, serta waktu latihan terbatas 45-60 menit.",
+      strategy: [
+        "<strong>Ankle Dorsiflexion & Hip Capsule Mobility:</strong> PNF stretching dan ankle banded mobilization sebelum setiap sesi squat.",
+        "<strong>Conjugate Strength & Wave Loading:</strong> Kombinasi heavy triples (3 reps @ RPE 8.5) dan dynamic effort box squats.",
+        "<strong>High-Efficiency High-Density Workouts:</strong> Sesi padat 45 menit dengan superset antagonist untuk menghemat waktu."
+      ]
     }
   };
 

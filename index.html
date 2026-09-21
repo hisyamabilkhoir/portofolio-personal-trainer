@@ -487,163 +487,272 @@
   </section>
 
   <!-- Transformations Section ("Real People. Real Progress.") -->
-  <section class="section" id="transformations" style="background: rgba(18, 20, 25, 0.4);">
+  <section class="section transformations-section" id="transformations">
     <div class="container">
-      <div class="section-header reveal-on-scroll" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
-        <div>
-          <span class="section-tag">Transformations &amp; Case Studies</span>
-          <h2 class="section-title">Real People. Real Progress.</h2>
-          <p class="section-desc">Evidence-based progress. Transparent data. Proof that structured coaching delivers permanent results.</p>
-        </div>
-        <button class="btn btn-outline" data-open-modal="bookingModal">
-          Consult With Coach &rarr;
-        </button>
-      </div>
-
-      <!-- Filter Row -->
-      <div class="trans-filter-row reveal-on-scroll">
-        <button class="trans-filter-btn active" data-trans-filter="all">
-          <span class="filter-dot"></span> All Transformations
-        </button>
-        <button class="trans-filter-btn" data-trans-filter="fatloss">
-          <span class="filter-dot"></span> Fat Loss &amp; Metabolic Recomp
-        </button>
-        <button class="trans-filter-btn" data-trans-filter="hypertrophy">
-          <span class="filter-dot"></span> Muscle &amp; Strength
-        </button>
-      </div>
-
-      <div class="transformations-grid">
+      
+      <!-- Top Row: Left Intro & Right Interactive Showcase Card -->
+      <div class="trans-top-row reveal-on-scroll">
         
-        <!-- Left: Draggable Before/After Comparison Slider -->
-        <div class="before-after-container reveal-on-scroll" id="beforeAfterBox">
-          <!-- After Image (Background) -->
-          <img src="assets/images/trans_back_after.jpg" alt="After Physique Transformation" class="ba-image ba-after-img">
+        <!-- Left Intro Column -->
+        <div class="trans-intro-col">
+          <span class="section-tag">TRANSFORMATIONS &amp; CASE STUDIES</span>
+          <h2 class="section-title trans-title">
+            Real People.<br>
+            <span class="highlight-lime">Real</span> Progress.
+          </h2>
+          <p class="section-desc trans-desc">
+            Evidence-based progress. Transparent data. Proof that structured coaching delivers permanent results.
+          </p>
           
-          <!-- Before Image (Clipped Overlay) -->
-          <div class="ba-before-wrapper">
-            <img src="assets/images/trans_back_before.jpg" alt="Before Physique Transformation" class="ba-image ba-before-img">
+          <div class="trans-cta-wrap">
+            <button class="btn-outline-lime trans-consult-btn" data-open-modal="bookingModal">
+              Consult With Coach <span class="cta-arrow">&rarr;</span>
+            </button>
           </div>
 
-          <!-- Drag Handle -->
-          <div class="ba-slider-handle">
-            <div class="ba-handle-button" aria-label="Drag to compare before and after">
-              &#10094;&#10095;
+          <!-- Handwritten Script Accent Overlay -->
+          <div class="trans-script-overlay">
+            Stronger<br>Healthier<br>Happier You
+          </div>
+
+          <!-- Stats 3-Column with Dividers -->
+          <div class="trans-stats-row">
+            <div class="trans-stat-item">
+              <div class="trans-stat-val">100+</div>
+              <div class="trans-stat-lbl">Transformations</div>
+            </div>
+            <div class="trans-stat-divider"></div>
+            <div class="trans-stat-item">
+              <div class="trans-stat-val">96%</div>
+              <div class="trans-stat-lbl">Goal Achievement</div>
+            </div>
+            <div class="trans-stat-divider"></div>
+            <div class="trans-stat-item">
+              <div class="trans-stat-val">12&ndash;24</div>
+              <div class="trans-stat-lbl">Weeks Average Result</div>
             </div>
           </div>
-
-          <!-- Labels -->
-          <span class="ba-label ba-label-before">Before</span>
-          <span class="ba-label ba-label-after">After</span>
         </div>
 
-        <!-- Right: Client Story & Dynamic Metrics -->
-        <div class="trans-story-card reveal-on-scroll reveal-delay-1">
-          <div class="trans-nav-bar">
-            <div class="trans-counter">
-              <span class="current-idx" id="transCurrentIndex">01</span> / <span id="transTotalCount">03</span>
+        <!-- Right: Interactive Showcase Card (Before/After + Client Dossier) -->
+        <div class="trans-showcase-card">
+          <div class="trans-showcase-split">
+            
+            <!-- Left Half: Draggable Before/After Comparison Slider -->
+            <div class="trans-ba-wrap" id="beforeAfterBox">
+              <img src="assets/images/trans_back_after.jpg" alt="After Transformation" class="ba-image ba-after-img" id="showcaseAfterImg">
+              <div class="ba-before-wrapper" id="showcaseBeforeWrap">
+                <img src="assets/images/trans_back_before.jpg" alt="Before Transformation" class="ba-image ba-before-img" id="showcaseBeforeImg">
+              </div>
+              <div class="ba-slider-handle" id="showcaseSliderHandle">
+                <div class="ba-handle-button" aria-label="Drag to compare before and after">
+                  <span>&lsaquo;&rsaquo;</span>
+                </div>
+              </div>
+              <span class="ba-tag ba-tag-before">BEFORE</span>
+              <span class="ba-tag ba-tag-after">AFTER</span>
             </div>
-            <div class="slider-nav-btns">
-              <button class="nav-arrow-btn" id="transPrevBtn" aria-label="Previous Transformation">&#8592;</button>
-              <button class="nav-arrow-btn" id="transNextBtn" aria-label="Next Transformation">&#8594;</button>
-            </div>
-          </div>
 
-          <div class="trans-client-header">
-            <h3 class="trans-client-name" id="transClientName">Dimas Pratama, 28</h3>
-            <div class="trans-program-duration" id="transProgramDuration">16 Weeks Program</div>
-          </div>
+            <!-- Right Half: Active Client Info & Metrics -->
+            <div class="trans-showcase-info">
+              <div class="showcase-client-head">
+                <h3 class="showcase-client-name" id="showcaseClientName">Arif Kurniawan, 30</h3>
+                <div class="showcase-client-program" id="showcaseProgramDuration">20 Weeks Transformation</div>
+              </div>
 
-          <blockquote class="trans-quote" id="transQuoteText">
-            "Turun 14.5 kg dan lingkar perut susut drastis tanpa lemas. Pola makan fleksibel dan sesi latihan sangat terukur."
-          </blockquote>
+              <blockquote class="showcase-quote" id="showcaseQuoteText">
+                &ldquo;Badan stuck bertahun-tahun. Bersama Revo, massa otot naik 7.8 kg bersih, nyeri bahu hilang total, dan deadlift tembus 165kg.&rdquo;
+              </blockquote>
 
-          <div class="trans-metrics-grid">
-            <div class="trans-metric-item">
-              <div class="trans-metric-val" id="transMetricWeight">- 14.5 kg</div>
-              <div class="trans-metric-label">Body Weight</div>
-            </div>
-            <div class="trans-metric-item">
-              <div class="trans-metric-val" id="transMetricFat">- 10.5%</div>
-              <div class="trans-metric-label">Body Fat</div>
-            </div>
-            <div class="trans-metric-item">
-              <div class="trans-metric-val" id="transMetricStrength">+ 45%</div>
-              <div class="trans-metric-label">Strength Lifted</div>
-            </div>
-          </div>
+              <div class="showcase-metrics-list">
+                <div class="showcase-metric-row">
+                  <span class="metric-big-val" id="showcaseMetric1Val">+7.8 kg</span>
+                  <span class="metric-label-txt" id="showcaseMetric1Lbl">Body Weight</span>
+                </div>
+                <div class="showcase-metric-row">
+                  <span class="metric-big-val" id="showcaseMetric2Val">13%</span>
+                  <span class="metric-label-txt" id="showcaseMetric2Lbl">Body Fat (Clean Bulk)</span>
+                </div>
+                <div class="showcase-metric-row">
+                  <span class="metric-big-val" id="showcaseMetric3Val">DL 165kg</span>
+                  <span class="metric-label-txt" id="showcaseMetric3Lbl">Strength Lifted</span>
+                </div>
+              </div>
 
-          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
-            <button class="btn btn-primary" data-open-modal="bookingModal">
-              Start Transformation &rarr;
-            </button>
-            <button class="btn btn-outline" id="viewActiveCaseStudyBtn" data-open-casestudy="dimas" style="padding: 0.75rem 1.25rem;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              View Case Study Dossier
-            </button>
+              <div class="showcase-nav-btns">
+                <button class="nav-arrow-btn" id="transShowcasePrev" aria-label="Previous Transformation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </button>
+                <button class="nav-arrow-btn prog-next-active" id="transShowcaseNext" aria-label="Next Transformation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <!-- Case Study Deep-Dive Preview Cards -->
-      <div class="case-studies-preview-grid reveal-on-scroll reveal-delay-2" style="margin-top: 3.5rem;">
-        
-        <!-- Case Study 1 (Dimas) -->
-        <div class="case-study-card transformation-card-item" data-trans-category="fatloss" onclick="window.openCaseStudyModal('dimas')">
-          <div class="case-study-img-wrap">
-            <img src="assets/images/client_dimas.jpg" alt="Dimas Pratama Transformation" class="case-study-img" loading="lazy">
-            <span class="case-study-tag">Fat Loss &bull; 16 Wks</span>
-          </div>
-          <div class="case-study-content">
-            <h4 class="case-study-name">Dimas Pratama (28) &bull; Tech Lead</h4>
-            <p class="case-study-excerpt">Memangkas lemak perut visceral 10.5% dan mengeliminasi postur bungkuk dari kebiasaan coding 10 jam/hari.</p>
-            <div class="case-study-metrics-pill">
-              <span>-14.5 kg</span> &bull; <span>-10.5% BF</span> &bull; <span>DL 140kg</span>
+      <!-- Bottom: 4 Transformation Cards Carousel with Outer Nav Arrows -->
+      <div class="trans-carousel-wrapper reveal-on-scroll reveal-delay-1">
+        <button class="nav-arrow-btn trans-outer-nav-btn trans-outer-prev" id="transCardsPrev" aria-label="Scroll Transformations Left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+
+        <div class="trans-cards-track" id="transCardsTrack">
+          
+          <!-- Card 1: Dimas Pratama -->
+          <div class="trans-card featured active" data-client-id="dimas" data-trans-category="fatloss" data-index="0" role="button" tabindex="0">
+            <div class="trans-card-img-wrap">
+              <img src="assets/images/client_dimas.jpg" alt="Dimas Pratama Transformation" class="trans-card-img" loading="lazy">
+              <span class="trans-badge">FAT LOSS &bull; 16 WEEKS</span>
             </div>
-            <span class="case-study-link">Open Full Case Dossier &rarr;</span>
+            <div class="trans-card-body">
+              <h4 class="trans-card-name">Dimas Pratama (28)</h4>
+              <div class="trans-card-role">Tech Lead</div>
+              <div class="trans-card-metrics-grid">
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">-14.5 kg</span>
+                  <span class="trans-m-lbl">Body Weight</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">-10.5%</span>
+                  <span class="trans-m-lbl">Body Fat</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">DL 140kg</span>
+                  <span class="trans-m-lbl">Strength</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Card 2: Maya Paramitha -->
+          <div class="trans-card" data-client-id="maya" data-trans-category="recomp" data-index="1" role="button" tabindex="0">
+            <div class="trans-card-img-wrap">
+              <img src="assets/images/trans_maya_after.jpg" alt="Maya Paramitha Transformation" class="trans-card-img" loading="lazy">
+              <span class="trans-badge">RECOMPOSITION &bull; 12 WEEKS</span>
+            </div>
+            <div class="trans-card-body">
+              <h4 class="trans-card-name">Maya Paramitha (26)</h4>
+              <div class="trans-card-role">Product Designer</div>
+              <div class="trans-card-metrics-grid">
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">-6.2 kg</span>
+                  <span class="trans-m-lbl">Body Weight</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">-7.8%</span>
+                  <span class="trans-m-lbl">Body Fat</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">Hip Thrust 95kg</span>
+                  <span class="trans-m-lbl">Strength</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Arif Kurniawan -->
+          <div class="trans-card" data-client-id="arif" data-trans-category="hypertrophy" data-index="2" role="button" tabindex="0">
+            <div class="trans-card-img-wrap">
+              <img src="assets/images/client_arif.jpg" alt="Arif Kurniawan Transformation" class="trans-card-img" loading="lazy">
+              <span class="trans-badge">HYPERTROPHY &bull; 20 WEEKS</span>
+            </div>
+            <div class="trans-card-body">
+              <h4 class="trans-card-name">Arif Kurniawan (30)</h4>
+              <div class="trans-card-role">Finance Manager</div>
+              <div class="trans-card-metrics-grid">
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">+7.8 kg</span>
+                  <span class="trans-m-lbl">Muscle Gain</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">-13%</span>
+                  <span class="trans-m-lbl">Body Fat</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">DL 165kg</span>
+                  <span class="trans-m-lbl">Strength</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Raka Wiratama -->
+          <div class="trans-card" data-client-id="raka" data-trans-category="strength" data-index="3" role="button" tabindex="0">
+            <div class="trans-card-img-wrap">
+              <img src="assets/images/client_raka.jpg" alt="Raka Wiratama Transformation" class="trans-card-img" loading="lazy">
+              <span class="trans-badge">STRENGTH &bull; 24 WEEKS</span>
+            </div>
+            <div class="trans-card-body">
+              <h4 class="trans-card-name">Raka Wiratama (27)</h4>
+              <div class="trans-card-role">Entrepreneur</div>
+              <div class="trans-card-metrics-grid">
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">+40%</span>
+                  <span class="trans-m-lbl">Total Strength</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">-8%</span>
+                  <span class="trans-m-lbl">Body Fat</span>
+                </div>
+                <div class="trans-card-metric">
+                  <span class="trans-m-val highlight-lime">Squat 120kg</span>
+                  <span class="trans-m-lbl">PR Lift</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Case Study 2 (Maya) -->
-        <div class="case-study-card transformation-card-item" data-trans-category="fatloss" onclick="window.openCaseStudyModal('maya')">
-          <div class="case-study-img-wrap">
-            <img src="assets/images/trans_maya_after.jpg" alt="Maya Paramitha Transformation" class="case-study-img" loading="lazy">
-            <span class="case-study-tag">Recomposition &bull; 12 Wks</span>
-          </div>
-          <div class="case-study-content">
-            <h4 class="case-study-name">Maya Paramitha (26) &bull; Producer</h4>
-            <p class="case-study-excerpt">Membentuk glutes &amp; lower body atletis, menghentikan crash dieting lewat reverse dieting terukur.</p>
-            <div class="case-study-metrics-pill">
-              <span>-6.2 kg</span> &bull; <span>-7.8% BF</span> &bull; <span>Hip Thrust 95kg</span>
-            </div>
-            <span class="case-study-link">Open Full Case Dossier &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Case Study 3 (Arif) -->
-        <div class="case-study-card transformation-card-item" data-trans-category="hypertrophy" onclick="window.openCaseStudyModal('arif')">
-          <div class="case-study-img-wrap">
-            <img src="assets/images/client_arif.jpg" alt="Arif Kurniawan Transformation" class="case-study-img" loading="lazy">
-            <span class="case-study-tag">Hypertrophy &bull; 20 Wks</span>
-          </div>
-          <div class="case-study-content">
-            <h4 class="case-study-name">Arif Kurniawan (30) &bull; Finance Mgr</h4>
-            <p class="case-study-excerpt">Menambah +7.8 kg massa otot murni (clean bulk), memperbaiki scapula bench press dan melipatgandakan deadlift.</p>
-            <div class="case-study-metrics-pill">
-              <span>+7.8 kg Muscle</span> &bull; <span>DL 165kg</span> &bull; <span>BF ~13%</span>
-            </div>
-            <span class="case-study-link">Open Full Case Dossier &rarr;</span>
-          </div>
-        </div>
-
+        <button class="nav-arrow-btn trans-outer-nav-btn trans-outer-next" id="transCardsNext" aria-label="Scroll Transformations Right">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
       </div>
+
+      <!-- Category Filter Tabs Below Cards -->
+      <div class="trans-filter-tabs-wrap reveal-on-scroll">
+        <button class="trans-pill-tab active" data-trans-filter="all">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg>
+          <span>All Transformations</span>
+        </button>
+        <button class="trans-pill-tab" data-trans-filter="fatloss">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Fat Loss &amp; Metabolic Recomp</span>
+        </button>
+        <button class="trans-pill-tab" data-trans-filter="hypertrophy">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h12M6 6h12M6 12h12"/></svg>
+          <span>Muscle &amp; Strength</span>
+        </button>
+        <button class="trans-pill-tab" data-trans-filter="strength">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          <span>Strength Performance</span>
+        </button>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="trans-bottom-bar reveal-on-scroll">
+        <div class="trans-bottom-left">
+          <span class="trans-brand-tag">R E V O</span>
+          <span class="trans-bottom-divider"></span>
+          <span class="trans-bottom-motto">Stronger People. Better Lives.</span>
+        </div>
+        <div class="trans-bottom-right">
+          <a href="#transformations" class="see-more-stories-link" data-open-modal="bookingModal">
+            See More Stories &rarr;
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
