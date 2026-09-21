@@ -78,13 +78,13 @@ class BeforeAfterSlider {
     this.handle = document.getElementById('showcaseSliderHandle');
     
     this.isSliding = false;
-    this.currentClientIdx = 0; // Default to Arif or Dimas
+    this.currentClientIdx = 2; // Match mockup default (Arif Kurniawan)
     
     this.initSliderEvents();
     this.initShowcaseControls();
     this.initCardsTrack();
     this.initCategoryFilters();
-    this.renderClientStory(0); // Card 1 (Dimas) initially active
+    this.renderClientStory(2); // Card 3 (Arif) initially active in showcase
   }
 
   initSliderEvents() {
