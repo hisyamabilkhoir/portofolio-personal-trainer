@@ -41,6 +41,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { passive: true });
 
+  // 2b. Hero Side Rail Navigation Controller
+  const railSteps = document.querySelectorAll('.rail-step');
+  const railActiveBar = document.querySelector('.rail-active-bar');
+
+  const updateRailActiveBar = (stepEl) => {
+    if (!stepEl || !railActiveBar) return;
+    const topOffset = stepEl.offsetTop;
+    const height = stepEl.offsetHeight;
+    railActiveBar.style.transform = `translateY(${topOffset}px)`;
+  };
+
+  if (railSteps.length > 0 && railActiveBar) {
+    railActiveBar.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+  }
+
+  railSteps.forEach(step => {
+    step.addEventListener('click', () => {
+      railSteps.forEach(s => s.classList.remove('active'));
+      step.classList.add('active');
+      updateRailActiveBar(step);
+    });
+  });
+
   // 3. Mobile Navigation Drawer
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileDrawer = document.getElementById('mobileNavDrawer');
@@ -672,9 +695,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Program Cards Click Listeners (Direct + Event Delegation)
   document.querySelectorAll('.program-card[data-program-id]').forEach(card => {
     card.addEventListener('click', (e) => {
-      e.preventDefault();
+      const track = card.closest('.programs-track');
+      if (track && (track.dataset.hasMoved === 'true' || track.classList.contains('is-dragging'))) {
+        e.preventDefault();
+        return;
+      }
+      const arrowBtn = e.target.closest('.program-arrow-btn');
       const programId = card.getAttribute('data-program-id');
-      openProgramModal(programId);
+      if (arrowBtn || card.classList.contains('active')) {
+        e.preventDefault();
+        openProgramModal(programId);
+      }
     });
   });
 

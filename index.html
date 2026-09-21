@@ -25,6 +25,9 @@
 </head>
 <body>
 
+  <!-- Viewport Left Margin Editorial Accent Line -->
+  <div class="viewport-left-line"></div>
+
   <!-- Ambient Glow Elements -->
   <div class="ambient-glow glow-top-right"></div>
   <div class="ambient-glow glow-mid-left"></div>
@@ -34,7 +37,7 @@
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo" aria-label="REVO Home">
-        R E V O<span>.</span>
+        R E V O
       </a>
 
       <!-- Desktop Nav -->
@@ -46,16 +49,14 @@
           <li><a href="#programs" class="nav-link">Programs</a></li>
           <li><a href="#transformations" class="nav-link">Transformations</a></li>
           <li><a href="#availability" class="nav-link">Studio Hubs</a></li>
-          <li><a href="#plan-generator" class="nav-link">Sports Lab</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="#blog" class="nav-link">Blog</a></li>
         </ul>
       </nav>
 
       <!-- Desktop CTA & Hamburger -->
       <div class="nav-actions">
-        <button class="btn btn-primary nav-cta-btn" data-open-modal="bookingModal">
-          Book a Session &rarr;
+        <button class="btn-outline-lime nav-cta-btn" data-open-modal="bookingModal">
+          Book a Session <span class="cta-arrow">&rarr;</span>
         </button>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
           <span></span>
@@ -71,7 +72,7 @@
   <div class="mobile-nav-drawer" id="mobileNavDrawer">
     <div>
       <div class="brand-logo" style="margin-bottom: 2.5rem;">
-        R E V O<span>.</span>
+        R E V O
       </div>
       <ul class="mobile-nav-links">
         <li><a href="#hero" class="mobile-nav-link active">Home</a></li>
@@ -95,23 +96,40 @@
 
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
-    <div class="container">
+    
+    <!-- Immersive Cinematic Landscape Background Image & Overlays -->
+    <div class="hero-bg-backdrop">
+      <img src="assets/images/hero_bg_landscape.png" alt="REVO Gym Training Background" class="hero-bg-landscape-img" loading="eager">
+      <div class="hero-bg-gradient-left"></div>
+      <div class="hero-bg-gradient-top"></div>
+      <div class="hero-bg-gradient-bottom"></div>
+    </div>
+
+    <div class="container hero-container">
       <div class="hero-grid">
         
         <!-- Hero Left Column -->
         <div class="hero-content reveal-on-scroll">
+          
           <div class="hero-subtitle-tag">
-            Personal Trainer / Online &amp; Offline
+            <span>PERSONAL TRAINER</span>
+            <span class="tag-slash">/</span>
+            <span>ONLINE &amp; OFFLINE</span>
+            <span class="tag-line"></span>
           </div>
+
           <h1 class="hero-title">
-            Discipline Builds A <span class="accent-text">Better You.</span>
+            <span class="title-line">DISCIPLINE</span>
+            <span class="title-line">BUILDS A</span>
+            <span class="title-line accent-lime">BETTER YOU.</span>
           </h1>
+
           <p class="hero-description">
             Personal training for real people. Stronger body. Clearer mind. A better life. Unlock your true physical and mental potential with structured, science-backed coaching.
           </p>
           
           <div class="hero-cta-group">
-            <a href="#programs" class="btn btn-primary">
+            <a href="#programs" class="btn btn-primary hero-btn-main">
               Start Your Journey &rarr;
             </a>
             <button class="hero-video-btn" data-open-modal="videoModal">
@@ -120,167 +138,351 @@
             </button>
           </div>
 
-          <!-- Hero Animated Stats -->
+          <!-- Hero Animated Stats with Vertical Separators -->
           <div class="hero-stats-row">
             <div class="stat-item">
               <div class="stat-value"><span class="counter-val" data-target="250">0</span>+</div>
               <div class="stat-label">Clients Coached</div>
             </div>
+            <div class="stat-divider"></div>
             <div class="stat-item">
               <div class="stat-value"><span class="counter-val" data-target="5">0</span>+</div>
               <div class="stat-label">Years Experience</div>
             </div>
+            <div class="stat-divider"></div>
             <div class="stat-item">
               <div class="stat-value"><span class="counter-val" data-target="98">0</span>%</div>
               <div class="stat-label">Client Satisfaction</div>
             </div>
           </div>
+
+          <!-- Quote Line & REVO Brand -->
+          <div class="hero-quote-row">
+            <div class="quote-text-wrap">
+              <span class="quote-symbol">&ldquo;</span>
+              <span class="quote-content">&ldquo;Progress over excuses.&rdquo;</span>
+            </div>
+            <div class="quote-divider-line"></div>
+            <div class="quote-brand">R E V O</div>
+          </div>
+
+          <!-- Trusted By Sponsor Logos -->
+          <div class="hero-sponsors">
+            <div class="sponsors-title">TRUSTED BY</div>
+            <div class="sponsors-logos">
+              <!-- Gymshark -->
+              <div class="sponsor-logo" title="Gymshark">
+                <svg viewBox="0 0 150 24" class="sponsor-svg" fill="currentColor">
+                  <path d="M12 4 C10 4 7 7 3 11 C7 12 12 11 15 9 C15 13 11 18 5 21 C12 21 19 17 21 10 C22 7 18 4 12 4 Z"/>
+                  <text x="28" y="17" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12.5" letter-spacing="1.5">GYMSHARK</text>
+                </svg>
+              </div>
+
+              <!-- Nike -->
+              <div class="sponsor-logo" title="Nike">
+                <svg viewBox="0 0 60 24" class="sponsor-svg" fill="currentColor">
+                  <path d="M4 15 C13 9 26 6 42 4 C29 9 19 14.5 11 19 C8.5 20.5 5.5 21 4 20 C2.8 19 3 17 4 15 Z"/>
+                </svg>
+              </div>
+
+              <!-- Under Armour -->
+              <div class="sponsor-logo" title="Under Armour">
+                <svg viewBox="0 0 145 24" class="sponsor-svg" fill="currentColor">
+                  <path d="M12 4 C7 4 4 8 4 12 C4 15 6 17.5 12 20 C18 17.5 20 15 20 12 C20 8 17 4 12 4 Z M12 7.5 C15 7.5 16 9 16 12 C16 13.5 14 15.5 12 16.5 C10 15.5 8 13.5 8 12 C8 9 9 7.5 12 7.5 Z"/>
+                  <text x="28" y="16" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10.5" letter-spacing="1">UNDER ARMOUR</text>
+                </svg>
+              </div>
+
+              <!-- Myprotein -->
+              <div class="sponsor-logo" title="Myprotein">
+                <svg viewBox="0 0 135 24" class="sponsor-svg" fill="currentColor">
+                  <path d="M4 5 L9 13 L14 5 L18 5 L18 19 L15 19 L15 10 L10 18 L8 18 L3 10 L3 19 L0 19 L0 5 Z"/>
+                  <text x="24" y="16.5" font-family="'Syne', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10.5" letter-spacing="1">MYPROTEIN</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Hero Right Column Visual -->
+        <!-- Hero Right Column Interactive Overlays -->
         <div class="hero-visual reveal-on-scroll reveal-delay-1">
-          <div class="hero-script-badge float-anim">
-            <span class="script-accent">Progress Over Excuses</span>
+          
+          <!-- Handwritten script overlay on lower center of visual -->
+          <div class="hero-script-overlay">
+            Progress<br>Over<br>Excuses
           </div>
 
-          <div class="hero-image-wrapper">
-            <img src="assets/images/hero_trainer.jpg" alt="Coach Revo Personal Trainer in Gym" class="hero-image" loading="eager">
-            <div class="hero-image-overlay"></div>
-          </div>
-
-          <!-- Hero Side Rail Nav -->
+          <!-- Hero Side Rail Nav (Far Right) -->
           <div class="hero-side-rail">
-            <a href="#programs" class="rail-step active">
+            <div class="rail-line-track">
+              <div class="rail-active-bar"></div>
+            </div>
+            <a href="#programs" class="rail-step active" data-rail-step="01">
               <span class="rail-number">01</span>
-              <span class="rail-label">Train</span>
+              <span class="rail-label">TRAIN</span>
             </a>
-            <a href="#about" class="rail-step">
+            <a href="#about" class="rail-step" data-rail-step="02">
               <span class="rail-number">02</span>
-              <span class="rail-label">Nutrition</span>
+              <span class="rail-label">NUTRITION</span>
             </a>
-            <a href="#transformations" class="rail-step">
-              <span class="rail-number">02</span>
-              <span class="rail-label">Lifestyle</span>
-            </a>
-            <a href="#plan-generator" class="rail-step">
+            <a href="#transformations" class="rail-step" data-rail-step="03">
               <span class="rail-number">03</span>
-              <span class="rail-label">Online</span>
+              <span class="rail-label">LIFESTYLE</span>
+            </a>
+            <a href="#process" class="rail-step" data-rail-step="04">
+              <span class="rail-number">04</span>
+              <span class="rail-label">MINDSET</span>
             </a>
           </div>
+
+          <!-- Floating Video / Story Preview Card (Bottom Right) -->
+          <div class="hero-floating-card" data-open-modal="videoModal" role="button" tabindex="0" title="Watch Real Progress Video">
+            <div class="floating-card-thumb">
+              <img src="assets/images/trans_back_after.jpg" alt="Client Transformation Preview">
+              <div class="floating-play-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="floating-card-info">
+              <div class="floating-card-title">Real People</div>
+              <div class="floating-card-sub">Real Progress <span class="arrow">&rarr;</span></div>
+            </div>
+          </div>
+
         </div>
 
       </div>
 
-      <!-- Scroll Down Indicator -->
-      <a href="#programs" class="hero-scroll-indicator" aria-label="Scroll to Programs">
-        <span>Scroll</span>
-        <svg class="scroll-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 5v14M19 12l-7 7-7-7"/>
-        </svg>
-      </a>
+      <!-- Hero Bottom Bar -->
+      <div class="hero-bottom-bar">
+        <!-- Center Mouse Scroll -->
+        <a href="#programs" class="hero-scroll-btn" aria-label="Scroll to Programs">
+          <span class="scroll-label">SCROLL</span>
+          <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+          </div>
+        </a>
+
+        <!-- Right Social Links & Motto -->
+        <div class="hero-bottom-right">
+          <div class="hero-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hero-social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hero-social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hero-social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="hero-bottom-motto">
+            TRAIN <span>/</span> NOURISH <span>/</span> LIVE BETTER
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Programs Section ("Find Your Focus.") -->
-  <section class="section" id="programs">
+  <section class="section programs-section" id="programs">
     <div class="container">
+      
+      <!-- Programs Section Header -->
       <div class="programs-header-wrap reveal-on-scroll">
-        <div>
-          <span class="section-tag">Programs</span>
-          <h2 class="section-title">Find Your Focus.</h2>
-          <p class="section-desc">Choose a program that fits your goals, schedule, and lifestyle.</p>
+        <div class="programs-header-left">
+          <span class="section-tag">PROGRAMS</span>
+          <h2 class="section-title programs-title">
+            Find Your <span class="highlight-lime">Focus.</span>
+          </h2>
+          <p class="section-desc">
+            Choose a program that fits your goals, schedule, and lifestyle.
+          </p>
         </div>
-        <div class="slider-nav-btns">
-          <button class="nav-arrow-btn" id="progPrevBtn" aria-label="Previous Program">&#8592;</button>
-          <button class="nav-arrow-btn" id="progNextBtn" aria-label="Next Program">&#8594;</button>
+
+        <div class="programs-header-right">
+          <div class="programs-header-divider"></div>
+          <div class="programs-header-tagline">
+            <span>Different goals.</span>
+            <span>Same commitment.</span>
+            <span>A stronger you.</span>
+          </div>
+          <div class="slider-nav-btns programs-nav-btns">
+            <button class="nav-arrow-btn" id="progPrevBtn" aria-label="Previous Program">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+            <button class="nav-arrow-btn prog-next-active" id="progNextBtn" aria-label="Next Program">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
+      <!-- Programs 4-Card Grid / Carousel -->
       <div class="programs-carousel-container reveal-on-scroll reveal-delay-1">
         <div class="programs-track" id="programsTrack">
           
           <!-- Program Card 1 (Fat Loss) -->
-          <div class="program-card featured" data-program-id="fatloss">
+          <div class="program-card featured active" data-program-id="fatloss" data-index="1">
             <div class="program-img-wrap">
               <img src="assets/images/program_fatloss.jpg" alt="Fat Loss Conditioning Workout" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
+              
+              <div class="program-top-badges">
+                <span class="program-num">01</span>
+                <span class="program-tag-badge">TRANSFORM<br>YOURSELF</span>
+              </div>
             </div>
             <div class="program-content">
               <h3 class="program-title">Fat Loss</h3>
-              <p class="program-desc">Build sustainable daily habits, torch stubborn fat, and sculpt a lean, athletic physique.</p>
+              <p class="program-desc">Build sustainable habits, torch stubborn fat, and sculpt a lean, athletic physique.</p>
               <div class="program-card-footer">
-                <span class="program-badge">12 - 16 Weeks</span>
-                <span class="program-arrow-btn" title="View Program Details">&rarr;</span>
+                <div class="program-meta">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                  <span>12 &ndash; 16 Weeks</span>
+                </div>
+                <button class="program-arrow-btn" aria-label="View Fat Loss Program Details" title="View Fat Loss Program">&rarr;</button>
               </div>
             </div>
           </div>
 
           <!-- Program Card 2 (Muscle Building) -->
-          <div class="program-card" data-program-id="muscle">
+          <div class="program-card" data-program-id="muscle" data-index="2">
             <div class="program-img-wrap">
               <img src="assets/images/program_muscle.jpg" alt="Muscle Building Hypertrophy" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
+              
+              <div class="program-top-badges">
+                <span class="program-num">02</span>
+                <span class="program-tag-badge">BUILD<br>STRENGTH</span>
+              </div>
             </div>
             <div class="program-content">
               <h3 class="program-title">Muscle Building</h3>
-              <p class="program-desc">Gain maximum strength, enhance muscle fullness, and master progressive overload mechanics.</p>
+              <p class="program-desc">Gain strength, enhance muscle fullness, and master progressive overload mechanics.</p>
               <div class="program-card-footer">
-                <span class="program-badge">16 - 24 Weeks</span>
-                <span class="program-arrow-btn" title="View Program Details">&rarr;</span>
+                <div class="program-meta">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="8" y1="6" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="18"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <rect x="2" y="9" width="2" height="6" rx="1"></rect>
+                    <rect x="20" y="9" width="2" height="6" rx="1"></rect>
+                  </svg>
+                  <span>16 &ndash; 24 Weeks</span>
+                </div>
+                <button class="program-arrow-btn" aria-label="View Muscle Building Program Details" title="View Muscle Building Program">&rarr;</button>
               </div>
             </div>
           </div>
 
           <!-- Program Card 3 (Strength) -->
-          <div class="program-card" data-program-id="strength">
+          <div class="program-card" data-program-id="strength" data-index="3">
             <div class="program-img-wrap">
               <img src="assets/images/program_strength.jpg" alt="Strength & Powerlifting" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
+              
+              <div class="program-top-badges">
+                <span class="program-num">03</span>
+                <span class="program-tag-badge">LIFT<br>HEAVIER</span>
+              </div>
             </div>
             <div class="program-content">
               <h3 class="program-title">Strength</h3>
-              <p class="program-desc">Move better, get explosive power, increase your Big 3 total, and optimize nervous system drive.</p>
+              <p class="program-desc">Move better, get explosive power, increase your Big 3 total, and build real-world strength.</p>
               <div class="program-card-footer">
-                <span class="program-badge">Custom Cycles</span>
-                <span class="program-arrow-btn" title="View Program Details">&rarr;</span>
+                <div class="program-meta">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="8" y1="6" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="18"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <rect x="2" y="9" width="2" height="6" rx="1"></rect>
+                    <rect x="20" y="9" width="2" height="6" rx="1"></rect>
+                  </svg>
+                  <span>Custom Cycles</span>
+                </div>
+                <button class="program-arrow-btn" aria-label="View Strength Program Details" title="View Strength Program">&rarr;</button>
               </div>
             </div>
           </div>
 
           <!-- Program Card 4 (Online Coaching) -->
-          <div class="program-card" data-program-id="online">
+          <div class="program-card" data-program-id="online" data-index="4">
             <div class="program-img-wrap">
               <img src="assets/images/program_online.jpg" alt="Online Fitness Coaching" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
+              
+              <div class="program-top-badges">
+                <span class="program-num">04</span>
+                <span class="program-tag-badge">TRAIN<br>ANYWHERE</span>
+              </div>
             </div>
             <div class="program-content">
               <h3 class="program-title">Online Coaching</h3>
-              <p class="program-desc">Train anywhere in the world with customized app routines, weekly video check-ins, and 24/7 chat support.</p>
+              <p class="program-desc">Train anywhere with customized plans, weekly check-ins, and full support.</p>
               <div class="program-card-footer">
-                <span class="program-badge">Monthly / Quarterly</span>
-                <span class="program-arrow-btn" title="View Program Details">&rarr;</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Program Card 5 (Functional Mobility) -->
-          <div class="program-card" data-program-id="mobility">
-            <div class="program-img-wrap">
-              <img src="assets/images/hero_trainer.jpg" alt="Functional Movement Training" class="program-img" loading="lazy">
-              <div class="program-img-overlay"></div>
-            </div>
-            <div class="program-content">
-              <h3 class="program-title">Mobility &amp; Posture</h3>
-              <p class="program-desc">Fix joint tightness, eliminate posture pains from desk work, and build bulletproof durability.</p>
-              <div class="program-card-footer">
-                <span class="program-badge">8 - 12 Weeks</span>
-                <span class="program-arrow-btn" title="View Program Details">&rarr;</span>
+                <div class="program-meta">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <span>Monthly / Quarterly</span>
+                </div>
+                <button class="program-arrow-btn" aria-label="View Online Coaching Details" title="View Online Coaching Program">&rarr;</button>
               </div>
             </div>
           </div>
 
         </div>
       </div>
+
+      <!-- Programs Bottom Bar -->
+      <div class="programs-bottom-bar reveal-on-scroll">
+        <div class="programs-bottom-left">
+          <span class="programs-brand-tag">R E V O</span>
+          <span class="programs-bottom-divider"></span>
+          <span class="programs-bottom-motto">STRONGER PEOPLE. BETTER LIVES.</span>
+        </div>
+
+        <div class="programs-bottom-right">
+          <div class="programs-counter-wrap">
+            <span class="current-prog-num" id="currentProgNum">01</span>
+            <span class="counter-slash">/</span>
+            <span class="total-prog-num">04</span>
+          </div>
+          <div class="programs-progress-track">
+            <div class="programs-progress-fill" id="progProgressFill"></div>
+          </div>
+          <a href="#programs" class="explore-programs-link">
+            EXPLORE PROGRAMS
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 

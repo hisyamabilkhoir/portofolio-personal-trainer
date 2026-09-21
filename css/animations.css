@@ -18,6 +18,21 @@
   }
 }
 
+@keyframes mouseScrollDot {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 0 0 rgba(210, 255, 0, 0.4);
