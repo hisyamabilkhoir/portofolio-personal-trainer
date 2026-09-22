@@ -76,6 +76,8 @@ class BeforeAfterSlider {
     this.beforeImg = document.getElementById('showcaseBeforeImg');
     this.afterImg = document.getElementById('showcaseAfterImg');
     this.handle = document.getElementById('showcaseSliderHandle');
+    this.tagBefore = this.container.querySelector('.ba-tag-before');
+    this.tagAfter = this.container.querySelector('.ba-tag-after');
     
     this.isSliding = false;
     this.currentClientIdx = 2; // Match mockup default (Arif Kurniawan)
@@ -85,6 +87,17 @@ class BeforeAfterSlider {
     this.initCardsTrack();
     this.initCategoryFilters();
     this.renderClientStory(2); // Card 3 (Arif) initially active in showcase
+  }
+
+  updateLabelVisibility(percentage) {
+    if (this.tagBefore) {
+      // Hide BEFORE label when slider moves close to the left edge (<= 15%)
+      this.tagBefore.classList.toggle('is-hidden', percentage <= 15);
+    }
+    if (this.tagAfter) {
+      // Hide AFTER label when slider moves close to the right edge (>= 85%)
+      this.tagAfter.classList.toggle('is-hidden', percentage >= 85);
+    }
   }
 
   initSliderEvents() {
@@ -100,6 +113,7 @@ class BeforeAfterSlider {
       const percentage = (x / rect.width) * 100;
       this.wrapper.style.width = `${percentage}%`;
       this.handle.style.left = `${percentage}%`;
+      this.updateLabelVisibility(percentage);
       
       if (this.beforeImg) {
         this.beforeImg.style.width = `${rect.width}px`;
@@ -239,6 +253,7 @@ class BeforeAfterSlider {
 
     if (this.wrapper) this.wrapper.style.width = '50%';
     if (this.handle) this.handle.style.left = '50%';
+    this.updateLabelVisibility(50);
 
     if (this.container && this.beforeImg) {
       const rect = this.container.getBoundingClientRect();
