@@ -16,8 +16,8 @@ const transformationData = [
     m2Lbl: "Body Fat",
     m3Val: "DL 140kg",
     m3Lbl: "Strength Lifted",
-    beforeImg: "assets/images/trans_back_before.jpg",
-    afterImg: "assets/images/trans_back_after.jpg",
+    beforeImg: "assets/images/trans_back_before.webp",
+    afterImg: "assets/images/trans_back_after.webp",
     category: "fatloss"
   },
   {
@@ -31,8 +31,8 @@ const transformationData = [
     m2Lbl: "Body Fat",
     m3Val: "Hip Thrust 95kg",
     m3Lbl: "Strength Lifted",
-    beforeImg: "assets/images/trans_maya_before.jpg",
-    afterImg: "assets/images/trans_maya_after.jpg",
+    beforeImg: "assets/images/trans_maya_before.webp",
+    afterImg: "assets/images/trans_maya_after.webp",
     category: "recomp"
   },
   {
@@ -46,8 +46,8 @@ const transformationData = [
     m2Lbl: "Body Fat (Clean Bulk)",
     m3Val: "DL 165kg",
     m3Lbl: "Strength Lifted",
-    beforeImg: "assets/images/trans_back_before.jpg",
-    afterImg: "assets/images/trans_back_after.jpg",
+    beforeImg: "assets/images/trans_back_before.webp",
+    afterImg: "assets/images/trans_back_after.webp",
     category: "hypertrophy"
   },
   {
@@ -61,8 +61,8 @@ const transformationData = [
     m2Lbl: "Body Fat",
     m3Val: "Squat 120kg",
     m3Lbl: "Strength Lifted",
-    beforeImg: "assets/images/trans_back_before.jpg",
-    afterImg: "assets/images/trans_back_after.jpg",
+    beforeImg: "assets/images/trans_back_before.webp",
+    afterImg: "assets/images/trans_back_after.webp",
     category: "strength"
   }
 ];

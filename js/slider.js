@@ -325,14 +325,71 @@ window.initCarousels = () => {
     });
   }
 
-  // 3. Process Cards Navigation
+  // 3. Process Cards Navigation & Interactive Step Cycling
   const processTrack = document.getElementById('processCardsGrid');
   const procNavPrev = document.getElementById('procNavPrev');
   const procNavNext = document.getElementById('procNavNext');
-  if (processTrack && procNavPrev && procNavNext) {
-    new HorizontalCarousel(processTrack, procNavPrev, procNavNext, {
-      cardSelector: '.proc-card',
-      scrollStepRatio: 0.85
+  const procCards = document.querySelectorAll('#processCardsGrid .proc-card');
+
+  if (processTrack && procCards.length > 0) {
+    let activeStepIdx = 0;
+    const totalSteps = procCards.length;
+
+    const setActiveStep = (index, scrollIntoView = true) => {
+      if (index < 0) index = 0;
+      if (index >= totalSteps) index = totalSteps - 1;
+      activeStepIdx = index;
+
+      procCards.forEach((card, idx) => {
+        const isActive = idx === activeStepIdx;
+        card.classList.toggle('active-step', isActive);
+      });
+
+      if (procNavPrev) {
+        procNavPrev.disabled = activeStepIdx === 0;
+        procNavPrev.classList.toggle('active', activeStepIdx > 0);
+      }
+      if (procNavNext) {
+        procNavNext.disabled = activeStepIdx === totalSteps - 1;
+        procNavNext.classList.toggle('active', activeStepIdx < totalSteps - 1);
+      }
+
+      // Smooth scroll into view when cards overflow horizontally (mobile / tablet)
+      const maxScroll = processTrack.scrollWidth - processTrack.clientWidth;
+      if (scrollIntoView && maxScroll > 10) {
+        const targetCard = procCards[activeStepIdx];
+        const cardLeft = targetCard.offsetLeft - processTrack.offsetLeft;
+        processTrack.scrollTo({ left: cardLeft, behavior: 'smooth' });
+      }
+    };
+
+    // Set initial active state on Card 1
+    setActiveStep(0, false);
+
+    if (procNavPrev) {
+      procNavPrev.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (activeStepIdx > 0) {
+          setActiveStep(activeStepIdx - 1, true);
+        }
+      });
+    }
+
+    if (procNavNext) {
+      procNavNext.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (activeStepIdx < totalSteps - 1) {
+          setActiveStep(activeStepIdx + 1, true);
+        }
+      });
+    }
+
+    // Card click event: activate card on direct click
+    procCards.forEach((card, idx) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.proc-pill-btn')) return;
+        setActiveStep(idx, true);
+      });
     });
   }
 };

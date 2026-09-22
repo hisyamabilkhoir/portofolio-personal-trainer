@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="REVO — Discipline Builds A Better You">
   <meta property="og:description" content="Personal training for real people. Stronger body. Clearer mind. A better life.">
-  <meta property="og:image" content="assets/images/hero_trainer.jpg">
+  <meta property="og:image" content="assets/images/hero_trainer.webp">
 
   <!-- Google Fonts: Plus Jakarta Sans, Syne, Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,23 +71,27 @@
   <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
   <div class="mobile-nav-drawer" id="mobileNavDrawer">
     <div>
-      <div class="brand-logo" style="margin-bottom: 2.5rem;">
-        R E V O
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">R E V O</div>
+        <button type="button" class="mobile-drawer-close-btn" id="closeMobileNavBtn" aria-label="Close Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
       </div>
       <ul class="mobile-nav-links">
         <li><a href="#hero" class="mobile-nav-link active">Home</a></li>
-        <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="#certifications" class="mobile-nav-link">Certifications &amp; Credentials</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Coach</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Credentials</a></li>
         <li><a href="#programs" class="mobile-nav-link">Programs</a></li>
-        <li><a href="#transformations" class="mobile-nav-link">Transformations &amp; Case Studies</a></li>
-        <li><a href="#availability" class="mobile-nav-link">Studio Hubs &amp; Live Slots</a></li>
+        <li><a href="#transformations" class="mobile-nav-link">Transformations</a></li>
+        <li><a href="#availability" class="mobile-nav-link">Studio Hubs</a></li>
         <li><a href="#process" class="mobile-nav-link">How It Works</a></li>
-        <li><a href="#plan-generator" class="mobile-nav-link">Sports Science Lab &amp; Calculator</a></li>
-        <li><a href="#faq" class="mobile-nav-link">Frequently Asked Questions</a></li>
+        <li><a href="#plan-generator" class="mobile-nav-link">Science Lab</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Client Reviews</a></li>
         <li><a href="#blog" class="mobile-nav-link">Blog &amp; Insights</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
       </ul>
     </div>
-    <div>
+    <div class="mobile-drawer-footer">
       <button class="btn btn-primary" style="width: 100%;" data-open-modal="bookingModal">
         Book a Free Consultation &rarr;
       </button>
@@ -99,7 +103,7 @@
     
     <!-- Immersive Cinematic Landscape Background Image & Overlays -->
     <div class="hero-bg-backdrop">
-      <img src="assets/images/hero_bg_landscape.png" alt="REVO Gym Training Background" class="hero-bg-landscape-img" loading="eager">
+      <img src="assets/images/hero_bg_landscape.webp" alt="REVO Gym Training Background" class="hero-bg-landscape-img" loading="eager">
       <div class="hero-bg-gradient-left"></div>
       <div class="hero-bg-gradient-top"></div>
       <div class="hero-bg-gradient-bottom"></div>
@@ -116,6 +120,31 @@
             <span class="tag-slash">/</span>
             <span>ONLINE &amp; OFFLINE</span>
             <span class="tag-line"></span>
+          </div>
+
+          <!-- Mobile Foreground Hero Visual Card -->
+          <div class="hero-mobile-visual">
+            <div class="hero-mobile-img-wrap">
+              <img src="assets/images/hero_bg_landscape.webp" alt="Coach Revo Personal Trainer" class="hero-mobile-img" loading="eager">
+              <div class="hero-mobile-overlay"></div>
+              
+              <!-- Top Live Coaching Badge -->
+              <div class="hero-mobile-badge">
+                <span class="live-dot"></span>
+                <span>ONLINE &amp; 1-ON-1 SESSIONS</span>
+              </div>
+
+              <!-- Cursive Script Accent -->
+              <div class="hero-mobile-script">
+                Progress Over Excuses
+              </div>
+
+              <!-- Floating Reel Button -->
+              <button type="button" class="hero-mobile-play-btn" data-open-modal="videoModal" aria-label="Watch Showreel">
+                <span class="play-icon">&#9658;</span>
+                <span>Watch Reel</span>
+              </button>
+            </div>
           </div>
 
           <h1 class="hero-title">
@@ -239,7 +268,7 @@
           <!-- Floating Video / Story Preview Card (Bottom Right) -->
           <div class="hero-floating-card" data-open-modal="videoModal" role="button" tabindex="0" title="Watch Real Progress Video">
             <div class="floating-card-thumb">
-              <img src="assets/images/trans_back_after.jpg" alt="Client Transformation Preview">
+              <img src="assets/images/trans_back_after.webp" alt="Client Transformation Preview">
               <div class="floating-play-badge">
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z"/>
@@ -344,7 +373,7 @@
           <!-- Program Card 1 (Fat Loss) -->
           <div class="program-card featured active" data-program-id="fatloss" data-index="1">
             <div class="program-img-wrap">
-              <img src="assets/images/program_fatloss.jpg" alt="Fat Loss Conditioning Workout" class="program-img" loading="lazy">
+              <img src="assets/images/program_fatloss.webp" alt="Fat Loss Conditioning Workout" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
               
               <div class="program-top-badges">
@@ -372,7 +401,7 @@
           <!-- Program Card 2 (Muscle Building) -->
           <div class="program-card" data-program-id="muscle" data-index="2">
             <div class="program-img-wrap">
-              <img src="assets/images/program_muscle.jpg" alt="Muscle Building Hypertrophy" class="program-img" loading="lazy">
+              <img src="assets/images/program_muscle.webp" alt="Muscle Building Hypertrophy" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
               
               <div class="program-top-badges">
@@ -402,7 +431,7 @@
           <!-- Program Card 3 (Strength) -->
           <div class="program-card" data-program-id="strength" data-index="3">
             <div class="program-img-wrap">
-              <img src="assets/images/program_strength.jpg" alt="Strength & Powerlifting" class="program-img" loading="lazy">
+              <img src="assets/images/program_strength.webp" alt="Strength & Powerlifting" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
               
               <div class="program-top-badges">
@@ -432,7 +461,7 @@
           <!-- Program Card 4 (Online Coaching) -->
           <div class="program-card" data-program-id="online" data-index="4">
             <div class="program-img-wrap">
-              <img src="assets/images/program_online.jpg" alt="Online Fitness Coaching" class="program-img" loading="lazy">
+              <img src="assets/images/program_online.webp" alt="Online Fitness Coaching" class="program-img" loading="lazy">
               <div class="program-img-overlay"></div>
               
               <div class="program-top-badges">
@@ -540,9 +569,9 @@
             
             <!-- Left Half: Draggable Before/After Comparison Slider -->
             <div class="trans-ba-wrap" id="beforeAfterBox">
-              <img src="assets/images/trans_back_after.jpg" alt="After Transformation" class="ba-image ba-after-img" id="showcaseAfterImg">
+              <img src="assets/images/trans_back_after.webp" alt="After Transformation" class="ba-image ba-after-img" id="showcaseAfterImg">
               <div class="ba-before-wrapper" id="showcaseBeforeWrap">
-                <img src="assets/images/trans_back_before.jpg" alt="Before Transformation" class="ba-image ba-before-img" id="showcaseBeforeImg">
+                <img src="assets/images/trans_back_before.webp" alt="Before Transformation" class="ba-image ba-before-img" id="showcaseBeforeImg">
               </div>
               <div class="ba-slider-handle" id="showcaseSliderHandle">
                 <div class="ba-handle-button" aria-label="Drag to compare before and after">
@@ -608,7 +637,7 @@
           <!-- Card 1: Dimas Pratama -->
           <div class="trans-card featured active" data-client-id="dimas" data-trans-category="fatloss" data-index="0" role="button" tabindex="0">
             <div class="trans-card-img-wrap">
-              <img src="assets/images/client_dimas.jpg" alt="Dimas Pratama Transformation" class="trans-card-img" loading="lazy">
+              <img src="assets/images/client_dimas.webp" alt="Dimas Pratama Transformation" class="trans-card-img" loading="lazy">
               <span class="trans-badge">FAT LOSS &bull; 16 WEEKS</span>
             </div>
             <div class="trans-card-body">
@@ -634,7 +663,7 @@
           <!-- Card 2: Maya Paramitha -->
           <div class="trans-card" data-client-id="maya" data-trans-category="recomp" data-index="1" role="button" tabindex="0">
             <div class="trans-card-img-wrap">
-              <img src="assets/images/trans_maya_after.jpg" alt="Maya Paramitha Transformation" class="trans-card-img" loading="lazy">
+              <img src="assets/images/trans_maya_after.webp" alt="Maya Paramitha Transformation" class="trans-card-img" loading="lazy">
               <span class="trans-badge">RECOMPOSITION &bull; 12 WEEKS</span>
             </div>
             <div class="trans-card-body">
@@ -660,7 +689,7 @@
           <!-- Card 3: Arif Kurniawan -->
           <div class="trans-card" data-client-id="arif" data-trans-category="hypertrophy" data-index="2" role="button" tabindex="0">
             <div class="trans-card-img-wrap">
-              <img src="assets/images/client_arif.jpg" alt="Arif Kurniawan Transformation" class="trans-card-img" loading="lazy">
+              <img src="assets/images/client_arif.webp" alt="Arif Kurniawan Transformation" class="trans-card-img" loading="lazy">
               <span class="trans-badge">HYPERTROPHY &bull; 20 WEEKS</span>
             </div>
             <div class="trans-card-body">
@@ -686,7 +715,7 @@
           <!-- Card 4: Raka Wiratama -->
           <div class="trans-card" data-client-id="raka" data-trans-category="strength" data-index="3" role="button" tabindex="0">
             <div class="trans-card-img-wrap">
-              <img src="assets/images/client_raka.jpg" alt="Raka Wiratama Transformation" class="trans-card-img" loading="lazy">
+              <img src="assets/images/client_raka.webp" alt="Raka Wiratama Transformation" class="trans-card-img" loading="lazy">
               <span class="trans-badge">STRENGTH &bull; 24 WEEKS</span>
             </div>
             <div class="trans-card-body">
@@ -779,7 +808,7 @@
           </div>
         </div>
         <div class="hub-hero-visual">
-          <img src="assets/images/hub_header_gym.jpg" alt="Luxury Private Studio Hub" class="hub-hero-bg-img">
+          <img src="assets/images/hub_header_gym.webp" alt="Luxury Private Studio Hub" class="hub-hero-bg-img">
           <div class="hub-hero-scrim"></div>
           <div class="hub-hero-wall-art">
             <div class="hub-wall-quote">DISCIPLINE<br>CREATES<br>FREEDOM</div>
@@ -792,9 +821,9 @@
       <div class="hub-status-bar reveal-on-scroll">
         <div class="hub-status-left">
           <div class="hub-avatar-group">
-            <img src="assets/images/client_dimas.jpg" alt="Client" class="hub-avatar-img">
-            <img src="assets/images/client_arif.jpg" alt="Client" class="hub-avatar-img">
-            <img src="assets/images/hero_trainer.jpg" alt="Coach Revo" class="hub-avatar-img">
+            <img src="assets/images/client_dimas.webp" alt="Client" class="hub-avatar-img">
+            <img src="assets/images/client_arif.webp" alt="Client" class="hub-avatar-img">
+            <img src="assets/images/hero_trainer.webp" alt="Coach Revo" class="hub-avatar-img">
           </div>
           <div class="hub-status-text-wrap">
             <div class="hub-status-title">Coach Revo Status: Active &bull; Q3/Q4 Client Intake Open</div>
@@ -822,7 +851,7 @@
           </div>
 
           <div class="hub-card-media">
-            <img src="assets/images/hub_scbd_studio.jpg" alt="SCBD Platinum Studio" class="hub-media-img">
+            <img src="assets/images/hub_scbd_studio.webp" alt="SCBD Platinum Studio" class="hub-media-img">
             <div class="hub-media-overlay-scrim"></div>
             <div class="hub-watermark-text">TRAIN<br>FOCUS<br>PROGRESS</div>
           </div>
@@ -887,7 +916,7 @@
           </div>
 
           <div class="hub-card-media">
-            <img src="assets/images/hub_pik_lab.jpg" alt="PIK 2 Biomechanics Lab" class="hub-media-img">
+            <img src="assets/images/hub_pik_lab.webp" alt="PIK 2 Biomechanics Lab" class="hub-media-img">
             <div class="hub-media-overlay-scrim"></div>
             <div class="hub-neon-tag-box">
               BUILD<br>BETTER<br>HUMAN
@@ -954,7 +983,7 @@
           </div>
 
           <div class="hub-card-media">
-            <img src="assets/images/hub_remote_portal.jpg" alt="Remote Elite Portal" class="hub-media-img">
+            <img src="assets/images/hub_remote_portal.webp" alt="Remote Elite Portal" class="hub-media-img">
             <div class="hub-media-overlay-scrim"></div>
             <div class="hub-screen-tag-box">
               <strong>TRAIN ANYWHERE</strong>
@@ -1108,9 +1137,9 @@
           </div>
           <div class="hub-req-right">
             <div class="hub-avatar-group">
-              <img src="assets/images/client_dimas.jpg" alt="Client" class="hub-avatar-img">
-              <img src="assets/images/client_arif.jpg" alt="Client" class="hub-avatar-img">
-              <img src="assets/images/hero_trainer.jpg" alt="Coach" class="hub-avatar-img">
+              <img src="assets/images/client_dimas.webp" alt="Client" class="hub-avatar-img">
+              <img src="assets/images/client_arif.webp" alt="Client" class="hub-avatar-img">
+              <img src="assets/images/hero_trainer.webp" alt="Coach" class="hub-avatar-img">
             </div>
             <div class="hub-req-trust-text">More than 250+ clients have transformed with Revo.</div>
           </div>
@@ -1155,8 +1184,13 @@
       <div class="process-cards-wrap reveal-on-scroll reveal-delay-1">
         
         <!-- Connecting SVG Path Background -->
-        <svg class="process-flow-line" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M 100 60 Q 250 15, 400 60 T 700 60 T 1000 60" fill="none" stroke="rgba(210, 255, 0, 0.25)" stroke-width="2" stroke-dasharray="6,6" />
+        <svg class="process-flow-line" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 0 95 C 120 95, 200 135, 260 145 C 310 155, 340 65, 390 75 C 470 90, 500 135, 560 145 C 610 155, 640 65, 700 75 C 780 90, 810 135, 870 145 C 920 155, 960 65, 1020 75 C 1080 85, 1140 100, 1200 100" fill="none" stroke="#c8ff00" stroke-width="1.8" stroke-linecap="round" opacity="0.65" filter="url(#procLineGlow)" />
+          <defs>
+            <filter id="procLineGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#c8ff00" flood-opacity="0.5" />
+            </filter>
+          </defs>
         </svg>
 
         <div class="process-cards-grid" id="processCardsGrid">
@@ -1164,7 +1198,7 @@
           <!-- Step 01: Assessment -->
           <div class="proc-card">
             <div class="proc-card-bg">
-              <img src="assets/images/process_01_assessment.jpg" alt="Assessment" class="proc-bg-img">
+              <img src="assets/images/process_01_assessment.webp" alt="Assessment" class="proc-bg-img" loading="lazy">
               <div class="proc-bg-scrim"></div>
               <div class="proc-bg-tagline">BETTER<br>VERSION<br>AHEAD</div>
             </div>
@@ -1172,6 +1206,7 @@
             <div class="proc-card-content">
               <div class="proc-card-top">
                 <div class="proc-step-num">01</div>
+                <div class="proc-step-line"></div>
                 <div class="proc-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><line x1="9" y1="12" x2="11" y2="12"></line><line x1="9" y1="16" x2="15" y2="16"></line></svg>
                 </div>
@@ -1193,13 +1228,14 @@
           <!-- Step 02: Personalized Plan -->
           <div class="proc-card">
             <div class="proc-card-bg">
-              <img src="assets/images/process_02_plan.jpg" alt="Personalized Plan" class="proc-bg-img">
+              <img src="assets/images/process_02_plan.webp" alt="Personalized Plan" class="proc-bg-img" loading="lazy">
               <div class="proc-bg-scrim"></div>
             </div>
             
             <div class="proc-card-content">
               <div class="proc-card-top">
                 <div class="proc-step-num">02</div>
+                <div class="proc-step-line"></div>
                 <div class="proc-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                 </div>
@@ -1221,13 +1257,14 @@
           <!-- Step 03: Training -->
           <div class="proc-card">
             <div class="proc-card-bg">
-              <img src="assets/images/process_03_training.jpg" alt="Training" class="proc-bg-img">
+              <img src="assets/images/process_03_training.webp" alt="Training" class="proc-bg-img" loading="lazy">
               <div class="proc-bg-scrim"></div>
             </div>
             
             <div class="proc-card-content">
               <div class="proc-card-top">
                 <div class="proc-step-num">03</div>
+                <div class="proc-step-line"></div>
                 <div class="proc-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"></path></svg>
                 </div>
@@ -1249,13 +1286,14 @@
           <!-- Step 04: Tracking -->
           <div class="proc-card">
             <div class="proc-card-bg">
-              <img src="assets/images/process_04_tracking.jpg" alt="Tracking" class="proc-bg-img">
+              <img src="assets/images/process_04_tracking.webp" alt="Tracking" class="proc-bg-img" loading="lazy">
               <div class="proc-bg-scrim"></div>
             </div>
             
             <div class="proc-card-content">
               <div class="proc-card-top">
                 <div class="proc-step-num">04</div>
+                <div class="proc-step-line"></div>
                 <div class="proc-icon-badge">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                 </div>
@@ -1295,68 +1333,171 @@
     </div>
   </section>
 
-  <!-- About Section ("Hi, I'm Revo.") -->
-  <section class="section" id="about">
+  <!-- About Section ("Hi, I'm Revo." Mockup Redesign) -->
+  <section class="section about-section" id="about">
     <div class="container">
       <div class="about-grid">
         
-        <!-- Left: Trainer Portrait Card -->
-        <div class="about-image-card reveal-on-scroll">
-          <img src="assets/images/about_trainer.jpg" alt="Coach Revo Personal Trainer Bio Portrait" class="about-image" loading="lazy">
+        <!-- Left: Trainer Portrait Interactive Feature Card -->
+        <div class="about-feature-card reveal-on-scroll">
+          <img src="assets/images/about_trainer.webp" alt="Coach Revo Certified Personal Trainer" class="about-card-img" loading="lazy">
           
-          <div class="about-image-overlay-text">
-            <div class="about-big-tagline">
-              More<br>Than A<br>Trainer.
+          <!-- Top Left Editorial Tag -->
+          <div class="about-card-tag-left">
+            <span class="about-card-vert-line"></span>
+            <div class="about-card-tag-text">
+              <span>TRAIN</span>
+              <span>MOVE</span>
+              <span>GROW</span>
             </div>
           </div>
 
-          <div class="about-script-accent">
-            <span class="script-accent">Some Stronger You.</span>
+          <!-- Top Right Branding -->
+          <div class="about-card-brand-right">
+            <div class="about-card-brand-title">R E V O</div>
+            <div class="about-card-brand-sub">REAL PEOPLE<br>REAL PROGRESS</div>
+          </div>
+
+          <!-- Middle Left Handwritten Script Accent -->
+          <div class="about-card-script-accent">
+            Stronger<br>People<br>Happier Lives
+          </div>
+
+          <!-- Bottom Left Watch My Story Glass Pill -->
+          <div class="about-video-pill" data-open-modal="bookingModal" role="button" tabindex="0">
+            <div class="about-play-icon">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <div class="about-video-text">
+              <span class="about-video-title">Watch My Story</span>
+              <span class="about-video-duration">2:15 minutes</span>
+            </div>
+          </div>
+
+          <!-- Bottom Glass Stats Dock -->
+          <div class="about-card-stats-dock">
+            <div class="about-dock-stat">
+              <div class="about-dock-val">250+</div>
+              <div class="about-dock-lbl">Clients Coached</div>
+            </div>
+            <div class="about-dock-stat">
+              <div class="about-dock-val">5+</div>
+              <div class="about-dock-lbl">Years Experience</div>
+            </div>
+            <div class="about-dock-stat">
+              <div class="about-dock-val">98%</div>
+              <div class="about-dock-lbl">Client Satisfaction</div>
+            </div>
           </div>
         </div>
 
-        <!-- Right: Bio & Credentials -->
-        <div class="about-content reveal-on-scroll reveal-delay-1">
-          <span class="section-tag">About</span>
-          <h2 class="section-title">Hi, I'm Revo.</h2>
+        <!-- Right: Bio, Specializations & Quote Signature Box -->
+        <div class="about-content-col reveal-on-scroll reveal-delay-1">
           
-          <p class="about-bio">
+          <!-- Top Row with Eyebrow and Circular Stamp Badge -->
+          <div class="about-header-row">
+            <div class="about-eyebrow-wrap">
+              <span class="about-lime-dash"></span>
+              <span class="about-eyebrow-text">ABOUT</span>
+            </div>
+            
+            <div class="about-circular-badge">
+              <svg class="about-circular-badge-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" stroke-dasharray="3,3"></circle>
+                <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"></circle>
+              </svg>
+              <div class="about-circular-badge-content">
+                <span>DISCIPLINE</span>
+                <span>BUILDS</span>
+                <span>FREEDOM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heading -->
+          <h2 class="about-heading">
+            Hi, I'm <span class="text-accent">Revo.</span>
+          </h2>
+          
+          <!-- Bio Description -->
+          <p class="about-lead-desc">
             Certified Personal Trainer with a deep passion for helping people become the strongest version of themselves — physically, mentally, and emotionally. I combine biomechanics, progressive strength principles, and sustainable nutrition habits so you get results that last for life.
           </p>
 
-          <div class="about-cta-row">
-            <button class="btn btn-outline" data-open-cert="nasm-cpt">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
-                <circle cx="12" cy="8" r="7"/>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-              </svg>
-              My Certifications
-            </button>
-            <button class="btn btn-primary" data-open-modal="bookingModal">
+          <!-- Action Buttons Row -->
+          <div class="about-actions-row">
+            <button class="btn btn-primary about-btn-more" data-open-modal="bookingModal">
               More About Me &rarr;
             </button>
+            <button class="btn btn-outline-glass about-btn-cert" data-open-cert="nasm-cpt">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+              <span>My Certifications</span>
+            </button>
           </div>
 
-          <div class="about-stats-grid">
-            <div class="stat-item">
-              <div class="stat-value">5+</div>
-              <div class="stat-label">Years Experience</div>
+          <!-- 3 Specialization Columns -->
+          <div class="about-specializations-grid">
+            <div class="about-spec-col">
+              <div class="about-spec-icon-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"></path></svg>
+              </div>
+              <div class="about-spec-text">
+                <strong>Strength &amp;</strong>
+                <span>Hypertrophy Training</span>
+              </div>
             </div>
-            <div class="stat-item">
-              <div class="stat-value">250+</div>
-              <div class="stat-label">Clients Coached</div>
+
+            <div class="about-spec-col">
+              <div class="about-spec-icon-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c.5 2.5-1 4-2.5 4.5"></path><path d="M12 6.5C10 4 5 4 3 8c-2 4-1 10 3 13 2 1.5 4 1 6 1s4 .5 6-1c4-3 5-9 3-13-2-4-7-4-9-1.5z"></path></svg>
+              </div>
+              <div class="about-spec-text">
+                <strong>Sustainable</strong>
+                <span>Body Transformation</span>
+              </div>
             </div>
-            <div class="stat-item">
-              <div class="stat-value">3</div>
-              <div class="stat-label">Specializations</div>
+
+            <div class="about-spec-col">
+              <div class="about-spec-icon-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4" r="2"></circle><path d="m18 19-3.5-3.5L16 11l-3.5-2L9 11l2 3-3 5"></path><path d="M6 13 4 10l5-2"></path></svg>
+              </div>
+              <div class="about-spec-text">
+                <strong>Functional Movement</strong>
+                <span>&amp; Posture Restoration</span>
+              </div>
             </div>
           </div>
 
-          <div class="about-specializations">
-            <div class="spec-item"><span class="spec-bullet">&#9654;</span> Strength &amp; Hypertrophy Training</div>
-            <div class="spec-item"><span class="spec-bullet">&#9654;</span> Sustainable Body Transformation</div>
-            <div class="spec-item"><span class="spec-bullet">&#9654;</span> Functional Movement &amp; Posture Restoration</div>
+          <!-- Bottom Quote & Signature Box -->
+          <div class="about-quote-box">
+            <div class="about-quote-left">
+              <span class="about-quote-mark">&#10077;</span>
+              <p class="about-quote-quote">
+                A stronger you<br>creates a brighter tomorrow.
+              </p>
+            </div>
+            <div class="about-quote-right">
+              <div class="about-sig-svg-wrap">
+                <svg class="about-signature-svg" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- R -->
+                  <path d="M12 34 V10 C12 10 26 6 30 15 C34 23 20 25 12 25 L32 35" stroke="rgba(255,255,255,0.95)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <!-- e -->
+                  <path d="M38 27 C36 21 44 19 48 23 C50 26 38 28 40 33 C42 35 48 35 51 32" stroke="rgba(255,255,255,0.95)" stroke-width="1.6" stroke-linecap="round"></path>
+                  <!-- v -->
+                  <path d="M56 22 L63 34 L72 20" stroke="rgba(255,255,255,0.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <!-- o -->
+                  <path d="M80 27 C80 21 88 20 90 26 C92 32 82 35 80 27 Z" stroke="rgba(255,255,255,0.95)" stroke-width="1.6" stroke-linecap="round"></path>
+                  <!-- dynamic signature flourish slash -->
+                  <path d="M8 36 Q 60 14 112 12" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <span class="about-sig-label">PERSONAL TRAINER</span>
+            </div>
           </div>
+
         </div>
 
       </div>
@@ -1366,38 +1507,154 @@
   <!-- Accreditations & Certifications Section -->
   <section class="section certifications-section" id="certifications">
     <div class="container">
-      <div class="section-header reveal-on-scroll" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
-        <div>
-          <span class="section-tag">Accreditations &amp; Credentials</span>
-          <h2 class="section-title">Sports Science &amp; Clinical Precision.</h2>
-          <p class="section-desc">Backed by internationally recognized governing bodies in human biomechanics, strength &amp; conditioning, and clinical nutrition.</p>
+      
+      <!-- Top Hero Split Banner -->
+      <div class="cert-hero-card reveal-on-scroll">
+        <div class="cert-hero-content">
+          <div class="cert-eyebrow">
+            ACCREDITATIONS &bull; CREDENTIALS
+          </div>
+          <h2 class="cert-hero-title">
+            Sports Science &amp;<br>
+            <span class="text-accent">Clinical Precision.</span>
+          </h2>
+          <p class="cert-hero-desc">
+            Backed by internationally recognized governing bodies in human biomechanics, strength &amp; conditioning, and clinical nutrition.
+          </p>
+
+          <!-- 3 Value Pillars in a single clean row -->
+          <div class="cert-pillars-row">
+            <div class="cert-pillar-item">
+              <div class="cert-pillar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div class="cert-pillar-text">
+                <strong>Global Standards</strong>
+                <span>Trusted &amp; Recognized</span>
+              </div>
+            </div>
+
+            <div class="cert-pillar-item">
+              <div class="cert-pillar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="cert-pillar-text">
+                <strong>Evidence-Based</strong>
+                <span>Science-Driven Practice</span>
+              </div>
+            </div>
+
+            <div class="cert-pillar-item">
+              <div class="cert-pillar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div class="cert-pillar-text">
+                <strong>Real-World Application</strong>
+                <span>For Lasting Results</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="btn btn-outline" data-open-cert="nasm-cpt">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-          View All Credentials &rarr;
-        </button>
+
+        <div class="cert-hero-media">
+          <div class="cert-media-inner">
+            <img src="assets/images/hero_trainer.webp" alt="Coach Revo Sports Science Credentials" class="cert-hero-img">
+            <div class="cert-media-vignette"></div>
+            
+            <!-- Cursive Script Floating Overlay with Neon Underline -->
+            <div class="cert-cursive-stamp">
+              <span class="cursive-word">Certified</span>
+              <span class="cursive-word">Knowledge</span>
+              <span class="cursive-word-highlight">Real Impact</span>
+            </div>
+
+            <!-- Bottom Floating Quote -->
+            <div class="cert-hero-quote-tag">
+              &ldquo;Better coaching.<br>A stronger you.&rdquo;
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="certifications-grid reveal-on-scroll reveal-delay-1">
+      <!-- Filter & Sort Bar -->
+      <div class="cert-filter-bar reveal-on-scroll">
+        <div class="cert-filter-tabs">
+          <button type="button" class="cert-filter-btn active" data-cert-filter="all">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            All Credentials
+          </button>
+          <button type="button" class="cert-filter-btn" data-cert-filter="personal-training">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Personal Training
+          </button>
+          <button type="button" class="cert-filter-btn" data-cert-filter="strength-conditioning">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"></path>
+            </svg>
+            Strength &amp; Conditioning
+          </button>
+          <button type="button" class="cert-filter-btn" data-cert-filter="nutrition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+            Nutrition
+          </button>
+          <button type="button" class="cert-filter-btn" data-cert-filter="rehab-clinical">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Rehab &amp; Clinical
+          </button>
+        </div>
+
+        <div class="cert-sort-wrapper">
+          <button type="button" class="cert-sort-btn" id="certSortBtn" aria-label="Sort credentials">
+            <span>Sort by</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 6 Cards Grid (3x2 Grid) -->
+      <div class="certifications-grid reveal-on-scroll reveal-delay-1" id="certificationsGrid">
         
         <!-- Card 1: NASM-CPT -->
-        <div class="cert-card" data-cert-id="nasm-cpt">
+        <div class="cert-card" data-cert-id="nasm-cpt" data-cert-category="personal-training">
           <div class="cert-card-header">
-            <div class="cert-badge-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            </div>
             <div class="cert-status-tag">
-              <span class="cert-pulse-dot"></span> Verified Active
+              <span class="cert-status-icon">&#10003;</span> Verified Active
             </div>
           </div>
           <div class="cert-card-preview" data-cert-render="nasm-cpt"></div>
           <div class="cert-card-body">
-            <span class="cert-category-tag">Core Personal Training</span>
+            <span class="cert-category-tag">CORE PERSONAL TRAINING</span>
             <h3 class="cert-acronym">NASM &mdash; CPT</h3>
             <h4 class="cert-title">Certified Personal Trainer (Optima™ Model)</h4>
-            <p class="cert-issuer">National Academy of Sports Medicine &bull; USA</p>
+            <p class="cert-issuer">🇺🇸 National Academy of Sports Medicine &bull; USA</p>
             <div class="cert-tags-row">
               <span class="cert-pill">Kinetic Assessment</span>
               <span class="cert-pill">OPT™ Periodization</span>
@@ -1411,21 +1668,18 @@
         </div>
 
         <!-- Card 2: NSCA-CSCS -->
-        <div class="cert-card" data-cert-id="nsca-cscs">
+        <div class="cert-card" data-cert-id="nsca-cscs" data-cert-category="strength-conditioning">
           <div class="cert-card-header">
-            <div class="cert-badge-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            </div>
             <div class="cert-status-tag">
-              <span class="cert-pulse-dot"></span> Verified Active
+              <span class="cert-status-icon">&#10003;</span> Verified Active
             </div>
           </div>
           <div class="cert-card-preview" data-cert-render="nsca-cscs"></div>
           <div class="cert-card-body">
-            <span class="cert-category-tag">Athlete Performance</span>
+            <span class="cert-category-tag">ATHLETE PERFORMANCE</span>
             <h3 class="cert-acronym">NSCA &mdash; CSCS</h3>
             <h4 class="cert-title">Certified Strength &amp; Conditioning Specialist</h4>
-            <p class="cert-issuer">National Strength &amp; Conditioning Association &bull; USA</p>
+            <p class="cert-issuer">🇺🇸 National Strength &amp; Conditioning Association &bull; USA</p>
             <div class="cert-tags-row">
               <span class="cert-pill">Olympic Lifting</span>
               <span class="cert-pill">Force-Velocity</span>
@@ -1433,27 +1687,24 @@
             </div>
           </div>
           <div class="cert-card-footer">
-            <span class="cert-id-badge">ID: CSCS-2021-88410</span>
+            <span class="cert-id-badge">ID: CSCS-2021-88418</span>
             <span class="cert-view-link">View Details &rarr;</span>
           </div>
         </div>
 
-        <!-- Card 3: Precision Nutrition -->
-        <div class="cert-card" data-cert-id="precision-nutrition">
+        <!-- Card 3: PN1-CNC -->
+        <div class="cert-card" data-cert-id="precision-nutrition" data-cert-category="nutrition">
           <div class="cert-card-header">
-            <div class="cert-badge-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-            </div>
             <div class="cert-status-tag">
-              <span class="cert-pulse-dot"></span> Verified Active
+              <span class="cert-status-icon">&#10003;</span> Verified Active
             </div>
           </div>
           <div class="cert-card-preview" data-cert-render="precision-nutrition"></div>
           <div class="cert-card-body">
-            <span class="cert-category-tag">Nutrition &amp; Habits</span>
+            <span class="cert-category-tag">NUTRITION &amp; HABITS</span>
             <h3 class="cert-acronym">PN1 &mdash; CNC</h3>
             <h4 class="cert-title">Certified Nutrition &amp; Metabolic Coach</h4>
-            <p class="cert-issuer">Precision Nutrition &bull; Canada</p>
+            <p class="cert-issuer">🇨🇦 Precision Nutrition &bull; Canada</p>
             <div class="cert-tags-row">
               <span class="cert-pill">Macro Periodization</span>
               <span class="cert-pill">Metabolic Health</span>
@@ -1466,274 +1717,546 @@
           </div>
         </div>
 
-        <!-- Card 4: FMS Level 2 -->
-        <div class="cert-card" data-cert-id="fms-level2">
+        <!-- Card 4: FMS-Level 1 -->
+        <div class="cert-card" data-cert-id="fms-level1" data-cert-category="rehab-clinical">
           <div class="cert-card-header">
-            <div class="cert-badge-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </div>
             <div class="cert-status-tag">
-              <span class="cert-pulse-dot"></span> Verified Active
+              <span class="cert-status-icon">&#10003;</span> Verified Active
             </div>
           </div>
-          <div class="cert-card-preview" data-cert-render="fms-level2"></div>
+          <div class="cert-card-preview" data-cert-render="fms-level1"></div>
           <div class="cert-card-body">
-            <span class="cert-category-tag">Movement &amp; Mobility</span>
-            <h3 class="cert-acronym">FMS Level 2</h3>
+            <span class="cert-category-tag">MOVEMENT &amp; MOBILITY</span>
+            <h3 class="cert-acronym">FMS &mdash; Level 1</h3>
             <h4 class="cert-title">Functional Movement Screen Specialist</h4>
-            <p class="cert-issuer">Functional Movement Systems &bull; USA</p>
+            <p class="cert-issuer">🇺🇸 Functional Movement Systems &bull; USA</p>
             <div class="cert-tags-row">
-              <span class="cert-pill">Movement Screen</span>
-              <span class="cert-pill">Joint Mobility</span>
+              <span class="cert-pill">Movement Screening</span>
+              <span class="cert-pill">Corrective Exercise</span>
               <span class="cert-pill">Injury Prevention</span>
             </div>
           </div>
           <div class="cert-card-footer">
-            <span class="cert-id-badge">ID: FMS-L2-60193</span>
+            <span class="cert-id-badge">ID: FMS-11295</span>
             <span class="cert-view-link">View Details &rarr;</span>
           </div>
         </div>
 
-        <!-- Card 5: EXOS Performance Specialist -->
-        <div class="cert-card" data-cert-id="exos-xps">
+        <!-- Card 5: EXOS-XPS -->
+        <div class="cert-card" data-cert-id="exos-xps" data-cert-category="strength-conditioning">
           <div class="cert-card-header">
-            <div class="cert-badge-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-            </div>
             <div class="cert-status-tag">
-              <span class="cert-pulse-dot"></span> Verified Active
+              <span class="cert-status-icon">&#10003;</span> Verified Active
             </div>
           </div>
           <div class="cert-card-preview" data-cert-render="exos-xps"></div>
           <div class="cert-card-body">
-            <span class="cert-category-tag">Elite Conditioning</span>
+            <span class="cert-category-tag">HUMAN PERFORMANCE</span>
             <h3 class="cert-acronym">EXOS &mdash; XPS</h3>
-            <h4 class="cert-title">Athletic Performance Specialist</h4>
-            <p class="cert-issuer">EXOS Human Performance Institute &bull; USA</p>
+            <h4 class="cert-title">Certified Performance Specialist</h4>
+            <p class="cert-issuer">🇺🇸 EXOS &bull; USA</p>
             <div class="cert-tags-row">
               <span class="cert-pill">Speed &amp; Agility</span>
-              <span class="cert-pill">VO2 Conditioning</span>
-              <span class="cert-pill">Pillar Stability</span>
+              <span class="cert-pill">Energy Systems</span>
+              <span class="cert-pill">Sport Performance</span>
             </div>
           </div>
           <div class="cert-card-footer">
-            <span class="cert-id-badge">ID: EXOS-PS-10943</span>
+            <span class="cert-id-badge">ID: EXOS-XPS-77621</span>
             <span class="cert-view-link">View Details &rarr;</span>
           </div>
         </div>
 
-        <!-- Card 6: AHA BLS / CPR & AED -->
-        <div class="cert-card" data-cert-id="aha-bls">
+        <!-- Card 6: ACE-Health Coach -->
+        <div class="cert-card" data-cert-id="ace-health-coach" data-cert-category="rehab-clinical">
           <div class="cert-card-header">
-            <div class="cert-badge-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </div>
             <div class="cert-status-tag">
-              <span class="cert-pulse-dot"></span> Verified Active
+              <span class="cert-status-icon">&#10003;</span> Verified Active
             </div>
           </div>
-          <div class="cert-card-preview" data-cert-render="aha-bls"></div>
+          <div class="cert-card-preview" data-cert-render="ace-health-coach"></div>
           <div class="cert-card-body">
-            <span class="cert-category-tag">Safety Protocol</span>
-            <h3 class="cert-acronym">AHA &mdash; BLS</h3>
-            <h4 class="cert-title">Basic Life Support / CPR &amp; AED Provider</h4>
-            <p class="cert-issuer">American Heart Association &bull; USA</p>
+            <span class="cert-category-tag">LIFESTYLE &amp; BEHAVIOR</span>
+            <h3 class="cert-acronym">ACE &mdash; Health Coach</h3>
+            <h4 class="cert-title">Certified Health Coach</h4>
+            <p class="cert-issuer">🇺🇸 American Council on Exercise &bull; USA</p>
             <div class="cert-tags-row">
-              <span class="cert-pill">Adult/Child CPR</span>
-              <span class="cert-pill">AED Operation</span>
-              <span class="cert-pill">Client Safety</span>
+              <span class="cert-pill">Behavior Change</span>
+              <span class="cert-pill">Lifestyle Coaching</span>
+              <span class="cert-pill">Client Adherence</span>
             </div>
           </div>
           <div class="cert-card-footer">
-            <span class="cert-id-badge">ID: AHA-BLS-772910</span>
+            <span class="cert-id-badge">ID: ACE-HC-55317</span>
             <span class="cert-view-link">View Details &rarr;</span>
           </div>
         </div>
 
       </div>
+
+      <!-- Bottom CTA Banner -->
+      <div class="cert-bottom-cta-banner reveal-on-scroll">
+        <div class="cert-cta-top">
+          <div class="cert-cta-heading-col">
+            <span class="cert-cta-eyebrow">READY TO WORK WITH A CERTIFIED EXPERT?</span>
+            <h3 class="cert-cta-title">
+              Let&rsquo;s Build a Stronger,<br>
+              <span class="text-accent">Healthier You.</span>
+            </h3>
+          </div>
+          <div class="cert-cta-action-col">
+            <p class="cert-cta-desc">
+              Science-backed coaching.<br>
+              Personalized for your goals.
+            </p>
+            <button type="button" class="btn btn-primary btn-glow cert-cta-btn" data-open-modal="bookingModal">
+              Start Your Journey &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-cta-bottom-row">
+          <div class="cert-trust-item">
+            <div class="cert-trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <span>Proven Methods</span>
+          </div>
+
+          <div class="cert-trust-item">
+            <div class="cert-trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span>Customized to You</span>
+          </div>
+
+          <div class="cert-trust-item">
+            <div class="cert-trust-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <span>Long-Term Results</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Interactive Sports Science Lab & Calculator Suite -->
   <section class="section plan-generator-section" id="plan-generator">
     <div class="container">
-      <div class="section-header reveal-on-scroll" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
-        <div>
-          <span class="section-tag">Sports Science Lab</span>
-          <h2 class="section-title">Interactive Training &amp; Nutrition Engines.</h2>
-          <p class="section-desc">Hitung kebutuhan nutrisi makro, estimasi 1-Rep Max angkatan, dan rancang weekly split routine berbasis ilmu fisiologi olahraga terkini.</p>
-        </div>
-        <button class="btn btn-outline" data-open-modal="bookingModal">
-          Consult With Coach &rarr;
-        </button>
-      </div>
+      
+      <!-- Top Hero Split Header Card -->
+      <div class="lab-hero-card reveal-on-scroll">
+        <div class="lab-hero-grid">
+          
+          <!-- Left Column: Eyebrow, Heading, Desc, and 3 Switcher Tab Cards -->
+          <div class="lab-hero-left">
+            <span class="lab-hero-eyebrow">SPORTS SCIENCE LAB</span>
+            <h2 class="lab-hero-title">Interactive Training &amp;<br><span class="text-accent">Nutrition Engines.</span></h2>
+            <p class="lab-hero-desc">Hitung kebutuhan nutrisi makro, estimasi 1-Rep Max angkatan, dan rancang weekly split routine berbasis ilmu fisiologi olahraga terkini.</p>
+            
+            <!-- 3 Switcher Tab Cards -->
+            <div class="lab-nav-tabs">
+              <button type="button" class="lab-tab-card active" data-lab-tab="labTabMacro" id="btnLabTabMacro">
+                <div class="lab-tab-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                    <line x1="8" y1="6" x2="16" y2="6"></line>
+                    <line x1="16" y1="14" x2="16" y2="18"></line>
+                    <path d="M16 10h.01"></path>
+                    <path d="M12 10h.01"></path>
+                    <path d="M8 10h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M8 14h.01"></path>
+                    <path d="M12 18h.01"></path>
+                    <path d="M8 18h.01"></path>
+                  </svg>
+                </div>
+                <div class="lab-tab-text">
+                  <span class="lab-tab-title">1. Macro &amp; TDEE Engine</span>
+                  <span class="lab-tab-sub">Hitung kebutuhan kalori &amp; makro</span>
+                </div>
+              </button>
 
-      <!-- Lab Navigation Tabs -->
-      <div class="lab-nav-tabs reveal-on-scroll">
-        <button type="button" class="lab-tab-btn active" data-lab-tab="labTabMacro">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17V7"/></svg>
-          1. Macro &amp; TDEE Engine
-        </button>
-        <button type="button" class="lab-tab-btn" data-lab-tab="labTabOrm">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
-          2. 1RM Strength Matrix
-        </button>
-        <button type="button" class="lab-tab-btn" data-lab-tab="labTabRoutine">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          3. Weekly Routine Split
-        </button>
+              <button type="button" class="lab-tab-card" data-lab-tab="labTabOrm" id="btnLabTabOrm">
+                <div class="lab-tab-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6.5 6.5 11 11"></path>
+                    <path d="m21 21-1-1"></path>
+                    <path d="m3 3 1 1"></path>
+                    <path d="m18 22 4-4"></path>
+                    <path d="m2 6 4-4"></path>
+                    <path d="m3 10 7-7"></path>
+                    <path d="m14 21 7-7"></path>
+                  </svg>
+                </div>
+                <div class="lab-tab-text">
+                  <span class="lab-tab-title">2. 1RM Strength Matrix</span>
+                  <span class="lab-tab-sub">Estimasi kekuatan maksimal</span>
+                </div>
+              </button>
+
+              <button type="button" class="lab-tab-card" data-lab-tab="labTabRoutine" id="btnLabTabRoutine">
+                <div class="lab-tab-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+                <div class="lab-tab-text">
+                  <span class="lab-tab-title">3. Weekly Routine Split</span>
+                  <span class="lab-tab-sub">Rancang program latihan</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Muscular Back Photo, Editorial Stack & Cursive -->
+          <div class="lab-hero-right">
+            <div class="lab-hero-media">
+              <img src="assets/images/trans_back_after.webp" alt="Athletic Back Conditioning" class="lab-hero-img" loading="lazy">
+              <div class="lab-hero-overlay"></div>
+              
+              <!-- Top-right Editorial Word Stack -->
+              <div class="lab-editorial-stack">
+                <div class="lab-stack-line"></div>
+                <div class="lab-stack-words">
+                  <span>SCIENCE</span>
+                  <span>PLANS</span>
+                  <span>DISCIPLINE</span>
+                  <span>RESULTS</span>
+                </div>
+              </div>
+
+              <!-- Cursive handwritten overlay -->
+              <div class="lab-cursive-badge">
+                <span>Better</span>
+                <span>Fuel</span>
+                <span>Stronger</span>
+                <span>You</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <!-- ==========================================
            TAB 1: MACRO & TDEE ENGINE
            ========================================== -->
       <div class="lab-tab-panel active" id="labTabMacro">
-        <div class="generator-card">
-          <div class="generator-grid">
+        <div class="lab-engine-card reveal-on-scroll">
+          <div class="lab-engine-grid">
             
-            <!-- Left: Inputs -->
-            <div class="generator-form-wrap">
-              <div>
-                <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">Metabolic &amp; Macro Calculator</h3>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Menggunakan formula klinis <strong>Mifflin-St Jeor</strong> untuk presisi BMR, TDEE, dan gramasi protein optimal.</p>
-              </div>
-
-              <!-- Gender -->
-              <div class="form-group">
-                <label class="form-label" for="macroGender">Gender Fisiologis</label>
-                <div class="custom-select-wrap">
-                  <select class="custom-select" id="macroGender">
-                    <option value="male" selected>Pria (Male)</option>
-                    <option value="female">Wanita (Female)</option>
-                  </select>
-                  <div class="select-arrow">&#9662;</div>
+            <!-- Left: Inputs Form -->
+            <div class="lab-form-col">
+              
+              <!-- Form Header -->
+              <div class="lab-panel-header">
+                <div class="lab-header-left">
+                  <div class="lab-header-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="lab-header-title">Metabolic &amp; Macro Calculator</h3>
+                    <p class="lab-header-sub">Menggunakan formula klinis Mifflin-St Jeor untuk presisi BMR, TDEE, dan gramasi protein optimal.</p>
+                  </div>
+                </div>
+                <div class="lab-personalize-badge">
+                  <span class="lab-radar-dot"></span>
+                  <span>Personalisasi hasil berdasarkan data Anda</span>
                 </div>
               </div>
 
-              <!-- Age, Weight, Height Row -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
-                <div class="form-group">
-                  <label class="form-label" for="macroAge">Usia (Thn)</label>
-                  <input type="number" id="macroAge" class="form-input" value="28" min="15" max="80">
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="macroWeight">Berat (kg)</label>
-                  <input type="number" id="macroWeight" class="form-input" value="75" min="35" max="200">
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="macroHeight">Tinggi (cm)</label>
-                  <input type="number" id="macroHeight" class="form-input" value="175" min="120" max="220">
-                </div>
-              </div>
-
-              <!-- Activity Level -->
-              <div class="form-group">
-                <label class="form-label" for="macroActivity">Tingkat Aktivitas Harian</label>
-                <div class="custom-select-wrap">
-                  <select class="custom-select" id="macroActivity">
-                    <option value="sedentary">Sedentary (Desk job, minim olahraga)</option>
-                    <option value="light">Lightly Active (Latihan 1-3 hari/minggu)</option>
-                    <option value="moderate" selected>Moderately Active (Latihan 3-5 hari/minggu)</option>
-                    <option value="very">Very Active (Latihan keras 6-7 hari/minggu)</option>
-                  </select>
-                  <div class="select-arrow">&#9662;</div>
+              <!-- Gender Selection -->
+              <div class="lab-field-group">
+                <span class="lab-field-label">GENDER</span>
+                <div class="lab-gender-toggle">
+                  <button type="button" class="lab-gender-btn active" id="btnGenderMale" data-gender="male">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Pria (Male)</span>
+                  </button>
+                  <button type="button" class="lab-gender-btn" id="btnGenderFemale" data-gender="female">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Wanita (Female)</span>
+                  </button>
+                  <input type="hidden" id="macroGender" value="male">
                 </div>
               </div>
 
-              <!-- Goal -->
-              <div class="form-group">
-                <label class="form-label" for="macroGoal">Target Transformasi</label>
-                <div class="custom-select-wrap">
-                  <select class="custom-select" id="macroGoal">
-                    <option value="cut" selected>Defisit Kalori (Fat Loss &amp; Shredding -20%)</option>
-                    <option value="maintenance">Maintenance (Body Recomposition)</option>
-                    <option value="bulk">Surplus Terukur (Clean Muscle Hypertrophy +12%)</option>
-                  </select>
-                  <div class="select-arrow">&#9662;</div>
+              <!-- Usia, Berat, Tinggi Steppers Row -->
+              <div class="lab-steppers-grid">
+                <!-- Usia -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">USIA (TAHUN)</span>
+                  <div class="lab-stepper-box">
+                    <span class="lab-stepper-val" id="dispAge">28</span>
+                    <input type="hidden" id="macroAge" value="28">
+                    <div class="lab-stepper-btns">
+                      <button type="button" class="stepper-btn" data-stepper="age" data-delta="-1" aria-label="Decrease Age">−</button>
+                      <button type="button" class="stepper-btn" data-stepper="age" data-delta="1" aria-label="Increase Age">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Berat -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">BERAT (KG)</span>
+                  <div class="lab-stepper-box">
+                    <span class="lab-stepper-val" id="dispWeight">75</span>
+                    <input type="hidden" id="macroWeight" value="75">
+                    <div class="lab-stepper-btns">
+                      <button type="button" class="stepper-btn" data-stepper="weight" data-delta="-1" aria-label="Decrease Weight">−</button>
+                      <button type="button" class="stepper-btn" data-stepper="weight" data-delta="1" aria-label="Increase Weight">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tinggi -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">TINGGI (CM)</span>
+                  <div class="lab-stepper-box">
+                    <span class="lab-stepper-val" id="dispHeight">175</span>
+                    <input type="hidden" id="macroHeight" value="175">
+                    <div class="lab-stepper-btns">
+                      <button type="button" class="stepper-btn" data-stepper="height" data-delta="-1" aria-label="Decrease Height">−</button>
+                      <button type="button" class="stepper-btn" data-stepper="height" data-delta="1" aria-label="Increase Height">+</button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <button class="btn btn-primary" id="calculateMacroBtn" style="width: 100%;">
-                Hitung Kebutuhan Kalori &amp; Makro &rarr;
-              </button>
+              <!-- Activity Level & Goal Selectors Row -->
+              <div class="lab-dropdowns-grid">
+                <!-- Activity Level -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">TINGKAT AKTIVITAS HARIAN</span>
+                  <div class="lab-custom-selector" id="activitySelectorWrap">
+                    <div class="lab-sel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"></circle><path d="m9 20 3-6 4 2 2-5"></path><path d="m6 8 6 2"></path><path d="M12 10v4"></path></svg>
+                    </div>
+                    <div class="lab-sel-info">
+                      <span class="lab-sel-primary" id="dispActivityTitle">Moderately Active</span>
+                      <span class="lab-sel-desc" id="dispActivitySub">Latihan 3–5 hari/minggu</span>
+                    </div>
+                    <select class="lab-hidden-select" id="macroActivity">
+                      <option value="sedentary" data-title="Sedentary" data-sub="Desk job, minim olahraga">Sedentary (Minim olahraga)</option>
+                      <option value="light" data-title="Lightly Active" data-sub="Latihan 1–3 hari/minggu">Lightly Active (1–3 hari/mgg)</option>
+                      <option value="moderate" data-title="Moderately Active" data-sub="Latihan 3–5 hari/minggu" selected>Moderately Active (3–5 hari/mgg)</option>
+                      <option value="very" data-title="Very Active" data-sub="Latihan keras 6–7 hari/minggu">Very Active (6–7 hari/mgg)</option>
+                    </select>
+                    <div class="lab-sel-chevron">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Goal -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">TARGET TRANSFORMASI</span>
+                  <div class="lab-custom-selector" id="goalSelectorWrap">
+                    <div class="lab-sel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                    </div>
+                    <div class="lab-sel-info">
+                      <span class="lab-sel-primary" id="dispGoalTitle">Defisit Kalori</span>
+                      <span class="lab-sel-desc" id="dispGoalSub">Fat Loss &amp; Shredding (−20%)</span>
+                    </div>
+                    <select class="lab-hidden-select" id="macroGoal">
+                      <option value="cut" data-title="Defisit Kalori" data-sub="Fat Loss &amp; Shredding (−20%)" selected>Defisit Kalori (-20%)</option>
+                      <option value="maintenance" data-title="Maintenance" data-sub="Body Recomposition &amp; Tone">Maintenance (Recomp)</option>
+                      <option value="bulk" data-title="Surplus Terukur" data-sub="Clean Muscle Hypertrophy (+12%)">Surplus Terukur (+12%)</option>
+                    </select>
+                    <div class="lab-sel-chevron">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="lab-actions-row">
+                <button type="button" class="btn btn-primary lab-calc-btn" id="calculateMacroBtn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                  <span>Hitung Kebutuhan Kalori &amp; Makro &rarr;</span>
+                </button>
+                <button type="button" class="lab-reset-btn" id="resetMacroBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                  <span>Reset Form</span>
+                </button>
+              </div>
+
+              <!-- Formula Note Dock -->
+              <div class="lab-formula-dock">
+                <div class="lab-formula-text">
+                  <span class="lab-formula-heading">Formula yang Digunakan</span>
+                  <span class="lab-formula-math">Mifflin-St Jeor (BMR) &times; Activity Factor = TDEE</span>
+                  <span class="lab-formula-sub">Makro disesuaikan berdasarkan target Anda.</span>
+                </div>
+                <a href="#about" class="lab-formula-link">Lihat Penjelasan Formula &rarr;</a>
+              </div>
+
             </div>
 
             <!-- Right: Results Card -->
-            <div class="macro-output-card">
-              <div class="plan-box-header">
-                <div class="plan-box-title">Target Harian Anda</div>
-                <span class="cert-status-tag" style="background: rgba(210, 255, 0, 0.1); border: 1px solid var(--accent); color: var(--accent);">Mifflin-St Jeor</span>
-              </div>
-
-              <div class="macro-calories-display">
-                <span class="macro-cal-number" id="macroCalories">2,020</span>
-                <span class="macro-cal-unit">kcal / hari</span>
-              </div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.25rem;">Asupan energi harian yang disesuaikan untuk mencapai target defisit/surplus tanpa mengorbankan otot.</p>
-
-              <div class="macro-stats-row">
-                <div class="macro-stat-box">
-                  <div class="macro-stat-label">Basal Metabolic Rate (BMR)</div>
-                  <div class="macro-stat-val" id="macroBmr">1,695 kcal</div>
+            <div class="lab-result-col">
+              
+              <!-- Result Header -->
+              <div class="lab-result-header">
+                <div>
+                  <h4 class="lab-result-title">Hasil Perhitungan</h4>
+                  <span class="lab-result-sub">Berdasarkan data yang Anda masukkan</span>
                 </div>
-                <div class="macro-stat-box">
-                  <div class="macro-stat-label">Total Daily Energy (TDEE)</div>
-                  <div class="macro-stat-val" id="macroTdee">2,627 kcal</div>
+                <div class="lab-target-pill" id="dispTargetPill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ff453a" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                  <span>Target: <strong id="dispTargetName">Fat Loss</strong></span>
                 </div>
               </div>
 
-              <!-- Macro Breakdown Progress Bars -->
-              <div class="macro-grams-grid">
-                
-                <!-- Protein -->
-                <div class="macro-bar-item">
-                  <div class="macro-bar-header">
-                    <span style="color: #00e5ff;">Protein (Optimal Synthesis)</span>
-                    <span id="macroProteinVal">165g (660 kcal)</span>
+              <!-- Hero Daily Calorie Box with Circular Progress Donut -->
+              <div class="lab-hero-calorie-box">
+                <div class="lab-cal-left">
+                  <span class="lab-cal-label">TARGET HARIAN ANDA &mdash;</span>
+                  <div class="lab-cal-num-wrap">
+                    <span class="lab-cal-val" id="macroCalories">2,020</span>
+                    <span class="lab-cal-unit">kcal / hari</span>
                   </div>
-                  <div class="macro-bar-track">
-                    <div class="macro-bar-fill protein" id="macroProteinBar" style="width: 33%;"></div>
+                  <p class="lab-cal-desc" id="macroCalDesc">Asupan energi harian yang disesuaikan untuk mencapai target defisit tanpa mengorbankan massa otot.</p>
+                </div>
+
+                <div class="lab-cal-right">
+                  <div class="lab-donut-wrap">
+                    <svg class="lab-donut-svg" width="110" height="110" viewBox="0 0 110 110">
+                      <circle class="lab-donut-bg" cx="55" cy="55" r="44"></circle>
+                      <circle class="lab-donut-fg" id="macroDonutRing" cx="55" cy="55" r="44" stroke-dasharray="276.46" stroke-dashoffset="65"></circle>
+                    </svg>
+                    <div class="lab-donut-text">
+                      <span class="lab-donut-val" id="macroDonutVal">2,020</span>
+                      <span class="lab-donut-unit">kcal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BMR & TDEE Dual Box -->
+              <div class="lab-substats-row">
+                <div class="lab-substat-card">
+                  <div class="lab-substat-icon flame">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                  </div>
+                  <div class="lab-substat-info">
+                    <span class="lab-substat-label">BMR (Basal Metabolic Rate)</span>
+                    <span class="lab-substat-num" id="macroBmr">1,695 kcal</span>
+                  </div>
+                </div>
+
+                <div class="lab-substat-card">
+                  <div class="lab-substat-icon bolt">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <div class="lab-substat-info">
+                    <span class="lab-substat-label">TDEE (Total Daily Energy)</span>
+                    <span class="lab-substat-num" id="macroTdee">2,627 kcal</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Macro Breakdown Rows -->
+              <div class="lab-macros-container">
+                <div class="lab-macros-header">
+                  <span class="lab-macros-title">Distribusi Makronutrien Harian</span>
+                  <span class="lab-macros-total" id="macroTotalLabel">Total: 2,020 kcal</span>
+                </div>
+
+                <!-- Protein -->
+                <div class="lab-macro-row">
+                  <div class="lab-macro-meta">
+                    <div class="lab-macro-name-wrap">
+                      <div class="lab-macro-badge protein">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                      </div>
+                      <span class="lab-macro-label protein">Protein (Optimal Synthesis)</span>
+                    </div>
+                    <div class="lab-macro-vals">
+                      <span class="lab-macro-gram" id="macroProteinVal">165 g (660 kcal)</span>
+                      <span class="lab-macro-pct" id="macroProteinPct">33%</span>
+                    </div>
+                  </div>
+                  <div class="lab-macro-track">
+                    <div class="lab-macro-fill protein" id="macroProteinBar" style="width: 33%;"></div>
                   </div>
                 </div>
 
                 <!-- Carbs -->
-                <div class="macro-bar-item">
-                  <div class="macro-bar-header">
-                    <span style="color: var(--accent);">Carbohydrates (Performance Fuel)</span>
-                    <span id="macroCarbsVal">202g (808 kcal)</span>
+                <div class="lab-macro-row">
+                  <div class="lab-macro-meta">
+                    <div class="lab-macro-name-wrap">
+                      <div class="lab-macro-badge carbs">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                      </div>
+                      <span class="lab-macro-label carbs">Karbohidrat (Performance Fuel)</span>
+                    </div>
+                    <div class="lab-macro-vals">
+                      <span class="lab-macro-gram" id="macroCarbsVal">202 g (808 kcal)</span>
+                      <span class="lab-macro-pct" id="macroCarbsPct">40%</span>
+                    </div>
                   </div>
-                  <div class="macro-bar-track">
-                    <div class="macro-bar-fill carbs" id="macroCarbsBar" style="width: 40%;"></div>
+                  <div class="lab-macro-track">
+                    <div class="lab-macro-fill carbs" id="macroCarbsBar" style="width: 40%;"></div>
                   </div>
                 </div>
 
                 <!-- Fats -->
-                <div class="macro-bar-item">
-                  <div class="macro-bar-header">
-                    <span style="color: #ff9100;">Healthy Fats (Hormone Health)</span>
-                    <span id="macroFatsVal">61g (549 kcal)</span>
+                <div class="lab-macro-row">
+                  <div class="lab-macro-meta">
+                    <div class="lab-macro-name-wrap">
+                      <div class="lab-macro-badge fats">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg>
+                      </div>
+                      <span class="lab-macro-label fats">Lemak Sehat (Hormone Health)</span>
+                    </div>
+                    <div class="lab-macro-vals">
+                      <span class="lab-macro-gram" id="macroFatsVal">61 g (549 kcal)</span>
+                      <span class="lab-macro-pct" id="macroFatsPct">27%</span>
+                    </div>
                   </div>
-                  <div class="macro-bar-track">
-                    <div class="macro-bar-fill fats" id="macroFatsBar" style="width: 27%;"></div>
+                  <div class="lab-macro-track">
+                    <div class="lab-macro-fill fats" id="macroFatsBar" style="width: 27%;"></div>
                   </div>
                 </div>
-
               </div>
 
-              <!-- Hydration Water Recommendation -->
-              <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(0, 229, 255, 0.04); border: 1px solid rgba(0, 229, 255, 0.2); padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
-                <span style="font-size: 0.82rem; color: #00e5ff; font-weight: 700;">Minimal Hidrasi Harian:</span>
-                <span style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary);" id="macroWater">2.6 - 3.2 Liter / hari</span>
+              <!-- Hydration Box -->
+              <div class="lab-hydration-box">
+                <div class="lab-hydration-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                </div>
+                <div class="lab-hydration-main">
+                  <span class="lab-hydration-label">Minimal Hidrasi Harian</span>
+                  <span class="lab-hydration-val" id="macroWater">2.6 &ndash; 3.2 Liter / hari</span>
+                </div>
+                <div class="lab-hydration-note">
+                  Dukung performa, metabolisme, dan pemulihan lebih optimal.
+                </div>
               </div>
 
-              <div class="plan-actions-row">
-                <button class="btn btn-outline" id="exportMacroBtn" style="padding: 0.65rem 1.25rem; font-size: 0.85rem;">
-                  Export ke Form Konsultasi &rarr;
-                </button>
-                <button class="btn btn-primary" data-open-modal="bookingModal" style="padding: 0.65rem 1.25rem; font-size: 0.85rem;">
-                  Rancang Meal Plan dengan Revo &rarr;
-                </button>
-              </div>
             </div>
 
           </div>
@@ -1744,100 +2267,196 @@
            TAB 2: 1-REP MAX STRENGTH MATRIX
            ========================================== -->
       <div class="lab-tab-panel" id="labTabOrm">
-        <div class="generator-card">
-          <div class="generator-grid">
+        <div class="lab-engine-card reveal-on-scroll">
+          <div class="lab-engine-grid">
             
-            <!-- Left: Inputs -->
-            <div class="generator-form-wrap">
-              <div>
-                <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">1-Rep Max &amp; Load Periodization</h3>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Estimasi kekuatan maksimal dan zona beban latihan (Brzycki &amp; Epley formula) untuk menghindari plateau.</p>
+            <!-- Left: Inputs Form -->
+            <div class="lab-form-col">
+              
+              <!-- Header -->
+              <div class="lab-panel-header">
+                <div class="lab-header-left">
+                  <div class="lab-header-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6.5 6.5 11 11"></path>
+                      <path d="m21 21-1-1"></path>
+                      <path d="m3 3 1 1"></path>
+                      <path d="m18 22 4-4"></path>
+                      <path d="m2 6 4-4"></path>
+                      <path d="m3 10 7-7"></path>
+                      <path d="m14 21 7-7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="lab-header-title">1-Rep Max &amp; Load Periodization</h3>
+                    <p class="lab-header-sub">Estimasi kekuatan maksimal dan zona beban latihan (Brzycki &amp; Epley formula) untuk menghindari plateau.</p>
+                  </div>
+                </div>
+                <div class="lab-personalize-badge">
+                  <span class="lab-radar-dot"></span>
+                  <span>Akurasi 98% Sub-Maximal Protocol</span>
+                </div>
               </div>
 
               <!-- Exercise Selection -->
-              <div class="form-group">
-                <label class="form-label" for="ormExercise">Compound Exercise</label>
-                <div class="custom-select-wrap">
-                  <select class="custom-select" id="ormExercise">
-                    <option value="squat" selected>Barbell Back Squat</option>
-                    <option value="bench">Flat Barbell Bench Press</option>
-                    <option value="deadlift">Conventional Barbell Deadlift</option>
-                    <option value="ohp">Standing Overhead Press (OHP)</option>
-                    <option value="row">Barbell Bent-Over Row</option>
+              <div class="lab-field-group">
+                <span class="lab-field-label">COMPOUND EXERCISE</span>
+                <div class="lab-custom-selector" id="ormExerciseWrap">
+                  <div class="lab-sel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path></svg>
+                  </div>
+                  <div class="lab-sel-info">
+                    <span class="lab-sel-primary" id="dispOrmExercise">Barbell Back Squat</span>
+                    <span class="lab-sel-desc">Primary Lower Body Compound</span>
+                  </div>
+                  <select class="lab-hidden-select" id="ormExercise">
+                    <option value="squat" data-title="Barbell Back Squat" data-sub="Primary Lower Body Compound" selected>Barbell Back Squat</option>
+                    <option value="bench" data-title="Flat Barbell Bench Press" data-sub="Primary Upper Push Compound">Flat Barbell Bench Press</option>
+                    <option value="deadlift" data-title="Conventional Barbell Deadlift" data-sub="Primary Posterior Chain">Conventional Barbell Deadlift</option>
+                    <option value="ohp" data-title="Standing Overhead Press (OHP)" data-sub="Vertical Upper Push">Standing Overhead Press (OHP)</option>
+                    <option value="row" data-title="Barbell Bent-Over Row" data-sub="Horizontal Upper Pull">Barbell Bent-Over Row</option>
                   </select>
-                  <div class="select-arrow">&#9662;</div>
+                  <div class="lab-sel-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </div>
                 </div>
               </div>
 
-              <!-- Lifted Weight & Reps -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div class="form-group">
-                  <label class="form-label" for="ormWeight">Beban Angkatan (kg)</label>
-                  <input type="number" id="ormWeight" class="form-input" value="80" min="10" max="400">
+              <!-- Weight & Reps Steppers Row -->
+              <div class="lab-steppers-grid" style="grid-template-columns: 1fr 1fr;">
+                <!-- Beban -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">BEBAN ANGKATAN (KG)</span>
+                  <div class="lab-stepper-box">
+                    <span class="lab-stepper-val" id="dispOrmWeight">80</span>
+                    <input type="hidden" id="ormWeight" value="80">
+                    <div class="lab-stepper-btns">
+                      <button type="button" class="stepper-btn" data-stepper="ormWeight" data-delta="-2.5" aria-label="Decrease Weight">−</button>
+                      <button type="button" class="stepper-btn" data-stepper="ormWeight" data-delta="2.5" aria-label="Increase Weight">+</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label class="form-label" for="ormReps">Reps Berhasil (1-12)</label>
-                  <input type="number" id="ormReps" class="form-input" value="6" min="1" max="15">
+
+                <!-- Reps -->
+                <div class="lab-field-group">
+                  <span class="lab-field-label">REPETISI BERHASIL (1-12)</span>
+                  <div class="lab-stepper-box">
+                    <span class="lab-stepper-val" id="dispOrmReps">6</span>
+                    <input type="hidden" id="ormReps" value="6">
+                    <div class="lab-stepper-btns">
+                      <button type="button" class="stepper-btn" data-stepper="ormReps" data-delta="-1" aria-label="Decrease Reps">−</button>
+                      <button type="button" class="stepper-btn" data-stepper="ormReps" data-delta="1" aria-label="Increase Reps">+</button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem;">
-                <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Sports Science Fact:</span>
-                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.3rem;">Menguji beban 1RM secara langsung berisiko cedera tinggi. Menggunakan sub-maximal test (3-8 reps) memberikan akurasi 98% dengan risiko cedera mendekati 0%.</p>
+              <!-- Action Buttons -->
+              <div class="lab-actions-row">
+                <button type="button" class="btn btn-primary lab-calc-btn" id="calculateOrmBtn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path></svg>
+                  <span>Hitung 1RM &amp; Zona Beban &rarr;</span>
+                </button>
               </div>
 
-              <button class="btn btn-primary" id="calculateOrmBtn" style="width: 100%;">
-                Hitung 1RM &amp; Zona Beban &rarr;
-              </button>
+              <!-- Formula Note Dock -->
+              <div class="lab-formula-dock">
+                <div class="lab-formula-text">
+                  <span class="lab-formula-heading">Formula Brzycki &amp; Epley</span>
+                  <span class="lab-formula-math">1RM = Weight &divide; (1.0278 &minus; 0.0278 &times; Reps)</span>
+                  <span class="lab-formula-sub">Memberikan estimasi akurasi 98% tanpa risiko cedera uji beban maksimal.</span>
+                </div>
+              </div>
+
             </div>
 
             <!-- Right: Results Card -->
-            <div class="macro-output-card">
-              <div class="plan-box-header">
-                <div class="plan-box-title">Strength Matrix Breakdown</div>
-                <span class="cert-status-tag" id="ormTierBadge" style="background: rgba(210, 255, 0, 0.1); border: 1px solid var(--accent); color: var(--accent);">Solid Intermediate Strength</span>
+            <div class="lab-result-col">
+              
+              <!-- Result Header -->
+              <div class="lab-result-header">
+                <div>
+                  <h4 class="lab-result-title">Strength Matrix Breakdown</h4>
+                  <span class="lab-result-sub">Proyeksi beban 1-repetisi maksimal Anda</span>
+                </div>
+                <div class="lab-target-pill" style="border-color: rgba(210, 255, 0, 0.3);">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <span id="ormTierBadge">Solid Intermediate Strength</span>
+                </div>
               </div>
 
-              <div class="macro-calories-display">
-                <span class="macro-cal-number" id="ormEstimatedMax">96 kg</span>
-                <span class="macro-cal-unit">Estimated 1RM</span>
-              </div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">Proyeksi beban 1-repetisi maksimal untuk menyusun program progressive overload.</p>
+              <!-- Hero 1RM Box -->
+              <div class="lab-hero-calorie-box">
+                <div class="lab-cal-left">
+                  <span class="lab-cal-label">ESTIMASI 1-REP MAX (1RM) &mdash;</span>
+                  <div class="lab-cal-num-wrap">
+                    <span class="lab-cal-val" id="ormEstimatedMax">96</span>
+                    <span class="lab-cal-unit">kg / lift</span>
+                  </div>
+                  <p class="lab-cal-desc">Beban acuan 100% kapasitas neuromuscular untuk kalkulasi progressive overload &amp; periodisasi mingguan.</p>
+                </div>
 
-              <!-- Percentage Training Zones Grid -->
-              <div class="orm-zones-grid">
+                <div class="lab-cal-right">
+                  <div class="lab-donut-wrap">
+                    <svg class="lab-donut-svg" width="110" height="110" viewBox="0 0 110 110">
+                      <circle class="lab-donut-bg" cx="55" cy="55" r="44"></circle>
+                      <circle class="lab-donut-fg" cx="55" cy="55" r="44" stroke-dasharray="276.46" stroke-dashoffset="40"></circle>
+                    </svg>
+                    <div class="lab-donut-text">
+                      <span class="lab-donut-val">1RM</span>
+                      <span class="lab-donut-unit" id="ormDonutKg">96 kg</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Training Zones Grid -->
+              <div class="lab-orm-zones-grid">
                 
-                <div class="orm-zone-card">
-                  <span class="orm-zone-pct">95% 1RM (Power / Peak)</span>
-                  <span class="orm-zone-weight" id="ormLoad95">91 kg</span>
-                  <span class="orm-zone-desc">1 - 2 Reps &bull; RPE 9.5</span>
+                <div class="lab-zone-card">
+                  <div class="lab-zone-top">
+                    <span class="lab-zone-pct">95% 1RM</span>
+                    <span class="lab-zone-tag">Power / Peak</span>
+                  </div>
+                  <span class="lab-zone-weight" id="ormLoad95">91 kg</span>
+                  <span class="lab-zone-desc">1 &ndash; 2 Reps &bull; RPE 9.5</span>
                 </div>
 
-                <div class="orm-zone-card">
-                  <span class="orm-zone-pct">85% 1RM (Strength Focus)</span>
-                  <span class="orm-zone-weight" id="ormLoad85">82 kg</span>
-                  <span class="orm-zone-desc">4 - 6 Reps &bull; RPE 8.5</span>
+                <div class="lab-zone-card">
+                  <div class="lab-zone-top">
+                    <span class="lab-zone-pct">85% 1RM</span>
+                    <span class="lab-zone-tag">Strength Focus</span>
+                  </div>
+                  <span class="lab-zone-weight" id="ormLoad85">82 kg</span>
+                  <span class="lab-zone-desc">4 &ndash; 6 Reps &bull; RPE 8.5</span>
                 </div>
 
-                <div class="orm-zone-card">
-                  <span class="orm-zone-pct">75% 1RM (Hypertrophy)</span>
-                  <span class="orm-zone-weight" id="ormLoad75">72 kg</span>
-                  <span class="orm-zone-desc">8 - 10 Reps &bull; RPE 7.5 - 8</span>
+                <div class="lab-zone-card">
+                  <div class="lab-zone-top">
+                    <span class="lab-zone-pct">75% 1RM</span>
+                    <span class="lab-zone-tag">Hypertrophy</span>
+                  </div>
+                  <span class="lab-zone-weight" id="ormLoad75">72 kg</span>
+                  <span class="lab-zone-desc">8 &ndash; 10 Reps &bull; RPE 7.5 &ndash; 8</span>
                 </div>
 
-                <div class="orm-zone-card">
-                  <span class="orm-zone-pct">65% 1RM (Endurance / Deload)</span>
-                  <span class="orm-zone-weight" id="ormLoad65">62 kg</span>
-                  <span class="orm-zone-desc">12 - 15 Reps &bull; RPE 6.5</span>
+                <div class="lab-zone-card">
+                  <div class="lab-zone-top">
+                    <span class="lab-zone-pct">65% 1RM</span>
+                    <span class="lab-zone-tag">Endurance / Deload</span>
+                  </div>
+                  <span class="lab-zone-weight" id="ormLoad65">62 kg</span>
+                  <span class="lab-zone-desc">12 &ndash; 15 Reps &bull; RPE 6.5</span>
                 </div>
 
               </div>
 
-              <div class="plan-actions-row">
+              <div class="lab-actions-row" style="margin-top: 1.25rem;">
                 <button class="btn btn-primary" data-open-modal="bookingModal" style="width: 100%;">
-                  Buat Strength Periodization Program &rarr;
+                  Buat Strength Periodization Program Bersama Revo &rarr;
                 </button>
               </div>
+
             </div>
 
           </div>
@@ -1848,81 +2467,146 @@
            TAB 3: WEEKLY ROUTINE SPLIT GENERATOR
            ========================================== -->
       <div class="lab-tab-panel" id="labTabRoutine">
-        <div class="generator-card">
-          <div class="generator-grid">
+        <div class="lab-engine-card reveal-on-scroll">
+          <div class="lab-engine-grid">
             
-            <!-- Left: Inputs -->
-            <div class="generator-form-wrap">
-              <div>
-                <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">Sample Split Routine Generator</h3>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Pilih target, level pengalaman, dan frekuensi latihan mingguan Anda.</p>
+            <!-- Left: Inputs Form -->
+            <div class="lab-form-col">
+              
+              <!-- Header -->
+              <div class="lab-panel-header">
+                <div class="lab-header-left">
+                  <div class="lab-header-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="lab-header-title">Sample Split Routine Generator</h3>
+                    <p class="lab-header-sub">Pilih target, level pengalaman, dan frekuensi latihan mingguan Anda.</p>
+                  </div>
+                </div>
+                <div class="lab-personalize-badge">
+                  <span class="lab-radar-dot"></span>
+                  <span>Custom Periodized Splits</span>
+                </div>
               </div>
 
               <!-- 1. Goal Selector -->
-              <div class="form-group">
-                <label class="form-label" for="planGoalSelect">1. Your Goal</label>
-                <div class="custom-select-wrap">
-                  <select class="custom-select" id="planGoalSelect">
-                    <option value="muscle" selected>Build Muscle (Hypertrophy)</option>
-                    <option value="fatloss">Fat Loss &amp; Metabolic Conditioning</option>
-                    <option value="strength">Maximal Strength &amp; Power</option>
+              <div class="lab-field-group">
+                <span class="lab-field-label">1. YOUR GOAL</span>
+                <div class="lab-custom-selector" id="routineGoalWrap">
+                  <div class="lab-sel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path></svg>
+                  </div>
+                  <div class="lab-sel-info">
+                    <span class="lab-sel-primary" id="dispRoutineGoal">Build Muscle (Hypertrophy)</span>
+                    <span class="lab-sel-desc">Fokus stimulasi volume &amp; pembesaran otot</span>
+                  </div>
+                  <select class="lab-hidden-select" id="planGoalSelect">
+                    <option value="muscle" data-title="Build Muscle (Hypertrophy)" data-sub="Fokus stimulasi volume &amp; pembesaran otot" selected>Build Muscle (Hypertrophy)</option>
+                    <option value="fatloss" data-title="Fat Loss &amp; Metabolic Conditioning" data-sub="Fokus defisit kalori &amp; kepadatan kerja">Fat Loss &amp; Conditioning</option>
+                    <option value="strength" data-title="Maximal Strength &amp; Power" data-sub="Fokus neuromuscular &amp; progressive overload">Maximal Strength &amp; Power</option>
                   </select>
-                  <div class="select-arrow">&#9662;</div>
+                  <div class="lab-sel-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </div>
                 </div>
               </div>
 
-              <!-- 2. Experience Level -->
-              <div class="form-group">
-                <label class="form-label" for="planLevelSelect">2. Experience Level</label>
-                <div class="custom-select-wrap">
-                  <select class="custom-select" id="planLevelSelect">
-                    <option value="beginner">Beginner (&lt; 1 year)</option>
-                    <option value="intermediate" selected>Intermediate (1 - 3 years)</option>
-                    <option value="advanced">Advanced (3+ years)</option>
+              <!-- 2. Experience Level Selector -->
+              <div class="lab-field-group">
+                <span class="lab-field-label">2. EXPERIENCE LEVEL</span>
+                <div class="lab-custom-selector" id="routineLevelWrap">
+                  <div class="lab-sel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  </div>
+                  <div class="lab-sel-info">
+                    <span class="lab-sel-primary" id="dispRoutineLevel">Intermediate (1 - 3 years)</span>
+                    <span class="lab-sel-desc">Sudah menguasai form dasar &amp; compound lifts</span>
+                  </div>
+                  <select class="lab-hidden-select" id="planLevelSelect">
+                    <option value="beginner" data-title="Beginner (< 1 year)" data-sub="Fokus penguasaan form &amp; adaptasi anatomis">Beginner (&lt; 1 year)</option>
+                    <option value="intermediate" data-title="Intermediate (1 - 3 years)" data-sub="Sudah menguasai form dasar &amp; compound lifts" selected>Intermediate (1 - 3 years)</option>
+                    <option value="advanced" data-title="Advanced (3+ years)" data-sub="Fokus variasi intensitas &amp; periodisasi blok">Advanced (3+ years)</option>
                   </select>
-                  <div class="select-arrow">&#9662;</div>
+                  <div class="lab-sel-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </div>
                 </div>
               </div>
 
-              <!-- 3. Days per Week Selector -->
-              <div class="form-group">
-                <label class="form-label">3. Days per Week</label>
+              <!-- 3. Days Per Week -->
+              <div class="lab-field-group">
+                <span class="lab-field-label">3. FREKUENSI LATIHAN (HARI / MINGGU)</span>
                 <div class="day-pills-row">
-                  <button type="button" class="day-pill-btn" data-days="2">2</button>
-                  <button type="button" class="day-pill-btn" data-days="3">3</button>
-                  <button type="button" class="day-pill-btn active" data-days="4">4</button>
-                  <button type="button" class="day-pill-btn" data-days="5">5</button>
+                  <button type="button" class="day-pill-btn" data-days="2">2 Hari</button>
+                  <button type="button" class="day-pill-btn" data-days="3">3 Hari</button>
+                  <button type="button" class="day-pill-btn active" data-days="4">4 Hari</button>
+                  <button type="button" class="day-pill-btn" data-days="5">5 Hari</button>
                 </div>
               </div>
 
-              <button class="btn btn-primary" id="generatePlanBtn" style="width: 100%;">
-                Generate Plan &rarr;
-              </button>
+              <!-- Action Buttons -->
+              <div class="lab-actions-row">
+                <button type="button" class="btn btn-primary lab-calc-btn" id="generatePlanBtn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+                  <span>Generate Split Routine &rarr;</span>
+                </button>
+              </div>
+
             </div>
 
-            <!-- Right: Generated Output Card -->
-            <div class="generated-plan-box">
-              <div class="plan-box-header">
-                <div class="plan-box-title" id="planBoxTitle">Your Sample Plan</div>
-                <span class="program-badge" style="color: var(--accent);">Live Preview</span>
+            <!-- Right: Results Card -->
+            <div class="lab-result-col">
+              
+              <!-- Result Header -->
+              <div class="lab-result-header">
+                <div>
+                  <h4 class="lab-result-title" id="planBoxTitle">4-Day Muscle Building (INTERMEDIATE)</h4>
+                  <span class="lab-result-sub">Jadwal latihan optimal untuk pemulihan jaringan otot</span>
+                </div>
+                <div class="lab-target-pill" style="border-color: rgba(210, 255, 0, 0.3);">
+                  <span class="lab-radar-dot"></span>
+                  <span>Live Preview</span>
+                </div>
               </div>
 
-              <div class="plan-days-list" id="planDaysList">
-                <!-- Dynamically populated via js/plan-generator.js -->
+              <!-- Generated Routine Plan List -->
+              <div class="plan-days-list" id="planDaysList" style="margin-bottom: 1.5rem;">
+                <!-- Populated dynamically via js/plan-generator.js -->
               </div>
 
-              <div class="plan-actions-row">
-                <button class="btn btn-outline" id="copyPlanBtn" style="padding: 0.65rem 1.25rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                  Copy Routine
+              <!-- Routine Action Row -->
+              <div class="lab-actions-row">
+                <button type="button" class="lab-reset-btn" id="copyPlanBtn" style="flex: 1;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy Routine Split</span>
                 </button>
-                <button class="btn btn-primary" data-open-modal="bookingModal" style="padding: 0.65rem 1.25rem; font-size: 0.85rem;">
-                  Customize With Revo &rarr;
+                <button type="button" class="btn btn-primary" data-open-modal="bookingModal" style="flex: 1.2;">
+                  <span>Konsultasi Program Ini &rarr;</span>
                 </button>
               </div>
+
             </div>
 
           </div>
+        </div>
+      </div>
+
+      <!-- Bottom Brand Bar -->
+      <div class="lab-bottom-bar reveal-on-scroll">
+        <div class="lab-brand-tagline">
+          <strong class="lab-brand-name">R E V O</strong>
+          <span class="lab-brand-sep">&mdash;</span>
+          <span class="lab-brand-text">SCIENCE-BACKED COACHING. REAL PROGRESS.</span>
+        </div>
+        <div class="lab-brand-motto">
+          <span class="lab-motto-dot"></span>
+          <span>Your Stronger Tomorrow Starts Here.</span>
         </div>
       </div>
 
@@ -1930,277 +2614,707 @@
   </section>
 
   <!-- Client Testimonials Section ("What They Say.") -->
-  <section class="section" id="testimonials">
+  <section class="section testimonials-section" id="testimonials">
     <div class="container">
-      <div class="programs-header-wrap reveal-on-scroll">
-        <div>
-          <span class="section-tag">Client Love</span>
-          <h2 class="section-title">What They Say.</h2>
+      
+      <!-- Top Header Row -->
+      <div class="testimonials-header-row reveal-on-scroll">
+        <!-- Left Title -->
+        <div class="testimonials-title-block">
+          <span class="testimonials-eyebrow">CLIENT LOVE</span>
+          <h2 class="testimonials-heading">What They <span class="text-accent">Say.</span></h2>
         </div>
-        <div class="slider-nav-btns">
-          <button class="nav-arrow-btn" id="testPrevBtn" aria-label="Previous Testimonial">&#8592;</button>
-          <button class="nav-arrow-btn" id="testNextBtn" aria-label="Next Testimonial">&#8594;</button>
+
+        <!-- Center Description -->
+        <div class="testimonials-desc-block">
+          <p class="testimonials-desc">
+            Real stories from real people. Different goals, backgrounds, and starting points &mdash; but the same result: a stronger, healthier, happier you.
+          </p>
+        </div>
+
+        <!-- Right: Floating Script Badge & Nav Arrows -->
+        <div class="testimonials-nav-wrap">
+          <!-- Floating Cursive Script -->
+          <div class="testimonials-cursive-badge">
+            <span>Real</span>
+            <span>People</span>
+            <span>Real Change</span>
+            <div class="testimonials-cursive-line"></div>
+          </div>
+
+          <div class="testimonials-nav-btns">
+            <button type="button" class="test-nav-arrow prev" id="testPrevBtn" aria-label="Previous Testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 19"></polyline></svg>
+            </button>
+            <button type="button" class="test-nav-arrow next" id="testNextBtn" aria-label="Next Testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="programs-carousel-container reveal-on-scroll reveal-delay-1">
+      <!-- Carousel Slider Track -->
+      <div class="testimonials-slider-container reveal-on-scroll reveal-delay-1">
         <div class="testimonials-track" id="testimonialsTrack">
           
-          <!-- Testimonial 1 (Dimas) -->
+          <!-- Card 1: Dimas -->
           <div class="testimonial-card">
-            <div class="testimonial-avatar-wrap">
-              <img src="assets/images/client_dimas.jpg" alt="Dimas Client Testimonial" class="testimonial-avatar" loading="lazy">
+            <div class="test-card-photo-box">
+              <img src="assets/images/client_dimas.webp" alt="Dimas Client Testimonial" class="test-card-photo" loading="lazy">
+              <span class="test-photo-script script-top-left">Down 12kg</span>
             </div>
-            <div class="testimonial-body">
-              <p class="testimonial-quote">
-                "The best decision I made. Not just a physical change, but a mental one too. Coach Revo keeps every session focused and rewarding."
+            <div class="test-card-content">
+              <div class="test-quote-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              <p class="test-quote-text">
+                &ldquo;The best decision I made. Not just a physical change, but a mental one too. Coach Revo keeps every session focused and rewarding.&rdquo;
               </p>
-              <div class="testimonial-author-name">Dimas, 28</div>
-              <div class="testimonial-author-program">Fat Loss Program</div>
+              <div class="test-author-box">
+                <h4 class="test-author-name">Dimas, 28</h4>
+                <span class="test-author-program">Fat Loss Program</span>
+              </div>
+              <div class="test-metrics-row">
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>
+                  <div class="test-metric-text">
+                    <strong>12kg</strong>
+                    <span>Weight Lost</span>
+                  </div>
+                </div>
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <div class="test-metric-text">
+                    <strong>More</strong>
+                    <span>Confident</span>
+                  </div>
+                </div>
+              </div>
+              <div class="test-stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Testimonial 2 (Arif) -->
+          <!-- Card 2: Arif -->
           <div class="testimonial-card">
-            <div class="testimonial-avatar-wrap">
-              <img src="assets/images/client_arif.jpg" alt="Arif Client Testimonial" class="testimonial-avatar" loading="lazy">
+            <div class="test-card-photo-box">
+              <img src="assets/images/client_arif.webp" alt="Arif Client Testimonial" class="test-card-photo" loading="lazy">
+              <span class="test-photo-script script-bottom-left">Stronger Everyday</span>
             </div>
-            <div class="testimonial-body">
-              <p class="testimonial-quote">
-                "Very professional, supportive, and knows what he's doing. Highly recommended for anyone who wants serious strength progress without injuries."
+            <div class="test-card-content">
+              <div class="test-quote-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              <p class="test-quote-text">
+                &ldquo;Very professional, supportive, and knows what he&rsquo;s doing. Highly recommended for anyone who wants serious strength progress without injuries.&rdquo;
               </p>
-              <div class="testimonial-author-name">Arif, 30</div>
-              <div class="testimonial-author-program">Strength Program</div>
+              <div class="test-author-box">
+                <h4 class="test-author-name">Arif, 30</h4>
+                <span class="test-author-program">Strength Program</span>
+              </div>
+              <div class="test-metrics-row">
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>
+                  <div class="test-metric-text">
+                    <strong>+40%</strong>
+                    <span>Strength Gain</span>
+                  </div>
+                </div>
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <div class="test-metric-text">
+                    <strong>Better</strong>
+                    <span>Posture</span>
+                  </div>
+                </div>
+              </div>
+              <div class="test-stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Testimonial 3 (Fahmi) -->
+          <!-- Card 3: Fahmi -->
           <div class="testimonial-card">
-            <div class="testimonial-avatar-wrap">
-              <img src="assets/images/client_dimas.jpg" alt="Fahmi Client Testimonial" class="testimonial-avatar" loading="lazy">
+            <div class="test-card-photo-box">
+              <img src="assets/images/client_fahmi.webp" alt="Fahmi Client Testimonial" class="test-card-photo" loading="lazy">
+              <span class="test-photo-script script-bottom-left">More Energy</span>
             </div>
-            <div class="testimonial-body">
-              <p class="testimonial-quote">
-                "The training is challenging tapi tetap fun. Hasilnya bener-bener terasa di minggu ke-4 dan postur punggung gue jauh lebih tegap."
+            <div class="test-card-content">
+              <div class="test-quote-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              <p class="test-quote-text">
+                &ldquo;The training is challenging tapi tetap fun. Hasilnya bener-bener terasa di minggu ke-4 dan postur punggung gue jauh lebih tegap.&rdquo;
               </p>
-              <div class="testimonial-author-name">Fahmi, 26</div>
-              <div class="testimonial-author-program">Muscle Building</div>
+              <div class="test-author-box">
+                <h4 class="test-author-name">Fahmi, 26</h4>
+                <span class="test-author-program">Muscle Building</span>
+              </div>
+              <div class="test-metrics-row">
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>
+                  <div class="test-metric-text">
+                    <strong>+6kg</strong>
+                    <span>Muscle Gain</span>
+                  </div>
+                </div>
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <div class="test-metric-text">
+                    <strong>More</strong>
+                    <span>Energy</span>
+                  </div>
+                </div>
+              </div>
+              <div class="test-stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Testimonial 4 (Maya) -->
+          <!-- Card 4: Maya -->
           <div class="testimonial-card">
-            <div class="testimonial-avatar-wrap">
-              <img src="assets/images/trans_maya_after.jpg" alt="Maya Client Testimonial" class="testimonial-avatar" loading="lazy">
+            <div class="test-card-photo-box">
+              <img src="assets/images/trans_maya_after.webp" alt="Maya Client Testimonial" class="test-card-photo" loading="lazy">
+              <span class="test-photo-script script-top-left">-9kg Body Fat</span>
             </div>
-            <div class="testimonial-body">
-              <p class="testimonial-quote">
-                "Programnya sangat fleksibel untuk jadwal kerja yang padat. Revo selalu memberikan penyesuaian nutrisi yang realistis tanpa tersiksa."
+            <div class="test-card-content">
+              <div class="test-quote-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              <p class="test-quote-text">
+                &ldquo;Programnya sangat fleksibel untuk jadwal kerja yang padat. Revo selalu memberikan penyesuaian nutrisi yang realistis tanpa tersiksa.&rdquo;
               </p>
-              <div class="testimonial-author-name">Maya, 26</div>
-              <div class="testimonial-author-program">Lean Physique Program</div>
+              <div class="test-author-box">
+                <h4 class="test-author-name">Maya, 26</h4>
+                <span class="test-author-program">Lean Physique Program</span>
+              </div>
+              <div class="test-metrics-row">
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>
+                  <div class="test-metric-text">
+                    <strong>-9kg</strong>
+                    <span>Body Fat</span>
+                  </div>
+                </div>
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <div class="test-metric-text">
+                    <strong>Toned</strong>
+                    <span>Physique</span>
+                  </div>
+                </div>
+              </div>
+              <div class="test-stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Raka -->
+          <div class="testimonial-card">
+            <div class="test-card-photo-box">
+              <img src="assets/images/client_raka.webp" alt="Raka Client Testimonial" class="test-card-photo" loading="lazy">
+              <span class="test-photo-script script-bottom-left">Life Changed</span>
+            </div>
+            <div class="test-card-content">
+              <div class="test-quote-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              <p class="test-quote-text">
+                &ldquo;Dari nol pengalaman gym sampai bisa deadlift 140kg dengan form sempurna. Pendampingan Coach Revo bener-bener level berikutnya!&rdquo;
+              </p>
+              <div class="test-author-box">
+                <h4 class="test-author-name">Raka, 29</h4>
+                <span class="test-author-program">Strength & Conditioning</span>
+              </div>
+              <div class="test-metrics-row">
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>
+                  <div class="test-metric-text">
+                    <strong>140kg</strong>
+                    <span>Deadlift PR</span>
+                  </div>
+                </div>
+                <div class="test-metric-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <div class="test-metric-text">
+                    <strong>Peak</strong>
+                    <span>Fitness</span>
+                  </div>
+                </div>
+              </div>
+              <div class="test-stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
+
+      <!-- Bottom Footer Row -->
+      <div class="testimonials-footer-row reveal-on-scroll reveal-delay-2">
+        <div class="testimonials-footer-left">
+          <span class="testimonials-footer-dash"></span>
+          <span class="testimonials-footer-tagline">TRANSFORMING LIVES, ONE REP AT A TIME.</span>
+        </div>
+
+        <div class="testimonials-footer-right">
+          <div class="testimonials-avatar-stack">
+            <img src="assets/images/client_dimas.webp" alt="Client Avatar 1" class="avatar-stack-img" loading="lazy">
+            <img src="assets/images/client_arif.webp" alt="Client Avatar 2" class="avatar-stack-img" loading="lazy">
+            <img src="assets/images/client_fahmi.webp" alt="Client Avatar 3" class="avatar-stack-img" loading="lazy">
+            <img src="assets/images/trans_maya_after.webp" alt="Client Avatar 4" class="avatar-stack-img" loading="lazy">
+          </div>
+          <span class="testimonials-client-count">250+ happy clients and counting.</span>
+          <a href="#transformations" class="btn-outline-pill">
+            View More Stories &rarr;
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Insights / Blog Section ("More Than Workouts.") -->
-  <section class="section" id="blog" style="background: rgba(18, 20, 25, 0.4);">
-    <div class="container">
-      <div class="section-header reveal-on-scroll" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
-        <div>
-          <span class="section-tag">Insights</span>
-          <h2 class="section-title">More Than Workouts.</h2>
-          <p class="section-desc">Tips, stories, and lessons for a stronger, healthier you.</p>
-        </div>
-        <a href="#blog" class="btn-arrow-link" onclick="window.showToast('Blog archive loaded. Click any article below to read!'); return false;">
-          Read the Blog &rarr;
-        </a>
+  <section class="section blog-section" id="blog">
+    <div class="container blog-container-relative">
+      
+      <!-- Left Vertical Sidebar Stack -->
+      <div class="blog-sidebar-words">
+        <span>KNOWLEDGE</span>
+        <span>BUILDS</span>
+        <span>BETTER</span>
+        <span>HABITS.</span>
       </div>
 
-      <div class="blog-grid reveal-on-scroll reveal-delay-1">
-        
-        <!-- Blog Card 1 -->
-        <div class="blog-card" data-article-id="1">
-          <div class="blog-img-wrap">
-            <img src="assets/images/blog_training.jpg" alt="Gym training tips" class="blog-img" loading="lazy">
+      <div class="blog-main-wrap">
+        <!-- Header Row -->
+        <div class="blog-header-row reveal-on-scroll">
+          <div class="blog-title-block">
+            <span class="blog-eyebrow">INSIGHTS</span>
+            <h2 class="blog-main-heading">More Than <span class="text-accent">Workouts.</span></h2>
+            <p class="blog-sub-desc">Tips, stories, and lessons for a stronger, healthier you.</p>
           </div>
-          <div class="blog-content">
-            <div class="blog-top-row">
-              <span class="blog-tag">Training</span>
-              <span class="blog-date">Sep 12, 2024 &bull; 4 min read</span>
-            </div>
-            <h3 class="blog-card-title">5 Common Mistakes Beginners Make at the Gym</h3>
-            <div class="blog-footer-action">
-              <span class="blog-read-btn">
-                Baca Selengkapnya
-                <span class="read-arrow">&rarr;</span>
-              </span>
-            </div>
+          <div class="blog-header-action">
+            <a href="#blog" class="blog-top-btn" onclick="window.showToast('Blog archive loaded. Click any article below to read!'); return false;">
+              Read the Blog &rarr;
+            </a>
           </div>
         </div>
 
-        <!-- Blog Card 2 -->
-        <div class="blog-card" data-article-id="2">
-          <div class="blog-img-wrap">
-            <img src="assets/images/blog_nutrition.jpg" alt="Meal prep containers" class="blog-img" loading="lazy">
-          </div>
-          <div class="blog-content">
-            <div class="blog-top-row">
-              <span class="blog-tag">Nutrition</span>
-              <span class="blog-date">Sep 5, 2024 &bull; 6 min read</span>
-            </div>
-            <h3 class="blog-card-title">A Simple Guide to Better Meal Prep</h3>
-            <div class="blog-footer-action">
-              <span class="blog-read-btn">
-                Baca Selengkapnya
-                <span class="read-arrow">&rarr;</span>
+        <!-- 3 Blog Cards Grid -->
+        <div class="blog-grid reveal-on-scroll reveal-delay-1">
+          
+          <!-- Blog Card 1 -->
+          <div class="blog-card" data-article-id="1">
+            <div class="blog-img-wrap">
+              <img src="assets/images/blog_training.webp" alt="Gym training tips" class="blog-img" loading="lazy">
+              <div class="blog-img-overlay"></div>
+              
+              <!-- Category Pill -->
+              <span class="blog-pill-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>
+                TRAINING
               </span>
+
+              <!-- Floating Editorial Overlay -->
+              <div class="blog-editorial-text">
+                <span>SMALL</span>
+                <span>STEPS</span>
+                <span>BIG</span>
+                <span>RESULTS</span>
+              </div>
+            </div>
+
+            <div class="blog-content">
+              <div class="blog-meta-date">Sep 12, 2024 &bull; 4 min read</div>
+              <h3 class="blog-card-title">5 Common Mistakes Beginners Make at the Gym</h3>
+              <p class="blog-card-desc">Hindari kesalahan umum ini agar latihanmu lebih efektif, aman, dan progresif.</p>
+              
+              <div class="blog-card-footer">
+                <span class="blog-link-text">Baca Selengkapnya &rarr;</span>
+                <button type="button" class="blog-circle-arrow" aria-label="Read Article">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
             </div>
           </div>
+
+          <!-- Blog Card 2 -->
+          <div class="blog-card" data-article-id="2">
+            <div class="blog-img-wrap">
+              <img src="assets/images/blog_nutrition.webp" alt="Meal prep containers" class="blog-img" loading="lazy">
+              <div class="blog-img-overlay"></div>
+
+              <!-- Category Pill -->
+              <span class="blog-pill-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+                NUTRITION
+              </span>
+
+              <!-- Floating Editorial Overlay -->
+              <div class="blog-editorial-text">
+                <span>FUEL &nearr;</span>
+                <span>BETTER</span>
+                <span>PERFORM</span>
+                <span>HIGHER</span>
+              </div>
+            </div>
+
+            <div class="blog-content">
+              <div class="blog-meta-date">Sep 5, 2024 &bull; 6 min read</div>
+              <h3 class="blog-card-title">A Simple Guide to Better Meal Prep</h3>
+              <p class="blog-card-desc">Panduan praktis menyiapkan makanan sehat, enak, dan tetap sesuai target nutrisimu.</p>
+              
+              <div class="blog-card-footer">
+                <span class="blog-link-text">Baca Selengkapnya &rarr;</span>
+                <button type="button" class="blog-circle-arrow" aria-label="Read Article">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div class="blog-card" data-article-id="3">
+            <div class="blog-img-wrap">
+              <img src="assets/images/blog_lifestyle.webp" alt="Consistency habits" class="blog-img" loading="lazy">
+              <div class="blog-img-overlay"></div>
+
+              <!-- Category Pill -->
+              <span class="blog-pill-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                LIFESTYLE
+              </span>
+
+              <!-- Floating Editorial Overlay -->
+              <div class="blog-editorial-text">
+                <span>A</span>
+                <span>HEALTHIER</span>
+                <span>MIND</span>
+                <span>A BRIGHTER</span>
+                <span>YOU</span>
+              </div>
+            </div>
+
+            <div class="blog-content">
+              <div class="blog-meta-date">Aug 28, 2024 &bull; 5 min read</div>
+              <h3 class="blog-card-title">Why Consistency Beats Motivation Every Time</h3>
+              <p class="blog-card-desc">Motivasi itu datang dan pergi. Konsistensi yang membuat hasil nyata.</p>
+              
+              <div class="blog-card-footer">
+                <span class="blog-link-text">Baca Selengkapnya &rarr;</span>
+                <button type="button" class="blog-circle-arrow" aria-label="Read Article">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Blog Card 3 -->
-        <div class="blog-card" data-article-id="3">
-          <div class="blog-img-wrap">
-            <img src="assets/images/blog_lifestyle.jpg" alt="Consistency habits" class="blog-img" loading="lazy">
+        <!-- Bottom Brand & Nav Bar -->
+        <div class="blog-bottom-bar reveal-on-scroll reveal-delay-2">
+          <div class="blog-bottom-left">
+            <span class="blog-brand-name">R E V O</span>
+            <span class="blog-brand-line"></span>
+            <span class="blog-brand-tagline">TRAIN SMARTER. LIVE BETTER.</span>
           </div>
-          <div class="blog-content">
-            <div class="blog-top-row">
-              <span class="blog-tag">Lifestyle</span>
-              <span class="blog-date">Aug 28, 2024 &bull; 5 min read</span>
-            </div>
-            <h3 class="blog-card-title">Why Consistency Beats Motivation Every Time</h3>
-            <div class="blog-footer-action">
-              <span class="blog-read-btn">
-                Baca Selengkapnya
-                <span class="read-arrow">&rarr;</span>
-              </span>
-            </div>
+
+          <div class="blog-bottom-right">
+            <button type="button" class="blog-nav-arrow" aria-label="Previous Articles">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 19"></polyline></svg>
+            </button>
+            <button type="button" class="blog-nav-arrow active" aria-label="Next Articles">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
   <!-- Interactive FAQ Accordion Section ("Frequently Asked Questions") -->
   <section class="section faq-section" id="faq">
-    <div class="container faq-container">
-      <div class="section-header reveal-on-scroll" style="text-align: center; margin-bottom: 3rem;">
-        <span class="section-tag" style="margin: 0 auto 0.5rem auto;">Got Questions?</span>
-        <h2 class="section-title">Frequently Asked Questions.</h2>
-        <p class="section-desc" style="margin: 0 auto;">Semua yang perlu Anda ketahui mengenai sistem pelatihan, nutrisi fleksibel, lokasi privat, dan ekspektasi hasil.</p>
-      </div>
-
-      <div class="faq-list reveal-on-scroll reveal-delay-1">
+    <div class="container">
+      
+      <div class="faq-grid-wrap">
         
-        <!-- FAQ 1 -->
-        <div class="faq-item active">
-          <div class="faq-header">
-            <h3 class="faq-question">Apakah pemula yang belum pernah ke gym sama sekali bisa ikut program ini?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
-          </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              <strong>Sangat bisa dan justru sangat direkomendasikan.</strong> Lebih dari 60% klien Coach Revo memulai dari nol (ground zero). Di tahap awal (Fase Assessment &amp; Foundation), Anda akan diajarkan fundamental biomekanik tubuh: cara bernapas intra-abdominal, aktivasi core, serta teknik mengangkat barbell yang 100% aman untuk persendian sebelum menyentuh beban berat.
+        <!-- Left Column: Header, Accordion Items, WhatsApp Support Dock -->
+        <div class="faq-left-col reveal-on-scroll">
+          
+          <!-- Section Header -->
+          <div class="faq-header-block">
+            <div class="faq-eyebrow-row">
+              <span class="faq-tag">FAQ</span>
+              <span class="faq-tag-dash"></span>
             </div>
+            
+            <div class="faq-title-row">
+              <h2 class="faq-section-title">Frequently Asked<br><span class="text-accent">Questions.</span></h2>
+              
+              <div class="faq-editorial-stack">
+                <div class="faq-stack-line"></div>
+                <div class="faq-stack-words">
+                  <span>REAL</span>
+                  <span>PEOPLE</span>
+                  <span>REAL</span>
+                  <span>ANSWERS</span>
+                </div>
+              </div>
+            </div>
+            
+            <p class="faq-section-desc">Semua yang perlu Anda ketahui mengenai sistem pelatihan, nutrisi fleksibel, lokasi privat, dan ekspektasi hasil.</p>
           </div>
+
+          <!-- 5 FAQ Accordion Items -->
+          <div class="faq-accordion-list">
+            
+            <!-- Item 01 (Active by default) -->
+            <div class="faq-item active">
+              <div class="faq-header">
+                <div class="faq-header-info">
+                  <span class="faq-num">01</span>
+                  <span class="faq-divider"></span>
+                  <h3 class="faq-question">Apakah pemula yang belum pernah ke gym sama sekali bisa ikut program ini?</h3>
+                </div>
+                <div class="faq-toggle-icon">
+                  <span class="faq-icon-minus">&minus;</span>
+                  <span class="faq-icon-plus">&plus;</span>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Tentu bisa. Program kami dirancang untuk semua level, termasuk pemula. Anda akan mendapatkan assessment awal, panduan dasar, dan pendampingan langsung dari coach agar latihan terasa aman, efektif, dan sesuai kemampuan Anda.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 02 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-header-info">
+                  <span class="faq-num">02</span>
+                  <span class="faq-divider"></span>
+                  <h3 class="faq-question">Di mana saja lokasi studio offline privat untuk sesi 1-on-1?</h3>
+                </div>
+                <div class="faq-toggle-icon">
+                  <span class="faq-icon-minus">&minus;</span>
+                  <span class="faq-icon-plus">&plus;</span>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Sesi privat 1-on-1 dilaksanakan di private partner studio eksklusif di kawasan SCBD (Sudirman) dan PIK (Pantai Indah Kapuk), Jakarta. Studio dilengkapi fasilitas standar internasional, shower privat, dan tanpa antrean alat umum untuk menjaga fokus serta privasi Anda.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 03 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-header-info">
+                  <span class="faq-num">03</span>
+                  <span class="faq-divider"></span>
+                  <h3 class="faq-question">Bagaimana sistem Online Coaching bekerja jika saya tinggal di luar kota / luar negeri?</h3>
+                </div>
+                <div class="faq-toggle-icon">
+                  <span class="faq-icon-minus">&minus;</span>
+                  <span class="faq-icon-plus">&plus;</span>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Program Online Coaching dipandu secara hybrid melalui mobile app portal &amp; weekly 1-on-1 video call. Anda mendapatkan personalized workout split, custom macro meal guidelines, serta video form check harian di mana Anda mengunggah video latihan untuk saya review teknik dan eksekusinya.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 04 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-header-info">
+                  <span class="faq-num">04</span>
+                  <span class="faq-divider"></span>
+                  <h3 class="faq-question">Apakah program ini hanya fokus pada latihan, atau termasuk juga nutrisi?</h3>
+                </div>
+                <div class="faq-toggle-icon">
+                  <span class="faq-icon-minus">&minus;</span>
+                  <span class="faq-icon-plus">&plus;</span>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Seluruh program kami mengintegrasikan pelatihan fisik dan panduan nutrisi berbasis bukti (science-backed flexible dieting). Kami tidak memberikan diet ekstrem yang menyiksa, melainkan target makronutrien terukur, rekomendasi belanja bahan makanan, serta panduan makan saat dining out.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 05 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <div class="faq-header-info">
+                  <span class="faq-num">05</span>
+                  <span class="faq-divider"></span>
+                  <h3 class="faq-question">Berapa lama biasanya hasil mulai terlihat?</h3>
+                </div>
+                <div class="faq-toggle-icon">
+                  <span class="faq-icon-minus">&minus;</span>
+                  <span class="faq-icon-plus">&plus;</span>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Adaptasi kekuatan fisik dan lonjakan energi biasanya terasa dalam 2&ndash;3 minggu pertama. Perubahan visual komposisi tubuh (fat loss terukur &amp; definisi otot) umumnya terlihat jelas dalam 6&ndash;8 minggu pertama dengan kepatuhan konsisten terhadap program latihan dan target kalori harian.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom WhatsApp Support Dock -->
+          <div class="faq-whatsapp-dock">
+            <div class="faq-wa-left">
+              <div class="faq-wa-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <div class="faq-wa-text">
+                <span class="faq-wa-title">Masih ada pertanyaan?</span>
+                <span class="faq-wa-sub">Tim kami siap membantu Anda.</span>
+              </div>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Coach%20Revo%2C%20saya%20ingin%20bertanya%20seputar%20program%20coaching" target="_blank" rel="noopener noreferrer" class="btn btn-primary faq-wa-btn">
+              <span>Chat via WhatsApp &rarr;</span>
+            </a>
+          </div>
+
         </div>
 
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Di mana saja lokasi studio offline privat untuk sesi 1-on-1?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
+        <!-- Right Column: Visual Trainer Card, Trust Pillars, and Still Have Questions CTA -->
+        <div class="faq-right-col reveal-on-scroll reveal-delay-1">
+          
+          <!-- Floating Cursive Script (Top-Right) -->
+          <div class="faq-cursive-badge">
+            <span>Stronger</span>
+            <span>Questions</span>
+            <span>Brighter</span>
+            <span>Progress</span>
+            <div class="faq-cursive-line"></div>
           </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              Sesi in-person privat berlangsung di dua hub studio partner eksklusif: <strong>SCBD Platinum Studio (Sudirman Lot 8, Jakarta Selatan)</strong> dan <strong>PIK 2 Biomechanics Lab (Pantai Indah Kapuk, Jakarta Utara)</strong>. Fasilitas ini bukan gym komersial ramai; ruangan privat, antrian alat nihil, privasi terjaga penuh, dan dilengkapi peralatan standar kompetisi internasional (Eleiko, Hammer Strength, Keiser).
-            </div>
-          </div>
-        </div>
 
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Bagaimana sistem Online Coaching bekerja jika saya tinggal di luar kota / luar negeri?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
-          </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              Online Coaching menggunakan platform app khusus Coach Revo. Setiap pekan, program latihan Anda diatur secara dinamis dengan video instruksional presisi. Anda cukup merekam video set latihan (dari sudut samping/depan) dan mengunggahnya ke portal untuk dibedah langsung oleh Coach Revo (form review, bar path, tempo). Komunikasi dua arah berlangsung via WhatsApp prioritas dan video call evaluasi dua mingguan.
-            </div>
-          </div>
-        </div>
+          <!-- Top Trainer Hero Card with Floating Badges & Quote -->
+          <div class="faq-trainer-card">
+            <div class="faq-trainer-media">
+              <img src="assets/images/faq_trainer.webp" alt="Coach Revo Fitness Coaching" class="faq-trainer-img" loading="lazy">
+              <div class="faq-trainer-overlay"></div>
 
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Apakah saya harus diet ketat dan hanya makan dada ayam rebus tanpa garam?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
-          </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              <strong>Sama sekali tidak.</strong> Revo menganut prinsip <em>Flexible Dieting &amp; Energy Balance</em> berbasis Sports Nutrition (CSN-NASM). Anda tetap bisa menikmati makanan keluarga, kuliner lokal, hingga makan bersama rekan kerja selama total target makronutrien (protein, lemak sehat, karbohidrat) dan serat harian terpenuhi. Tidak ada pantangan makanan ekstrem yang merusak kesehatan mental.
-            </div>
-          </div>
-        </div>
+              <!-- Top-Left Glassmorphic Badge: 250+ People Transformed -->
+              <div class="faq-stat-badge">
+                <div class="faq-stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="faq-stat-text">
+                  <span class="faq-stat-num">250+</span>
+                  <span class="faq-stat-label">People Transformed</span>
+                </div>
+              </div>
 
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Berapa lama rata-rata sampai hasil perubahan fisik terlihat nyata?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
-          </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              Secara fisiologis:
-              <ul style="margin: 0.5rem 0 0 1.25rem; padding: 0; display: flex; flex-direction: column; gap: 0.4rem;">
-                <li><strong>Minggu 2 - 4:</strong> Peningkatan stamina, perbaikan pola tidur, energi harian stabil, dan koreksi postur tubuh.</li>
-                <li><strong>Minggu 6 - 8:</strong> Perubahan visual signifikan pada lingkar perut, definisi otot bahu/lengan, dan penurunan body fat 3-5%.</li>
-                <li><strong>Minggu 12 - 16:</strong> Transformasi komplit (rekomposisi tubuh total, penurunan berat badan 8-15 kg atau kenaikan massa otot padat 4-7 kg).</li>
-              </ul>
+              <!-- Bottom Quote Overlay -->
+              <div class="faq-quote-overlay">
+                <p class="faq-quote-text">&ldquo;Good questions lead to great results.&rdquo;</p>
+                <span class="faq-quote-author">&mdash; Coach Revo</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- FAQ 6 -->
-        <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Bagaimana jika saya memiliki riwayat cedera (misal: low back pain, skoliosis, atau lutut)?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
-          </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              Dengan sertifikasi <strong>Corrective Exercise Specialist (CES)</strong>, Coach Revo akan melakukan <em>Postural &amp; Overhead Squat Assessment</em> di sesi pertama. Gerakan yang berpotensi memicu nyeri akan diganti dengan variasi biomekanik ramah sendi (misal: Trap Bar Deadlift untuk melindungi lumbal spine, atau Box Squats untuk mengistirahatkan patella tendon) sambil memperkuat otot stabilisator di sekitarnya.
+          <!-- Trust Pillars (3 Badges) -->
+          <div class="faq-pillars-card">
+            <div class="faq-pillar-item">
+              <div class="faq-pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                </svg>
+              </div>
+              <div class="faq-pillar-info">
+                <span class="faq-pillar-title">1:1 Support</span>
+                <span class="faq-pillar-sub">Fast Response</span>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- FAQ 7 -->
-        <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Apa perbedaan utama private coaching Revo dengan Personal Trainer gym biasa?</h3>
-            <div class="faq-toggle-icon">&plus;</div>
-          </div>
-          <div class="faq-body">
-            <div class="faq-content">
-              Trainer komersial umumnya hanya "menghitung repetisi" saat Anda latihan 1 jam di gym. Bersama Revo, Anda mendapatkan sistem ekosistem komprehensif: <strong>1)</strong> Periodisasi beban berbasis data sains, <strong>2)</strong> Kalkulasi makronutrisi individual yang di-update setiap minggu, <strong>3)</strong> Edukasi gaya hidup &amp; sleep recovery, dan <strong>4)</strong> Akuntabilitas harian 24/7. Anda membayar untuk <em>hasil nyata terukur</em>, bukan sekadar kehadiran.
+            <div class="faq-pillar-item">
+              <div class="faq-pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="faq-pillar-info">
+                <span class="faq-pillar-title">Detailed Answers</span>
+                <span class="faq-pillar-sub">No Guesswork</span>
+              </div>
+            </div>
+
+            <div class="faq-pillar-item">
+              <div class="faq-pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="faq-pillar-info">
+                <span class="faq-pillar-title">Trusted Guidance</span>
+                <span class="faq-pillar-sub">From Real Coaches</span>
+              </div>
             </div>
           </div>
+
+          <!-- Bottom CTA Box -->
+          <div class="faq-cta-box" data-open-modal="bookingModal">
+            <div class="faq-cta-text">
+              <span class="faq-cta-title">Still have questions?</span>
+              <span class="faq-cta-sub">We're here to help you reach your goals.</span>
+            </div>
+            <button type="button" class="faq-cta-arrow" aria-label="Book Consultation">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
         </div>
 
       </div>
+
     </div>
   </section>
 
   <!-- Call To Action Banner Section ("READY TO LEVEL UP?") -->
   <section class="cta-banner-section" id="contact">
-    <img src="assets/images/cta_bg.jpg" alt="Athletic training background" class="cta-banner-bg" loading="lazy">
+    <img src="assets/images/cta_bg.webp" alt="Athletic training background" class="cta-banner-bg" loading="lazy">
     <div class="cta-banner-overlay"></div>
     
     <div class="container">
@@ -2465,7 +3579,7 @@
         </div>
         <h2 class="modal-title article-modal-title" id="articleModalTitle">Article Title</h2>
         <div class="article-author-row">
-          <img src="assets/images/hero_trainer.jpg" alt="Coach Revo" class="article-author-avatar">
+          <img src="assets/images/hero_trainer.webp" alt="Coach Revo" class="article-author-avatar">
           <div>
             <div class="article-author-name">Coach Revo</div>
             <div class="article-author-role">Certified Performance Coach &bull; CSCS, NASM-CPT</div>
@@ -2474,7 +3588,7 @@
       </div>
 
       <div class="article-modal-banner-wrap">
-        <img src="assets/images/blog_training.jpg" alt="Article cover image" class="article-modal-banner" id="articleModalImage">
+        <img src="assets/images/blog_training.webp" alt="Article cover image" class="article-modal-banner" id="articleModalImage">
       </div>
 
       <div class="article-modal-body" id="articleModalBody">
@@ -2527,7 +3641,7 @@
       </div>
 
       <div class="program-modal-banner-wrap">
-        <img src="assets/images/program_fatloss.jpg" alt="Program banner" class="program-modal-banner" id="programModalImage">
+        <img src="assets/images/program_fatloss.webp" alt="Program banner" class="program-modal-banner" id="programModalImage">
       </div>
 
       <!-- Main Rich Detail Content -->
@@ -2572,7 +3686,7 @@
             Baseline (Day 0)
           </div>
           <div style="height: 240px; overflow: hidden;">
-            <img src="assets/images/trans_back_before.jpg" alt="Before Transformation" id="caseStudyBeforeImg" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/images/trans_back_before.webp" alt="Before Transformation" id="caseStudyBeforeImg" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
         <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(210, 255, 0, 0.3); border-radius: var(--radius-md); overflow: hidden;">
@@ -2580,7 +3694,7 @@
             Outcome (Week 16)
           </div>
           <div style="height: 240px; overflow: hidden;">
-            <img src="assets/images/trans_back_after.jpg" alt="After Transformation" id="caseStudyAfterImg" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/images/trans_back_after.webp" alt="After Transformation" id="caseStudyAfterImg" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>

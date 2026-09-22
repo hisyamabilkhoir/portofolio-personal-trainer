@@ -109,12 +109,24 @@ class TrainingPlanGenerator {
     if (this.goalSelect) {
       this.goalSelect.addEventListener('change', (e) => {
         this.selectedGoal = e.target.value;
+        const selOpt = e.target.selectedOptions[0];
+        const dispTitle = document.getElementById('dispRoutineGoal');
+        if (dispTitle && selOpt) {
+          dispTitle.textContent = selOpt.getAttribute('data-title') || selOpt.text;
+        }
+        this.generateRoutine();
       });
     }
 
     if (this.levelSelect) {
       this.levelSelect.addEventListener('change', (e) => {
         this.selectedLevel = e.target.value;
+        const selOpt = e.target.selectedOptions[0];
+        const dispTitle = document.getElementById('dispRoutineLevel');
+        if (dispTitle && selOpt) {
+          dispTitle.textContent = selOpt.getAttribute('data-title') || selOpt.text;
+        }
+        this.generateRoutine();
       });
     }
 
@@ -123,6 +135,7 @@ class TrainingPlanGenerator {
         this.dayButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.selectedDays = parseInt(btn.dataset.days, 10);
+        this.generateRoutine();
       });
     });
 
@@ -168,25 +181,29 @@ class TrainingPlanGenerator {
     }
 
     this.generateBtn.classList.add('pulse-anim');
-    setTimeout(() => this.generateBtn.classList.remove('pulse-anim'), 800);
+    setTimeout(() => this.generateBtn.classList.remove('pulse-anim'), 600);
   }
 
   copyToClipboard() {
     const goalCategory = workoutDatabase[this.selectedGoal] || workoutDatabase.muscle;
     const schedule = goalCategory[this.selectedDays] || goalCategory[4];
 
-    let text = `REVO PERSONAL TRAINER - SAMPLE TRAINING PLAN\n`;
-    text += `Goal: ${this.selectedGoal.toUpperCase()} | Level: ${this.selectedLevel.toUpperCase()} | Frequency: ${this.selectedDays} Days/Week\n\n`;
+    let text = `REVO SPORTS SCIENCE LAB — CUSTOM SPLIT ROUTINE\n`;
+    text += `Target: ${this.selectedGoal.toUpperCase()} | Level: ${this.selectedLevel.toUpperCase()} | Frekuensi: ${this.selectedDays} Hari/Minggu\n\n`;
     
     schedule.forEach(item => {
       text += `• ${item.day}: ${item.focus}\n`;
     });
     
-    text += `\nCurated by Coach Revo — Ready to start? Book your free session at https://revotrainer.com`;
+    text += `\nCurated by Coach Revo — Science-Backed Performance.\nKonsultasi gratis: https://revotrainer.com`;
 
     navigator.clipboard.writeText(text).then(() => {
       if (window.showToast) {
-        window.showToast("Training plan copied to clipboard!");
+        window.showToast("Training split routine berhasil disalin ke clipboard!");
+      }
+    }).catch(() => {
+      if (window.showToast) {
+        window.showToast("Routine tersalin!");
       }
     });
   }
@@ -197,28 +214,52 @@ class TrainingPlanGenerator {
 // ============================================================================
 class MetabolicMacroCalculator {
   constructor() {
-    this.genderSelect = document.getElementById('calcGender');
-    this.ageInput = document.getElementById('calcAge');
-    this.weightInput = document.getElementById('calcWeight');
-    this.heightInput = document.getElementById('calcHeight');
-    this.activitySelect = document.getElementById('calcActivity');
-    this.goalSelect = document.getElementById('calcGoal');
-    this.calculateBtn = document.getElementById('calculateMacrosBtn');
+    this.genderInput = document.getElementById('macroGender');
+    this.btnGenderMale = document.getElementById('btnGenderMale');
+    this.btnGenderFemale = document.getElementById('btnGenderFemale');
+
+    this.ageInput = document.getElementById('macroAge');
+    this.weightInput = document.getElementById('macroWeight');
+    this.heightInput = document.getElementById('macroHeight');
+
+    this.dispAge = document.getElementById('dispAge');
+    this.dispWeight = document.getElementById('dispWeight');
+    this.dispHeight = document.getElementById('dispHeight');
+
+    this.activitySelect = document.getElementById('macroActivity');
+    this.goalSelect = document.getElementById('macroGoal');
+
+    this.dispActivityTitle = document.getElementById('dispActivityTitle');
+    this.dispActivitySub = document.getElementById('dispActivitySub');
+    this.dispGoalTitle = document.getElementById('dispGoalTitle');
+    this.dispGoalSub = document.getElementById('dispGoalSub');
+
+    this.calculateBtn = document.getElementById('calculateMacroBtn');
+    this.resetBtn = document.getElementById('resetMacroBtn');
 
     // Outputs
-    this.outBmr = document.getElementById('outBmr');
-    this.outTdee = document.getElementById('outTdee');
-    this.outCalories = document.getElementById('outCalories');
-    this.outProtein = document.getElementById('outProtein');
-    this.outFats = document.getElementById('outFats');
-    this.outCarbs = document.getElementById('outCarbs');
-    this.outProteinPct = document.getElementById('outProteinPct');
-    this.outFatsPct = document.getElementById('outFatsPct');
-    this.outCarbsPct = document.getElementById('outCarbsPct');
-    this.barProtein = document.getElementById('barProtein');
-    this.barFats = document.getElementById('barFats');
-    this.barCarbs = document.getElementById('barCarbs');
-    this.exportMacroBtn = document.getElementById('exportMacroBtn');
+    this.outBmr = document.getElementById('macroBmr');
+    this.outTdee = document.getElementById('macroTdee');
+    this.outCalories = document.getElementById('macroCalories');
+    this.outCalDesc = document.getElementById('macroCalDesc');
+    this.outDonutVal = document.getElementById('macroDonutVal');
+    this.outDonutRing = document.getElementById('macroDonutRing');
+    this.outTargetName = document.getElementById('dispTargetName');
+    this.outTotalLabel = document.getElementById('macroTotalLabel');
+
+    this.outProteinVal = document.getElementById('macroProteinVal');
+    this.outProteinPct = document.getElementById('macroProteinPct');
+    this.barProtein = document.getElementById('macroProteinBar');
+
+    this.outCarbsVal = document.getElementById('macroCarbsVal');
+    this.outCarbsPct = document.getElementById('macroCarbsPct');
+    this.barCarbs = document.getElementById('macroCarbsBar');
+
+    this.outFatsVal = document.getElementById('macroFatsVal');
+    this.outFatsPct = document.getElementById('macroFatsPct');
+    this.barFats = document.getElementById('macroFatsBar');
+
+    this.outWater = document.getElementById('macroWater');
 
     this.init();
   }
@@ -226,108 +267,229 @@ class MetabolicMacroCalculator {
   init() {
     if (!this.calculateBtn) return;
 
-    this.calculateBtn.addEventListener('click', () => {
-      this.calculate();
-    });
+    // 1. Gender Toggles
+    if (this.btnGenderMale && this.btnGenderFemale) {
+      this.btnGenderMale.addEventListener('click', () => {
+        this.btnGenderMale.classList.add('active');
+        this.btnGenderFemale.classList.remove('active');
+        if (this.genderInput) this.genderInput.value = 'male';
+        this.calculate();
+      });
 
-    if (this.exportMacroBtn) {
-      this.exportMacroBtn.addEventListener('click', () => {
-        this.exportToBooking();
+      this.btnGenderFemale.addEventListener('click', () => {
+        this.btnGenderFemale.classList.add('active');
+        this.btnGenderMale.classList.remove('active');
+        if (this.genderInput) this.genderInput.value = 'female';
+        this.calculate();
       });
     }
 
-    // Auto calculate initial default values
+    // 2. Stepper Buttons
+    document.querySelectorAll('.stepper-btn[data-stepper="age"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const delta = parseInt(btn.dataset.delta, 10) || 0;
+        let val = (parseInt(this.ageInput.value, 10) || 28) + delta;
+        val = Math.max(15, Math.min(85, val));
+        this.ageInput.value = val;
+        if (this.dispAge) this.dispAge.textContent = val;
+        this.calculate();
+      });
+    });
+
+    document.querySelectorAll('.stepper-btn[data-stepper="weight"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const delta = parseFloat(btn.dataset.delta) || 0;
+        let val = (parseFloat(this.weightInput.value) || 75) + delta;
+        val = Math.max(35, Math.min(220, Math.round(val)));
+        this.weightInput.value = val;
+        if (this.dispWeight) this.dispWeight.textContent = val;
+        this.calculate();
+      });
+    });
+
+    document.querySelectorAll('.stepper-btn[data-stepper="height"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const delta = parseFloat(btn.dataset.delta) || 0;
+        let val = (parseFloat(this.heightInput.value) || 175) + delta;
+        val = Math.max(120, Math.min(230, Math.round(val)));
+        this.heightInput.value = val;
+        if (this.dispHeight) this.dispHeight.textContent = val;
+        this.calculate();
+      });
+    });
+
+    // 3. Dropdown Sync
+    if (this.activitySelect) {
+      this.activitySelect.addEventListener('change', (e) => {
+        const opt = e.target.selectedOptions[0];
+        if (opt) {
+          if (this.dispActivityTitle) this.dispActivityTitle.textContent = opt.getAttribute('data-title') || opt.text;
+          if (this.dispActivitySub) this.dispActivitySub.textContent = opt.getAttribute('data-sub') || '';
+        }
+        this.calculate();
+      });
+    }
+
+    if (this.goalSelect) {
+      this.goalSelect.addEventListener('change', (e) => {
+        const opt = e.target.selectedOptions[0];
+        if (opt) {
+          if (this.dispGoalTitle) this.dispGoalTitle.textContent = opt.getAttribute('data-title') || opt.text;
+          if (this.dispGoalSub) this.dispGoalSub.textContent = opt.getAttribute('data-sub') || '';
+        }
+        this.calculate();
+      });
+    }
+
+    // 4. Calculate Button
+    this.calculateBtn.addEventListener('click', () => {
+      this.calculate();
+      this.calculateBtn.classList.add('pulse-anim');
+      setTimeout(() => this.calculateBtn.classList.remove('pulse-anim'), 600);
+    });
+
+    // 5. Reset Form
+    if (this.resetBtn) {
+      this.resetBtn.addEventListener('click', () => {
+        this.resetForm();
+      });
+    }
+
+    // Initial Calculation
     this.calculate();
   }
 
+  resetForm() {
+    if (this.genderInput) this.genderInput.value = 'male';
+    if (this.btnGenderMale) this.btnGenderMale.classList.add('active');
+    if (this.btnGenderFemale) this.btnGenderFemale.classList.remove('active');
+
+    if (this.ageInput) this.ageInput.value = '28';
+    if (this.dispAge) this.dispAge.textContent = '28';
+
+    if (this.weightInput) this.weightInput.value = '75';
+    if (this.dispWeight) this.dispWeight.textContent = '75';
+
+    if (this.heightInput) this.heightInput.value = '175';
+    if (this.dispHeight) this.dispHeight.textContent = '175';
+
+    if (this.activitySelect) {
+      this.activitySelect.value = 'moderate';
+      if (this.dispActivityTitle) this.dispActivityTitle.textContent = 'Moderately Active';
+      if (this.dispActivitySub) this.dispActivitySub.textContent = 'Latihan 3–5 hari/minggu';
+    }
+
+    if (this.goalSelect) {
+      this.goalSelect.value = 'cut';
+      if (this.dispGoalTitle) this.dispGoalTitle.textContent = 'Defisit Kalori';
+      if (this.dispGoalSub) this.dispGoalSub.textContent = 'Fat Loss & Shredding (−20%)';
+    }
+
+    this.calculate();
+    if (window.showToast) {
+      window.showToast("Form kalkulator di-reset ke nilai standar.");
+    }
+  }
+
   calculate() {
-    const gender = this.genderSelect ? this.genderSelect.value : 'male';
+    const gender = this.genderInput ? this.genderInput.value : 'male';
     const age = parseFloat(this.ageInput ? this.ageInput.value : 28) || 28;
     const weight = parseFloat(this.weightInput ? this.weightInput.value : 75) || 75;
     const height = parseFloat(this.heightInput ? this.heightInput.value : 175) || 175;
-    const activityMultiplier = parseFloat(this.activitySelect ? this.activitySelect.value : 1.55) || 1.55;
-    const goal = this.goalSelect ? this.goalSelect.value : 'fatloss_moderate';
+    const activityKey = this.activitySelect ? this.activitySelect.value : 'moderate';
+    const goal = this.goalSelect ? this.goalSelect.value : 'cut';
 
-    // Mifflin-St Jeor BMR Equation
+    // Activity multiplier
+    const activityMap = {
+      sedentary: 1.2,
+      light: 1.375,
+      moderate: 1.55,
+      very: 1.725
+    };
+    const multiplier = activityMap[activityKey] || 1.55;
+
+    // 1. Mifflin-St Jeor BMR Equation
     let bmr = (10 * weight) + (6.25 * height) - (5 * age);
     if (gender === 'male') {
       bmr += 5;
     } else {
       bmr -= 161;
     }
+    const finalBmr = Math.round(bmr);
 
-    // TDEE
-    const tdee = Math.round(bmr * activityMultiplier);
+    // 2. TDEE
+    const tdee = Math.round(finalBmr * multiplier);
 
-    // Goal Calorie Adjustments
+    // 3. Goal Adjustment & Text
     let targetCalories = tdee;
-    if (goal === 'fatloss_aggressive') {
-      targetCalories = Math.round(tdee * 0.78); // 22% deficit
-    } else if (goal === 'fatloss_moderate') {
-      targetCalories = Math.round(tdee * 0.85); // 15% deficit
+    let targetName = "Fat Loss";
+    let desc = "Asupan energi harian yang disesuaikan untuk mencapai target defisit tanpa mengorbankan massa otot.";
+
+    if (goal === 'cut') {
+      targetCalories = Math.round(tdee * 0.80); // 20% deficit
+      targetName = "Fat Loss";
+      desc = "Asupan energi harian yang disesuaikan untuk mencapai target defisit tanpa mengorbankan massa otot.";
     } else if (goal === 'maintenance') {
       targetCalories = tdee;
-    } else if (goal === 'lean_bulk') {
-      targetCalories = Math.round(tdee * 1.10); // 10% surplus
-    } else if (goal === 'mass_gain') {
-      targetCalories = Math.round(tdee * 1.18); // 18% surplus
+      targetName = "Body Recomposition";
+      desc = "Keseimbangan energi harian untuk mempertahankan berat badan sambil memadatkan komposisi massa otot.";
+    } else if (goal === 'bulk') {
+      targetCalories = Math.round(tdee * 1.12); // 12% surplus
+      targetName = "Clean Muscle Hypertrophy";
+      desc = "Surplus kalori terukur untuk memicu sintesis protein myofibrilar maksimal tanpa penumpukan lemak berlebih.";
     }
 
-    // Macro Partitioning
+    // 4. Macro Partitioning
     // Protein: 2.2g per kg bodyweight
     const proteinGrams = Math.round(weight * 2.2);
-    const proteinCalories = proteinGrams * 4;
+    const proteinKcal = proteinGrams * 4;
 
-    // Fats: 25% of target calories
-    const fatCalories = Math.round(targetCalories * 0.25);
-    const fatGrams = Math.round(fatCalories / 9);
+    // Fats: 27% of target calories (hormone optimization)
+    const fatKcal = Math.round(targetCalories * 0.27);
+    const fatGrams = Math.round(fatKcal / 9);
 
     // Carbs: Remaining calories
-    const carbCalories = Math.max(0, targetCalories - proteinCalories - fatCalories);
-    const carbGrams = Math.round(carbCalories / 4);
+    const carbKcal = Math.max(0, targetCalories - proteinKcal - fatKcal);
+    const carbGrams = Math.round(carbKcal / 4);
 
-    // Percentages
-    const proteinPct = Math.round((proteinCalories / targetCalories) * 100) || 30;
-    const fatPct = Math.round((fatCalories / targetCalories) * 100) || 25;
+    // Pct
+    const proteinPct = Math.round((proteinKcal / targetCalories) * 100);
+    const fatPct = Math.round((fatKcal / targetCalories) * 100);
     const carbPct = Math.max(0, 100 - proteinPct - fatPct);
 
-    // Display
-    if (this.outBmr) this.outBmr.textContent = `${Math.round(bmr).toLocaleString()} kcal`;
+    // 5. Water Hydration: 35-42ml / kg
+    const waterMin = (weight * 0.035).toFixed(1);
+    const waterMax = (weight * 0.043).toFixed(1);
+
+    // 6. Update DOM Outputs
+    if (this.outBmr) this.outBmr.textContent = `${finalBmr.toLocaleString()} kcal`;
     if (this.outTdee) this.outTdee.textContent = `${tdee.toLocaleString()} kcal`;
     if (this.outCalories) this.outCalories.textContent = `${targetCalories.toLocaleString()}`;
-    if (this.outProtein) this.outProtein.textContent = `${proteinGrams}g`;
-    if (this.outFats) this.outFats.textContent = `${fatGrams}g`;
-    if (this.outCarbs) this.outCarbs.textContent = `${carbGrams}g`;
+    if (this.outDonutVal) this.outDonutVal.textContent = `${targetCalories.toLocaleString()}`;
+    if (this.outCalDesc) this.outCalDesc.textContent = desc;
+    if (this.outTargetName) this.outTargetName.textContent = targetName;
+    if (this.outTotalLabel) this.outTotalLabel.textContent = `Total: ${targetCalories.toLocaleString()} kcal`;
 
+    if (this.outProteinVal) this.outProteinVal.textContent = `${proteinGrams} g (${proteinKcal} kcal)`;
     if (this.outProteinPct) this.outProteinPct.textContent = `${proteinPct}%`;
-    if (this.outFatsPct) this.outFatsPct.textContent = `${fatPct}%`;
-    if (this.outCarbsPct) this.outCarbsPct.textContent = `${carbPct}%`;
-
     if (this.barProtein) this.barProtein.style.width = `${proteinPct}%`;
-    if (this.barFats) this.barFats.style.width = `${fatPct}%`;
+
+    if (this.outCarbsVal) this.outCarbsVal.textContent = `${carbGrams} g (${carbKcal} kcal)`;
+    if (this.outCarbsPct) this.outCarbsPct.textContent = `${carbPct}%`;
     if (this.barCarbs) this.barCarbs.style.width = `${carbPct}%`;
 
-    this.lastCalculation = {
-      bmr: Math.round(bmr),
-      tdee,
-      calories: targetCalories,
-      protein: proteinGrams,
-      fats: fatGrams,
-      carbs: carbGrams,
-      weight,
-      goal
-    };
-  }
+    if (this.outFatsVal) this.outFatsVal.textContent = `${fatGrams} g (${fatKcal} kcal)`;
+    if (this.outFatsPct) this.outFatsPct.textContent = `${fatPct}%`;
+    if (this.barFats) this.barFats.style.width = `${fatPct}%`;
 
-  exportToBooking() {
-    if (!this.lastCalculation) this.calculate();
-    const c = this.lastCalculation;
-    const notesInput = document.getElementById('clientNotes');
-    if (notesInput) {
-      notesInput.value = `[Sports Science Calculator Export] Target: ${c.calories} kcal/day | Protein: ${c.protein}g | Fats: ${c.fats}g | Carbs: ${c.carbs}g | TDEE: ${c.tdee} kcal (Weight: ${c.weight}kg, Goal: ${c.goal})`;
-    }
-    if (window.openModal) {
-      window.openModal('bookingModal');
+    if (this.outWater) this.outWater.textContent = `${waterMin} – ${waterMax} Liter / hari`;
+
+    // 7. Update SVG Donut Gauge Arc
+    if (this.outDonutRing) {
+      const circumference = 276.46; // 2 * pi * 44
+      const progress = Math.min(1.0, targetCalories / 2800);
+      const offset = circumference * (1 - (progress * 0.8));
+      this.outDonutRing.style.strokeDashoffset = offset;
     }
   }
 }
@@ -337,18 +499,22 @@ class MetabolicMacroCalculator {
 // ============================================================================
 class OneRepMaxCalculator {
   constructor() {
-    this.liftSelect = document.getElementById('ormLift');
+    this.liftSelect = document.getElementById('ormExercise');
+    this.dispExercise = document.getElementById('dispOrmExercise');
     this.weightInput = document.getElementById('ormWeight');
     this.repsInput = document.getElementById('ormReps');
+    this.dispWeight = document.getElementById('dispOrmWeight');
+    this.dispReps = document.getElementById('dispOrmReps');
     this.calculateBtn = document.getElementById('calculateOrmBtn');
 
     // Outputs
-    this.out1rm = document.getElementById('out1rm');
-    this.outTierBadge = document.getElementById('outTierBadge');
-    this.out95 = document.getElementById('out95');
-    this.out85 = document.getElementById('out85');
-    this.out75 = document.getElementById('out75');
-    this.out65 = document.getElementById('out65');
+    this.out1rm = document.getElementById('ormEstimatedMax');
+    this.outDonutKg = document.getElementById('ormDonutKg');
+    this.outTierBadge = document.getElementById('ormTierBadge');
+    this.out95 = document.getElementById('ormLoad95');
+    this.out85 = document.getElementById('ormLoad85');
+    this.out75 = document.getElementById('ormLoad75');
+    this.out65 = document.getElementById('ormLoad65');
 
     this.init();
   }
@@ -356,8 +522,42 @@ class OneRepMaxCalculator {
   init() {
     if (!this.calculateBtn) return;
 
+    if (this.liftSelect) {
+      this.liftSelect.addEventListener('change', (e) => {
+        const opt = e.target.selectedOptions[0];
+        if (opt && this.dispExercise) {
+          this.dispExercise.textContent = opt.getAttribute('data-title') || opt.text;
+        }
+        this.calculate();
+      });
+    }
+
+    document.querySelectorAll('.stepper-btn[data-stepper="ormWeight"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const delta = parseFloat(btn.dataset.delta) || 0;
+        let val = (parseFloat(this.weightInput.value) || 80) + delta;
+        val = Math.max(10, Math.min(400, val));
+        this.weightInput.value = val;
+        if (this.dispWeight) this.dispWeight.textContent = val;
+        this.calculate();
+      });
+    });
+
+    document.querySelectorAll('.stepper-btn[data-stepper="ormReps"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const delta = parseInt(btn.dataset.delta, 10) || 0;
+        let val = (parseInt(this.repsInput.value, 10) || 6) + delta;
+        val = Math.max(1, Math.min(15, val));
+        this.repsInput.value = val;
+        if (this.dispReps) this.dispReps.textContent = val;
+        this.calculate();
+      });
+    });
+
     this.calculateBtn.addEventListener('click', () => {
       this.calculate();
+      this.calculateBtn.classList.add('pulse-anim');
+      setTimeout(() => this.calculateBtn.classList.remove('pulse-anim'), 600);
     });
 
     this.calculate();
@@ -365,7 +565,7 @@ class OneRepMaxCalculator {
 
   calculate() {
     const weight = parseFloat(this.weightInput ? this.weightInput.value : 80) || 80;
-    const reps = parseInt(this.repsInput ? this.repsInput.value : 5, 10) || 5;
+    const reps = parseInt(this.repsInput ? this.repsInput.value : 6, 10) || 6;
 
     // Brzycki Formula: 1RM = Weight / (1.0278 - 0.0278 * Reps)
     let estimated1rm = weight;
@@ -380,7 +580,8 @@ class OneRepMaxCalculator {
     const load75 = Math.round(final1rm * 0.75);
     const load65 = Math.round(final1rm * 0.65);
 
-    if (this.out1rm) this.out1rm.textContent = `${final1rm} kg`;
+    if (this.out1rm) this.out1rm.textContent = `${final1rm}`;
+    if (this.outDonutKg) this.outDonutKg.textContent = `${final1rm} kg`;
     if (this.out95) this.out95.textContent = `${load95} kg`;
     if (this.out85) this.out85.textContent = `${load85} kg`;
     if (this.out75) this.out75.textContent = `${load75} kg`;
@@ -388,7 +589,7 @@ class OneRepMaxCalculator {
 
     // Classification Tier
     if (this.outTierBadge) {
-      let tier = "Intermediate Lifter";
+      let tier = "Solid Intermediate Strength";
       if (final1rm < 70) tier = "Novice Strength Level";
       else if (final1rm >= 70 && final1rm < 110) tier = "Solid Intermediate Strength";
       else if (final1rm >= 110 && final1rm < 150) tier = "Advanced Power Athlete";
@@ -402,7 +603,7 @@ class OneRepMaxCalculator {
 // 5. Interactive Lab Tab Switcher
 // ============================================================================
 const initLabTabs = () => {
-  const tabs = document.querySelectorAll('.lab-tab-btn');
+  const tabs = document.querySelectorAll('.lab-tab-card');
   const panels = document.querySelectorAll('.lab-tab-panel');
 
   tabs.forEach(tab => {

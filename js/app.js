@@ -78,8 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('modal-open', isOpen);
   };
 
+  const closeMobileNavBtn = document.getElementById('closeMobileNavBtn');
+
   if (hamburgerBtn) {
     hamburgerBtn.addEventListener('click', () => toggleMobileNav());
+  }
+  if (closeMobileNavBtn) {
+    closeMobileNavBtn.addEventListener('click', () => toggleMobileNav(false));
   }
   if (mobileBackdrop) {
     mobileBackdrop.addEventListener('click', () => toggleMobileNav(false));
@@ -210,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "5 Common Mistakes Beginners Make at the Gym",
       tag: "Training",
       date: "Sep 12, 2024 &bull; 4 min read",
-      image: "assets/images/blog_training.jpg",
+      image: "assets/images/blog_training.webp",
       content: `
         <p>Walking into a gym for the first time is exciting, but without a clear strategy, it's easy to waste time, get frustrated, or even end up injured. Over the past 8+ years coaching beginners into confident lifters, I've seen these same 5 mistakes repeated constantly.</p>
         
@@ -239,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "A Simple Guide to Better Meal Prep",
       tag: "Nutrition",
       date: "Sep 5, 2024 • 6 min read",
-      image: "assets/images/blog_nutrition.jpg",
+      image: "assets/images/blog_nutrition.webp",
       content: `
         <p>You can't out-train a chaotic diet. But meal prepping shouldn't mean spending your entire Sunday afternoon cooking dry chicken and soggy broccoli. Here is a simple, realistic meal prep blueprint designed for busy professionals.</p>
 
@@ -273,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Why Consistency Beats Motivation Every Time",
       tag: "Lifestyle",
       date: "Aug 28, 2024 • 5 min read",
-      image: "assets/images/blog_lifestyle.jpg",
+      image: "assets/images/blog_lifestyle.webp",
       content: `
         <p>Motivation is an emotion. It comes in waves when you watch an inspiring video or set a New Year's resolution. But feelings are volatile. The clients who achieve dramatic, permanent transformations aren't the ones who are motivated 365 days a year &mdash; they are the ones who show up on the days they don't feel like it.</p>
 
@@ -339,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: "12 - 16 Weeks",
       tag: "Body Recomposition & Conditioning",
       subtitle: "Drop 5–15+ kg of pure body fat, preserve athletic muscle tissue, and lock in permanent metabolic vitality without starvation diets.",
-      image: "assets/images/program_fatloss.jpg",
+      image: "assets/images/program_fatloss.webp",
       stats: {
         duration: "12 - 16 Weeks",
         frequency: "3 - 5 Days / Wk",
@@ -402,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: "16 - 24 Weeks",
       tag: "Hypertrophy & Physique Architecture",
       subtitle: "Pack on 3–7+ kg of dense lean muscle tissue, develop classic aesthetic V-taper proportions, and master progressive overload mechanics.",
-      image: "assets/images/program_muscle.jpg",
+      image: "assets/images/program_muscle.webp",
       stats: {
         duration: "16 - 24 Weeks",
         frequency: "4 - 5 Days Split",
@@ -465,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: "Custom 12-Wk Cycles",
       tag: "Strength, Biomechanics & Power",
       subtitle: "Maximize your 1-Rep Max across the Squat, Bench Press, and Deadlift with world-class periodization and lever-specific biomechanics.",
-      image: "assets/images/program_strength.jpg",
+      image: "assets/images/program_strength.webp",
       stats: {
         duration: "12-Week Cycles",
         frequency: "3 - 4 Days / Wk",
@@ -528,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: "Flexible Monthly / Quarterly",
       tag: "Global Online Mentorship",
       subtitle: "Elite personal training and nutritional guidance from Coach Revo delivered anywhere in the world through custom app workouts and weekly video coaching.",
-      image: "assets/images/program_online.jpg",
+      image: "assets/images/program_online.webp",
       stats: {
         duration: "Monthly / Quarterly",
         frequency: "Custom (2 - 6 Days/Wk)",
@@ -591,7 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: "8 - 12 Weeks",
       tag: "Mobility, Posture & Injury Prevention",
       subtitle: "Eliminate chronic desk-work stiffness, fix forward-head posture and anterior pelvic tilt, and build bulletproof, pain-free joint durability.",
-      image: "assets/images/hero_trainer.jpg",
+      image: "assets/images/hero_trainer.webp",
       stats: {
         duration: "8 - 12 Weeks",
         frequency: "3 - 4 Sessions / Wk (30 min)",
@@ -736,7 +741,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Certified Strength & Conditioning Specialist",
       issuer: "National Strength & Conditioning Association",
       issuerLocation: "Colorado Springs, Colorado, USA",
-      code: "CSCS-2021-88410",
+      code: "CSCS-2021-88418",
       status: "Verified & Active",
       issueDate: "2021 • Active Standing",
       accreditingOrg: "NCCA Accredited",
@@ -760,7 +765,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Verified & Active",
       issueDate: "2020 • Active Standing",
       accreditingOrg: "PN Global Institute",
-      tag: "Clinical Nutrition & Habits",
+      tag: "Nutrition & Habits",
       iconSvg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>`,
       description: "Globally acclaimed behavioral nutrition methodology blending macronutrient biochemistry with deep cognitive habit transformation.",
       pillars: [
@@ -771,12 +776,32 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       clientImpact: "Eliminates restrictive yo-yo starvation diets forever by building sustainable eating habits that effortlessly fit into your career and social lifestyle."
     },
-    "fms-level2": {
-      acronym: "FMS Level 2",
+    "fms-level1": {
+      acronym: "FMS — Level 1",
       title: "Functional Movement Screen Specialist",
       issuer: "Functional Movement Systems",
       issuerLocation: "Chatham, Virginia, USA",
-      code: "FMS-L2-60193",
+      code: "FMS-11295",
+      status: "Verified & Active",
+      issueDate: "2022 • Active Standing",
+      accreditingOrg: "FMS Global",
+      tag: "Movement & Mobility",
+      iconSvg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`,
+      description: "Standardized movement diagnostic system designed to identify physical asymmetries, neuromuscular inhibitions, and mobility limitations.",
+      pillars: [
+        "7-step standardized movement test (Deep Squat, Hurdle Step, In-Line Lunge, Shoulder Mobility, Active Straight-Leg Raise, Trunk Stability, Rotary Stability)",
+        "Corrective movement algorithms to restore bilateral symmetry before loading",
+        "Myofascial release, joint capsule decompression, and neuromuscular reactivation drills",
+        "Safe regression and progression pathways for pain-free compound lifting"
+      ],
+      clientImpact: "Unlocks stiff hips, tight thoracic spines, and aching knees so you can train with maximum intensity without waking up with debilitating aches."
+    },
+    "fms-level2": {
+      acronym: "FMS — Level 1",
+      title: "Functional Movement Screen Specialist",
+      issuer: "Functional Movement Systems",
+      issuerLocation: "Chatham, Virginia, USA",
+      code: "FMS-11295",
       status: "Verified & Active",
       issueDate: "2022 • Active Standing",
       accreditingOrg: "FMS Global",
@@ -793,14 +818,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     "exos-xps": {
       acronym: "EXOS — XPS",
-      title: "Athletic Performance Specialist",
-      issuer: "EXOS Human Performance Institute",
+      title: "Certified Performance Specialist",
+      issuer: "EXOS Human Performance",
       issuerLocation: "Phoenix, Arizona, USA",
-      code: "EXOS-PS-10943",
+      code: "EXOS-XPS-77621",
       status: "Verified & Active",
       issueDate: "2022 • Active Standing",
       accreditingOrg: "EXOS Institute",
-      tag: "Elite Conditioning",
+      tag: "Human Performance",
       iconSvg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`,
       description: "World-class athletic conditioning methodology utilized by NFL, military special operations, and top Olympic training facilities.",
       pillars: [
@@ -811,164 +836,399 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       clientImpact: "Builds a high-output cardiovascular engine and explosive agility, ensuring you never run out of gas during high-intensity sessions."
     },
-    "aha-bls": {
-      acronym: "AHA — BLS",
-      title: "Basic Life Support / CPR & AED Provider",
-      issuer: "American Heart Association",
-      issuerLocation: "Dallas, Texas, USA",
-      code: "AHA-BLS-772910",
+    "ace-health-coach": {
+      acronym: "ACE — Health Coach",
+      title: "Certified Health Coach",
+      issuer: "American Council on Exercise",
+      issuerLocation: "San Diego, California, USA",
+      code: "ACE-HC-55317",
       status: "Verified & Active",
-      issueDate: "2023 • Valid Thru 2025",
-      accreditingOrg: "American Heart Association",
-      tag: "Safety Protocol",
+      issueDate: "2023 • Valid Thru 2026",
+      accreditingOrg: "NCCA Accredited",
+      tag: "Lifestyle & Behavior",
       iconSvg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`,
-      description: "Professional healthcare-grade life safety and medical emergency certification, ensuring unconditional safety during maximum-effort training.",
+      description: "Evidence-based lifestyle modification, behavior change architecture, and holistic adherence coaching certified by the American Council on Exercise.",
       pillars: [
-        "Adult, child, and infant Cardiopulmonary Resuscitation (CPR) with high-efficiency chest compressions",
-        "Immediate Automated External Defibrillator (AED) rapid operation and cardiac rhythm recovery",
-        "Exercise-induced acute distress, heat exhaustion, and syncope emergency triage",
-        "Facility emergency action planning (EAP) and pre-exercise health questionnaire (PAR-Q+) adherence"
+        "Transtheoretical Model (TTM) of behavior change & cognitive motivational interviewing",
+        "Sleep quality architecture, circadian rhythm alignment, and daily stress mitigation",
+        "Client self-efficacy building and sustainable fitness routine integration",
+        "Comprehensive health metric tracking, biomarker monitoring, and lifestyle wellness"
       ],
-      clientImpact: "Provides absolute peace of mind that every intense workout is executed in a medically sound, rigorously safe training environment."
+      clientImpact: "Transforms healthy exercise and eating habits from a temporary chore into an effortless, lifelong permanent lifestyle."
+    },
+    "aha-bls": {
+      acronym: "ACE — Health Coach",
+      title: "Certified Health Coach",
+      issuer: "American Council on Exercise",
+      issuerLocation: "San Diego, California, USA",
+      code: "ACE-HC-55317",
+      status: "Verified & Active",
+      issueDate: "2023 • Valid Thru 2026",
+      accreditingOrg: "NCCA Accredited",
+      tag: "Lifestyle & Behavior",
+      iconSvg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`,
+      description: "Evidence-based lifestyle modification, behavior change architecture, and holistic adherence coaching certified by the American Council on Exercise.",
+      pillars: [
+        "Transtheoretical Model (TTM) of behavior change & cognitive motivational interviewing",
+        "Sleep quality architecture, circadian rhythm alignment, and daily stress mitigation",
+        "Client self-efficacy building and sustainable fitness routine integration",
+        "Comprehensive health metric tracking, biomarker monitoring, and lifestyle wellness"
+      ],
+      clientImpact: "Transforms healthy exercise and eating habits from a temporary chore into an effortless, lifelong permanent lifestyle."
     }
   };
 
   let currentLoadedCertKey = 'nasm-cpt';
 
-  // SVG Certificate Vector Artwork Generator
-  const generateCertSvg = (certKey, width = "100%", height = "auto") => {
-    const cert = certificatesData[certKey] || certificatesData['nasm-cpt'];
-    if (!cert) return '';
+  // Realistic SVG Certificate Vector Artwork Generator matching mockup designs
+  const generateCertSvg = (certKey, width = "100%", height = "100%") => {
+    // NASM - CPT (Cream Parchment with Navy Header & Gold Seal)
+    if (certKey === 'nasm-cpt') {
+      return `
+        <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nasmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fdfdfb" />
+              <stop offset="100%" stop-color="#f0efe9" />
+            </linearGradient>
+            <linearGradient id="nasmGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d4af37" />
+              <stop offset="50%" stop-color="#f5e08c" />
+              <stop offset="100%" stop-color="#aa801e" />
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" rx="6" fill="url(#nasmBg)" />
+          <!-- Dark outer border and gold inner border -->
+          <rect x="12" y="12" width="616" height="376" rx="4" fill="none" stroke="#1a2536" stroke-width="2.5" />
+          <rect x="18" y="18" width="604" height="364" rx="2" fill="none" stroke="url(#nasmGold)" stroke-width="1.2" />
+          
+          <!-- NASM Dark Badge Header -->
+          <g transform="translate(260, 36)">
+            <rect width="120" height="34" rx="4" fill="#14213d" />
+            <text x="60" y="24" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="3" text-anchor="middle">NASM</text>
+          </g>
+          
+          <text x="320" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#475569" letter-spacing="2" text-anchor="middle">NATIONAL ACADEMY OF SPORTS MEDICINE</text>
+          <text x="320" y="128" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#0f172a" letter-spacing="1.5" text-anchor="middle">CERTIFIED PERSONAL TRAINER</text>
+          
+          <text x="320" y="152" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#64748b" letter-spacing="1" text-anchor="middle">THIS CREDENTIAL IS OFFICIALLY PRESENTED TO</text>
+          <text x="320" y="190" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#0f172a" letter-spacing="1.5" text-anchor="middle">COACH REVO</text>
+          <line x1="180" y1="202" x2="460" y2="202" stroke="url(#nasmGold)" stroke-width="1.2" />
+          
+          <text x="320" y="224" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">For demonstrating professional competence in the Optimum Performance Training (OPT™) Model</text>
 
-    const colors = {
-      "nasm-cpt": { primary: "#d2ff00", secondary: "#a0cc00", bg: "#0d0f14", accent: "rgba(210,255,0,0.15)" },
-      "nsca-cscs": { primary: "#00f0ff", secondary: "#0099ff", bg: "#0b1017", accent: "rgba(0,240,255,0.15)" },
-      "precision-nutrition": { primary: "#ffaa00", secondary: "#ff6600", bg: "#130f0a", accent: "rgba(255,170,0,0.15)" },
-      "fms-level2": { primary: "#39ff14", secondary: "#00cc44", bg: "#0a130b", accent: "rgba(57,255,20,0.15)" },
-      "exos-xps": { primary: "#ff2a6d", secondary: "#ff007f", bg: "#140a10", accent: "rgba(255,42,109,0.15)" },
-      "aha-bls": { primary: "#ff4d4d", secondary: "#cc0000", bg: "#140a0a", accent: "rgba(255,77,77,0.15)" }
-    }[certKey] || { primary: "#d2ff00", secondary: "#a0cc00", bg: "#0d0f14", accent: "rgba(210,255,0,0.15)" };
+          <!-- Dual Signatures -->
+          <g transform="translate(60, 270)">
+            <path d="M 10 20 Q 30 5, 55 18 T 100 12 T 130 22" fill="none" stroke="#1e293b" stroke-width="1.4" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#64748b" text-anchor="middle">Director of Credentialing</text>
+          </g>
 
+          <g transform="translate(440, 270)">
+            <path d="M 15 22 Q 40 8, 65 20 T 110 14 T 135 24" fill="none" stroke="#1e293b" stroke-width="1.4" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#64748b" text-anchor="middle">Chairman, Exam Committee</text>
+          </g>
+
+          <!-- Center Gold Embossed Seal -->
+          <g transform="translate(290, 260)">
+            <polygon points="15,45 5,75 18,68 30,75 25,45" fill="url(#nasmGold)" />
+            <polygon points="45,45 38,75 50,68 62,75 55,45" fill="url(#nasmGold)" />
+            <circle cx="30" cy="28" r="26" fill="#14213d" stroke="url(#nasmGold)" stroke-width="2" />
+            <circle cx="30" cy="28" r="21" fill="none" stroke="url(#nasmGold)" stroke-width="0.8" stroke-dasharray="2,2" />
+            <text x="30" y="26" font-family="'Outfit', sans-serif" font-size="7" font-weight="900" fill="url(#nasmGold)" text-anchor="middle">OFFICIAL</text>
+            <text x="30" y="35" font-family="'Outfit', sans-serif" font-size="6" font-weight="800" fill="#ffffff" text-anchor="middle">SEAL</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    // NSCA - CSCS (Dark Navy Slate with Gold Border & CSCS Logo)
+    if (certKey === 'nsca-cscs') {
+      return `
+        <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="nscaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0e1724" />
+              <stop offset="50%" stop-color="#0a101a" />
+              <stop offset="100%" stop-color="#06090e" />
+            </linearGradient>
+            <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d4af37" />
+              <stop offset="50%" stop-color="#fff2a8" />
+              <stop offset="100%" stop-color="#aa801e" />
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" rx="6" fill="url(#nscaBg)" />
+          <rect x="12" y="12" width="616" height="376" rx="4" fill="none" stroke="url(#goldGlow)" stroke-width="1.8" />
+          <rect x="18" y="18" width="604" height="364" rx="2" fill="none" stroke="url(#goldGlow)" stroke-width="0.6" stroke-dasharray="4,3" />
+
+          <!-- NSCA Header Logo -->
+          <g transform="translate(270, 36)">
+            <rect width="100" height="30" rx="3" fill="#1e293b" stroke="url(#goldGlow)" stroke-width="0.8" />
+            <text x="50" y="21" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="2" text-anchor="middle">NSCA</text>
+          </g>
+
+          <text x="320" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" fill="#94a3b8" letter-spacing="2" text-anchor="middle">NATIONAL STRENGTH AND CONDITIONING ASSOCIATION</text>
+          <text x="320" y="120" font-family="'Outfit', sans-serif" font-size="13.5" font-weight="900" fill="#ffffff" letter-spacing="1" text-anchor="middle">CERTIFIED <tspan fill="#00f0ff">STRENGTH AND</tspan></text>
+          <text x="320" y="138" font-family="'Outfit', sans-serif" font-size="13.5" font-weight="900" fill="#00f0ff" letter-spacing="1" text-anchor="middle">CONDITIONING SPECIALIST</text>
+
+          <text x="320" y="162" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#64748b" letter-spacing="1" text-anchor="middle">CONFERS THIS DISTINCTION UPON</text>
+          <text x="320" y="196" font-family="'Outfit', sans-serif" font-size="23" font-weight="900" fill="url(#goldGlow)" letter-spacing="1.5" text-anchor="middle">COACH REVO</text>
+          <line x1="180" y1="206" x2="460" y2="206" stroke="url(#goldGlow)" stroke-width="1" stroke-opacity="0.6" />
+
+          <!-- Dual Signatures -->
+          <g transform="translate(60, 270)">
+            <path d="M 10 20 Q 35 6, 60 18 T 105 12 T 130 22" fill="none" stroke="url(#goldGlow)" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#334155" stroke-width="0.8" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#94a3b8" text-anchor="middle">Executive Director</text>
+          </g>
+
+          <g transform="translate(440, 270)">
+            <path d="M 15 22 Q 40 8, 65 20 T 110 14 T 135 24" fill="none" stroke="url(#goldGlow)" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#334155" stroke-width="0.8" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#94a3b8" text-anchor="middle">Certification Commission</text>
+          </g>
+
+          <!-- Center CSCS Seal -->
+          <g transform="translate(290, 256)">
+            <circle cx="30" cy="30" r="28" fill="#0b1320" stroke="url(#goldGlow)" stroke-width="2" />
+            <circle cx="30" cy="30" r="23" fill="none" stroke="#00f0ff" stroke-width="0.8" />
+            <text x="30" y="29" font-family="'Outfit', sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">CSCS</text>
+            <text x="30" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-size="5" font-weight="800" fill="url(#goldGlow)" text-anchor="middle">CERTIFIED</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    // PN1 / ISSN (Cream with Gold Ribbon Seal)
+    if (certKey === 'precision-nutrition' || certKey === 'pn1-cnc') {
+      return `
+        <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="pnBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#faf8f4" />
+              <stop offset="100%" stop-color="#f2eee6" />
+            </linearGradient>
+            <linearGradient id="goldPn" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#c59b27" />
+              <stop offset="50%" stop-color="#ffd56b" />
+              <stop offset="100%" stop-color="#8a650c" />
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" rx="6" fill="url(#pnBg)" />
+          <rect x="12" y="12" width="616" height="376" rx="4" fill="none" stroke="#23272e" stroke-width="2" />
+          <rect x="16" y="16" width="608" height="368" rx="2" fill="none" stroke="url(#goldPn)" stroke-width="0.9" />
+
+          <!-- ISSN / PN Header -->
+          <text x="320" y="54" font-family="'Outfit', sans-serif" font-size="19" font-weight="900" fill="#1f242d" letter-spacing="4" text-anchor="middle">ISSN</text>
+          <text x="320" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#5a6270" letter-spacing="1.5" text-anchor="middle">INTERNATIONAL SOCIETY OF SPORTS NUTRITION</text>
+          
+          <text x="320" y="116" font-family="'Outfit', sans-serif" font-size="15" font-weight="900" fill="#1f242d" letter-spacing="1" text-anchor="middle">CERTIFIED NUTRITION &amp;</text>
+          <text x="320" y="136" font-family="'Outfit', sans-serif" font-size="15" font-weight="900" fill="#1f242d" letter-spacing="1" text-anchor="middle">METABOLIC COACH</text>
+
+          <text x="320" y="162" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#788190" text-anchor="middle">THIS CREDENTIAL IS DULY AWARDED TO</text>
+          <text x="320" y="196" font-family="'Outfit', sans-serif" font-size="23" font-weight="900" fill="#1f242d" letter-spacing="1" text-anchor="middle">COACH REVO</text>
+          <line x1="200" y1="206" x2="440" y2="206" stroke="url(#goldPn)" stroke-width="1.2" />
+
+          <!-- Dual Signatures -->
+          <g transform="translate(60, 270)">
+            <path d="M 10 20 Q 30 5, 55 18 T 100 12 T 130 22" fill="none" stroke="#1f242d" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#788190" text-anchor="middle">Senior Science Director</text>
+          </g>
+
+          <g transform="translate(440, 270)">
+            <path d="M 15 22 Q 40 8, 65 20 T 110 14 T 135 24" fill="none" stroke="#1f242d" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#788190" text-anchor="middle">Board of Registrars</text>
+          </g>
+
+          <!-- Center Gold Medallion Ribbon -->
+          <g transform="translate(290, 254)">
+            <polygon points="12,46 2,78 16,70 28,78 22,46" fill="url(#goldPn)" />
+            <polygon points="48,46 42,78 54,70 68,78 58,46" fill="url(#goldPn)" />
+            <circle cx="30" cy="28" r="26" fill="#1f242d" stroke="url(#goldPn)" stroke-width="2" />
+            <circle cx="30" cy="28" r="21" fill="none" stroke="url(#goldPn)" stroke-width="0.8" stroke-dasharray="3,2" />
+            <text x="30" y="30" font-family="'Outfit', sans-serif" font-size="8" font-weight="900" fill="url(#goldPn)" text-anchor="middle">ISSN</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    // FMS - Level 1 (White with Red Geometric Bands)
+    if (certKey === 'fms-level1' || certKey === 'fms-level2') {
+      return `
+        <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fmsGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d4af37" />
+              <stop offset="100%" stop-color="#997300" />
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" rx="6" fill="#ffffff" />
+          
+          <!-- Signature Red Geometric Side Bands -->
+          <polygon points="0,0 36,0 12,400 0,400" fill="#dc2626" />
+          <polygon points="640,0 604,0 628,400 640,400" fill="#dc2626" />
+          
+          <rect x="42" y="14" width="556" height="372" fill="none" stroke="#dc2626" stroke-width="1.2" />
+
+          <!-- FMS Logo Header -->
+          <text x="320" y="58" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#dc2626" letter-spacing="3" text-anchor="middle">FMS</text>
+          <text x="320" y="76" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" fill="#475569" letter-spacing="1.5" text-anchor="middle">FUNCTIONAL MOVEMENT SYSTEMS</text>
+          
+          <text x="320" y="118" font-family="'Outfit', sans-serif" font-size="14.5" font-weight="900" fill="#0f172a" letter-spacing="1" text-anchor="middle">CERTIFIED FUNCTIONAL</text>
+          <text x="320" y="138" font-family="'Outfit', sans-serif" font-size="14.5" font-weight="900" fill="#0f172a" letter-spacing="1" text-anchor="middle">MOVEMENT SPECIALIST</text>
+
+          <text x="320" y="166" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">PROUDLY PRESENTED TO</text>
+          <text x="320" y="200" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#0f172a" letter-spacing="1" text-anchor="middle">COACH REVO</text>
+          <line x1="200" y1="210" x2="440" y2="210" stroke="#dc2626" stroke-width="1.2" />
+
+          <!-- Dual Signatures -->
+          <g transform="translate(70, 270)">
+            <path d="M 10 20 Q 30 5, 55 18 T 100 12 T 130 22" fill="none" stroke="#0f172a" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="130" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="65" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#64748b" text-anchor="middle">Gray Cook, MSPT, OCS</text>
+          </g>
+
+          <g transform="translate(440, 270)">
+            <path d="M 15 22 Q 40 8, 65 20 T 110 14 T 135 24" fill="none" stroke="#0f172a" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="130" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="65" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#64748b" text-anchor="middle">Lee Burton, PhD, ATC</text>
+          </g>
+
+          <!-- Center FMS Gold Seal -->
+          <g transform="translate(292, 260)">
+            <circle cx="28" cy="28" r="26" fill="#ffffff" stroke="url(#fmsGold)" stroke-width="2.5" />
+            <circle cx="28" cy="28" r="21" fill="none" stroke="#dc2626" stroke-width="0.8" />
+            <text x="28" y="27" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="900" fill="#dc2626" text-anchor="middle">FMS</text>
+            <text x="28" y="36" font-family="'Outfit', sans-serif" font-size="5.5" font-weight="800" fill="#0f172a" text-anchor="middle">LEVEL 1</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    // EXOS - XPS (Dark Charcoal with Gold Art Deco Filigree)
+    if (certKey === 'exos-xps') {
+      return `
+        <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="exosGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#e6c66e" />
+              <stop offset="50%" stop-color="#ffd980" />
+              <stop offset="100%" stop-color="#997a26" />
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" rx="6" fill="#0d0f14" />
+          
+          <!-- Ornate Gold Filigree Art Deco Borders -->
+          <rect x="14" y="14" width="612" height="372" fill="none" stroke="url(#exosGold)" stroke-width="1.4" />
+          <rect x="20" y="20" width="600" height="360" fill="none" stroke="url(#exosGold)" stroke-width="0.6" />
+          
+          <!-- Corner Filigree brackets -->
+          <path d="M 20 50 L 50 20 M 20 20 L 60 20 M 20 20 L 20 60" stroke="url(#exosGold)" stroke-width="1.2" fill="none" />
+          <path d="M 620 50 L 590 20 M 620 20 L 580 20 M 620 20 L 620 60" stroke="url(#exosGold)" stroke-width="1.2" fill="none" />
+          <path d="M 20 350 L 50 380 M 20 380 L 60 380 M 20 380 L 20 340" stroke="url(#exosGold)" stroke-width="1.2" fill="none" />
+          <path d="M 620 350 L 590 380 M 620 380 L 580 380 M 620 380 L 620 340" stroke="url(#exosGold)" stroke-width="1.2" fill="none" />
+
+          <!-- EXOS Logo Header -->
+          <text x="320" y="56" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="url(#exosGold)" letter-spacing="4" text-anchor="middle">EXOS</text>
+          <text x="320" y="76" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#94a3b8" letter-spacing="2" text-anchor="middle">HUMAN PERFORMANCE</text>
+
+          <text x="320" y="128" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1.5" text-anchor="middle">PERFORMANCE SPECIALIST</text>
+
+          <text x="320" y="156" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#64748b" text-anchor="middle">CONFERRED UPON</text>
+          <text x="320" y="194" font-family="'Outfit', sans-serif" font-size="23" font-weight="900" fill="url(#exosGold)" letter-spacing="1.5" text-anchor="middle">COACH REVO</text>
+          <line x1="180" y1="204" x2="460" y2="204" stroke="url(#exosGold)" stroke-width="1" stroke-opacity="0.6" />
+
+          <!-- Dual Signatures -->
+          <g transform="translate(60, 270)">
+            <path d="M 10 20 Q 30 5, 55 18 T 100 12 T 130 22" fill="none" stroke="url(#exosGold)" stroke-width="1.2" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#334155" stroke-width="0.8" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#94a3b8" text-anchor="middle">VP of Performance</text>
+          </g>
+
+          <g transform="translate(440, 270)">
+            <path d="M 15 22 Q 40 8, 65 20 T 110 14 T 135 24" fill="none" stroke="url(#exosGold)" stroke-width="1.2" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#334155" stroke-width="0.8" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#94a3b8" text-anchor="middle">Founder &amp; President</text>
+          </g>
+
+          <!-- Center EXOS Seal -->
+          <g transform="translate(290, 258)">
+            <circle cx="30" cy="28" r="26" fill="#141822" stroke="url(#exosGold)" stroke-width="2" />
+            <circle cx="30" cy="28" r="21" fill="none" stroke="url(#exosGold)" stroke-width="0.8" stroke-dasharray="2,2" />
+            <text x="30" y="27" font-family="'Outfit', sans-serif" font-size="7.5" font-weight="900" fill="url(#exosGold)" text-anchor="middle">EXOS</text>
+            <text x="30" y="36" font-family="'Outfit', sans-serif" font-size="5" font-weight="800" fill="#ffffff" text-anchor="middle">XPS</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    // ACE - Health Coach (Clean White Parchment with Red Geometry & ACE Seal)
+    if (certKey === 'ace-health-coach' || certKey === 'aha-bls') {
+      return `
+        <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="aceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#f8f7f4" />
+            </linearGradient>
+            <linearGradient id="aceGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d4af37" />
+              <stop offset="100%" stop-color="#aa801e" />
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" rx="6" fill="url(#aceBg)" />
+          
+          <!-- Red Angled Header Corners -->
+          <polygon points="0,0 80,0 0,60" fill="#dc2626" />
+          <polygon points="640,0 560,0 640,60" fill="#dc2626" />
+
+          <rect x="14" y="14" width="612" height="372" fill="none" stroke="#e2e8f0" stroke-width="1.5" />
+          <rect x="18" y="18" width="604" height="364" fill="none" stroke="#dc2626" stroke-width="0.8" />
+
+          <!-- ACE Logo Header -->
+          <text x="320" y="56" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#dc2626" letter-spacing="3" text-anchor="middle">ACE</text>
+          <text x="320" y="74" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" fill="#475569" letter-spacing="1.5" text-anchor="middle">AMERICAN COUNCIL ON EXERCISE</text>
+
+          <text x="320" y="124" font-family="'Outfit', sans-serif" font-size="17" font-weight="900" fill="#0f172a" letter-spacing="1.5" text-anchor="middle">HEALTH COACH</text>
+
+          <text x="320" y="152" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">THIS CREDENTIAL IS PROUDLY CONFERRED UPON</text>
+          <text x="320" y="190" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#0f172a" letter-spacing="1" text-anchor="middle">COACH REVO</text>
+          <line x1="200" y1="200" x2="440" y2="200" stroke="#dc2626" stroke-width="1.2" />
+
+          <!-- Dual Signatures -->
+          <g transform="translate(60, 270)">
+            <path d="M 10 20 Q 30 5, 55 18 T 100 12 T 130 22" fill="none" stroke="#0f172a" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#64748b" text-anchor="middle">President &amp; CEO</text>
+          </g>
+
+          <g transform="translate(440, 270)">
+            <path d="M 15 22 Q 40 8, 65 20 T 110 14 T 135 24" fill="none" stroke="#0f172a" stroke-width="1.3" />
+            <line x1="0" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-width="1" />
+            <text x="70" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#64748b" text-anchor="middle">Chief Science Officer</text>
+          </g>
+
+          <!-- Center ACE Seal -->
+          <g transform="translate(290, 258)">
+            <circle cx="30" cy="28" r="26" fill="#1e293b" stroke="url(#aceGold)" stroke-width="2" />
+            <circle cx="30" cy="28" r="21" fill="none" stroke="#dc2626" stroke-width="0.8" />
+            <text x="30" y="27" font-family="'Outfit', sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">ACE</text>
+            <text x="30" y="36" font-family="'Outfit', sans-serif" font-size="5" font-weight="800" fill="url(#aceGold)" text-anchor="middle">COACH</text>
+          </g>
+        </svg>
+      `;
+    }
+
+    // Default Fallback
     return `
       <svg class="cert-rendered-svg" viewBox="0 0 640 400" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="gradBg-${certKey}" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#1a1e27" />
-            <stop offset="50%" stop-color="${colors.bg}" />
-            <stop offset="100%" stop-color="#080a0d" />
-          </linearGradient>
-          <linearGradient id="gradGold-${certKey}" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="${colors.primary}" />
-            <stop offset="50%" stop-color="#ffffff" />
-            <stop offset="100%" stop-color="${colors.secondary}" />
-          </linearGradient>
-          <pattern id="guilloche-${certKey}" width="30" height="30" patternUnits="userSpaceOnUse">
-            <circle cx="15" cy="15" r="14" fill="none" stroke="${colors.primary}" stroke-width="0.35" stroke-opacity="0.1" />
-            <path d="M0,15 Q7.5,0 15,15 T30,15" fill="none" stroke="${colors.primary}" stroke-width="0.3" stroke-opacity="0.08" />
-          </pattern>
-        </defs>
-
-        <!-- Background with subtle security pattern -->
-        <rect width="640" height="400" rx="10" fill="url(#gradBg-${certKey})" />
-        <rect x="8" y="8" width="624" height="384" rx="6" fill="url(#guilloche-${certKey})" />
-
-        <!-- Ornate Outer Border -->
-        <rect x="14" y="14" width="612" height="372" rx="4" fill="none" stroke="${colors.primary}" stroke-width="1.2" stroke-opacity="0.6" />
-        <rect x="20" y="20" width="600" height="360" rx="3" fill="none" stroke="${colors.primary}" stroke-width="0.6" stroke-dasharray="6,4" stroke-opacity="0.4" />
-
-        <!-- Corner Rosettes -->
-        <g stroke="${colors.primary}" fill="none" stroke-width="1.2">
-          <path d="M 20 42 L 42 20 M 20 20 L 46 20 M 20 20 L 20 46" />
-          <path d="M 620 42 L 598 20 M 620 20 L 594 20 M 620 20 L 620 46" />
-          <path d="M 20 358 L 42 380 M 20 380 L 46 380 M 20 380 L 20 354" />
-          <path d="M 620 358 L 598 380 M 620 380 L 594 380 M 620 380 L 620 354" />
-        </g>
-
-        <!-- Watermark Emblem in Background -->
-        <circle cx="320" cy="200" r="100" fill="none" stroke="${colors.primary}" stroke-width="1" stroke-opacity="0.05" />
-        <polygon points="320,125 345,175 400,180 360,220 372,275 320,245 268,275 280,220 240,180 295,175" fill="${colors.primary}" fill-opacity="0.03" />
-
-        <!-- Header Authority -->
-        <text x="320" y="52" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="${colors.primary}" letter-spacing="3.5" text-anchor="middle">
-          ${cert.issuer.toUpperCase()}
-        </text>
-        <text x="320" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#8b949e" letter-spacing="1.5" text-anchor="middle">
-          ${cert.issuerLocation.toUpperCase()} &bull; ${cert.accreditingOrg.toUpperCase()}
-        </text>
-
-        <line x1="160" y1="80" x2="480" y2="80" stroke="url(#gradGold-${certKey})" stroke-width="1" stroke-opacity="0.5" />
-
-        <!-- Title Main -->
-        <text x="320" y="108" font-family="'Outfit', sans-serif" font-size="17" font-weight="900" fill="#ffffff" letter-spacing="1.5" text-anchor="middle">
-          CERTIFICATE OF ACCREDITATION
-        </text>
-        <text x="320" y="126" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#a0aec0" letter-spacing="1" text-anchor="middle">
-          THIS OFFICIAL CREDENTIAL IS PROUDLY CONFERRED UPON
-        </text>
-
-        <!-- Recipient Name -->
-        <text x="320" y="164" font-family="'Outfit', sans-serif" font-size="23" font-weight="900" fill="url(#gradGold-${certKey})" letter-spacing="1" text-anchor="middle">
-          COACH REVO
-        </text>
-        <line x1="200" y1="175" x2="440" y2="175" stroke="${colors.primary}" stroke-width="1" stroke-opacity="0.3" />
-
-        <!-- Credential Conferred -->
-        <text x="320" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#cbd5e1" text-anchor="middle">
-          for demonstrating mastery in the sports science curriculum &amp; practical clinical standards of
-        </text>
-        <text x="320" y="222" font-family="'Outfit', sans-serif" font-size="13.5" font-weight="800" fill="#ffffff" letter-spacing="0.5" text-anchor="middle">
-          ${cert.title.toUpperCase()}
-        </text>
-        <text x="320" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="${colors.primary}" font-weight="700" letter-spacing="1" text-anchor="middle">
-          CREDENTIAL ID: ${cert.code} &bull; ${cert.status.toUpperCase()}
-        </text>
-
-        <!-- Bottom Authority & Official Seal -->
-        <!-- Left Signature -->
-        <g transform="translate(50, 280)">
-          <path d="M 10 25 Q 35 5, 60 22 T 110 18 T 135 28" fill="none" stroke="${colors.primary}" stroke-width="1.3" stroke-opacity="0.8" />
-          <line x1="0" y1="36" x2="140" y2="36" stroke="#4a5568" stroke-width="0.8" />
-          <text x="70" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#a0aec0" text-anchor="middle">Board of Certification Director</text>
-          <text x="70" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" fill="#718096" text-anchor="middle">Official Registrar Signature</text>
-        </g>
-
-        <!-- Center Gold Embossed Seal -->
-        <g transform="translate(285, 260)">
-          <!-- Ribbon Tails -->
-          <polygon points="20,50 5,85 20,77 35,85 30,50" fill="${colors.primary}" fill-opacity="0.7" />
-          <polygon points="40,50 32,85 45,77 58,85 50,50" fill="${colors.primary}" fill-opacity="0.5" />
-          <!-- Seal Outer Star -->
-          <circle cx="35" cy="30" r="28" fill="#12151c" stroke="${colors.primary}" stroke-width="1.8" />
-          <circle cx="35" cy="30" r="23" fill="none" stroke="${colors.primary}" stroke-width="0.7" stroke-dasharray="3,2" />
-          <circle cx="35" cy="30" r="19" fill="url(#gradBg-${certKey})" stroke="${colors.primary}" stroke-width="0.8" />
-          <text x="35" y="27" font-family="'Outfit', sans-serif" font-size="6" font-weight="900" fill="${colors.primary}" text-anchor="middle" letter-spacing="1">OFFICIAL</text>
-          <text x="35" y="36" font-family="'Outfit', sans-serif" font-size="5.5" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">ACCREDITED</text>
-          <polygon points="35,16 36.5,19 40,19 37.5,21.5 38.5,25 35,23 31.5,25 32.5,21.5 30,19 33.5,19" fill="${colors.primary}" />
-        </g>
-
-        <!-- Right Security Stamp / Barcode -->
-        <g transform="translate(460, 280)">
-          <!-- Micro Barcode -->
-          <rect x="15" y="8" width="2" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="20" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="26" y="8" width="1" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="30" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="36" y="8" width="2" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="41" y="8" width="4" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="48" y="8" width="2" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="53" y="8" width="1" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="57" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="63" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="69" y="8" width="2" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="74" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="80" y="8" width="1" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="84" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="90" y="8" width="2" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <rect x="95" y="8" width="3" height="22" fill="${colors.primary}" fill-opacity="0.7" />
-          <line x1="0" y1="36" x2="120" y2="36" stroke="#4a5568" stroke-width="0.8" />
-          <text x="60" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#a0aec0" text-anchor="middle">Digital Registry Hash</text>
-          <text x="60" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" fill="#718096" text-anchor="middle">VALIDATED &bull; ACTIVE</text>
-        </g>
+        <rect width="640" height="400" rx="6" fill="#0d0f14" />
+        <rect x="14" y="14" width="612" height="372" fill="none" stroke="#d2ff00" stroke-width="1.5" />
+        <text x="320" y="200" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">OFFICIAL ACCREDITATION</text>
       </svg>
     `;
   };
@@ -985,12 +1245,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderCardPreviews();
 
+  // Category Filtering for Accreditations
+  const certFilterBtns = document.querySelectorAll('.cert-filter-btn[data-cert-filter]');
+  const certCards = document.querySelectorAll('.cert-card[data-cert-category]');
+
+  if (certFilterBtns.length > 0 && certCards.length > 0) {
+    certFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-cert-filter');
+        
+        certFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        certCards.forEach(card => {
+          const category = card.getAttribute('data-cert-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+            setTimeout(() => {
+              card.style.transition = 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
   const renderCertTabs = (activeCertId) => {
     const tabsContainer = document.getElementById('certModalTabs');
     if (!tabsContainer) return;
     
-    tabsContainer.innerHTML = Object.keys(certificatesData).map(key => {
+    // Unique list of keys for tabs
+    const uniqueKeys = ['nasm-cpt', 'nsca-cscs', 'precision-nutrition', 'fms-level1', 'exos-xps', 'ace-health-coach'];
+    
+    tabsContainer.innerHTML = uniqueKeys.map(key => {
       const c = certificatesData[key];
+      if (!c) return '';
       const isActive = key === activeCertId ? 'active' : '';
       return `<button type="button" class="cert-modal-tab ${isActive}" data-cert-tab="${key}">${c.acronym}</button>`;
     }).join('');
@@ -1029,7 +1324,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalId) modalId.textContent = cert.code;
     if (modalDate) modalDate.textContent = cert.issueDate;
     if (modalOrg) modalOrg.textContent = cert.accreditingOrg;
-    if (modalCanvas) modalCanvas.innerHTML = generateCertSvg(certId);
+    if (modalCanvas) modalCanvas.innerHTML = generateCertSvg(certId, "100%", "auto");
 
     renderCertTabs(certId);
 
@@ -1113,8 +1408,8 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "16 Weeks (4 Months)",
       badge: "Fat Loss & Recomp",
       category: "fatloss",
-      beforeImg: "assets/images/trans_before_1789966355483.jpg",
-      afterImg: "assets/images/client_dimas.jpg",
+      beforeImg: "assets/images/trans_dimas_before.webp",
+      afterImg: "assets/images/client_dimas.webp",
       quote: "Gue kerja 50+ jam seminggu di depan laptop dan metabolisme sempat ancur karena begadang. Dengan bimbingan Coach Revo, gue bisa turun 14 kg tanpa lemas dan lingkar pinggang berkurang drastis.",
       stats: {
         weightChange: "-14.2 kg (88 kg &rarr; 73.8 kg)",
@@ -1138,8 +1433,8 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "12 Weeks (3 Months)",
       badge: "Body Recomposition",
       category: "fatloss",
-      beforeImg: "assets/images/trans_maya_before.jpg",
-      afterImg: "assets/images/trans_maya_after.jpg",
+      beforeImg: "assets/images/trans_maya_before.webp",
+      afterImg: "assets/images/trans_maya_after.webp",
       quote: "Dulu gue takut angkat beban karena takut 'berotot kekar'. Ternyata latihan beban terstruktur malah bikin badan gue kencang, pinggang ramping, dan stamina kerja naik 2x lipat!",
       stats: {
         weightChange: "-6.5 kg (61 kg &rarr; 54.5 kg)",
@@ -1162,8 +1457,8 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "20 Weeks (5 Months)",
       badge: "Muscle Building & Strength",
       category: "hypertrophy",
-      beforeImg: "assets/images/trans_back_before.jpg",
-      afterImg: "assets/images/trans_back_after.jpg",
+      beforeImg: "assets/images/trans_back_before.webp",
+      afterImg: "assets/images/trans_back_after.webp",
       quote: "Gue udah nge-gym 2 tahun sendiri tapi badan stuck gitu-gitu aja. Setelah ikut coaching Revo, dalam 5 bulan otot punggung dan dada gue berkembang pesat dan teknik angkatan jauh lebih aman.",
       stats: {
         weightChange: "+7.8 kg Lean Mass (64 kg &rarr; 71.8 kg)",
@@ -1186,8 +1481,8 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "24 Weeks (6 Months)",
       badge: "Strength & Power",
       category: "strength",
-      beforeImg: "assets/images/trans_back_before.jpg",
-      afterImg: "assets/images/client_raka.jpg",
+      beforeImg: "assets/images/trans_back_before.webp",
+      afterImg: "assets/images/client_raka.webp",
       quote: "Fokus pada progresif overload dan mobilitas sendi. Beban squat naik 40kg dengan teknik solid dan bebas cedera pinggang.",
       stats: {
         weightChange: "+4.5 kg Athletic Mass (70 kg &rarr; 74.5 kg)",
