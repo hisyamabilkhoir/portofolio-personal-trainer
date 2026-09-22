@@ -1121,77 +1121,177 @@
     </div>
   </section>
 
-  <!-- How It Works Section ("A Simple Process. Real Results.") -->
-  <section class="section" id="process">
+  <!-- How It Works Section ("A Simple Process. Real Results." Mockup Redesign) -->
+  <section class="section process-section" id="process">
     <div class="container">
-      <div class="section-header reveal-on-scroll" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
-        <div>
-          <span class="section-tag">How It Works</span>
-          <h2 class="section-title">A Simple Process. Real Results.</h2>
-          <p class="section-desc">A structured journey designed specifically around your lifestyle and capabilities.</p>
+      
+      <!-- Section Header with Right-Aligned Quotes, Controls & Script Badge -->
+      <div class="process-header reveal-on-scroll">
+        <div class="process-header-left">
+          <span class="hub-eyebrow-tag">HOW IT WORKS</span>
+          <h2 class="process-headline">A Simple Process.<br><span class="text-accent">Real Results.</span></h2>
+          <p class="process-subdesc">A structured journey designed specifically around your lifestyle and capabilities.</p>
         </div>
-        <a href="#plan-generator" class="btn-arrow-link">
-          Try Interactive Planner &rarr;
-        </a>
+
+        <div class="process-header-right">
+          <div class="process-header-quote-wrap">
+            <div class="process-header-quote">CONSISTENT STEPS.<br>LASTING CHANGE.</div>
+          </div>
+          <div class="process-header-nav-btns">
+            <button class="proc-nav-arrow prev" aria-label="Previous step" id="procNavPrev">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <button class="proc-nav-arrow next active" aria-label="Next step" id="procNavNext">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+          <div class="process-script-badge">
+            Small<br>Steps<br><span>Big Changes</span>
+          </div>
+        </div>
       </div>
 
-      <div class="process-grid reveal-on-scroll reveal-delay-1">
+      <!-- 4 Process Cards with Wavy Connecting Line -->
+      <div class="process-cards-wrap reveal-on-scroll reveal-delay-1">
         
-        <!-- Step 1 -->
-        <div class="process-step-card">
-          <div class="process-step-number">01</div>
-          <h3 class="process-step-title">Assessment</h3>
-          <p class="process-step-desc">Comprehensive movement screening, posture check, body composition analysis, and lifestyle audit.</p>
-          <div class="process-step-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
-          </div>
-        </div>
+        <!-- Connecting SVG Path Background -->
+        <svg class="process-flow-line" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 100 60 Q 250 15, 400 60 T 700 60 T 1000 60" fill="none" stroke="rgba(210, 255, 0, 0.25)" stroke-width="2" stroke-dasharray="6,6" />
+        </svg>
 
-        <!-- Step 2 -->
-        <div class="process-step-card">
-          <div class="process-step-number">02</div>
-          <h3 class="process-step-title">Personalized Plan</h3>
-          <p class="process-step-desc">A tailored training schedule and flexible macronutrient guidance built around your daily schedule.</p>
-          <div class="process-step-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-          </div>
-        </div>
+        <div class="process-cards-grid" id="processCardsGrid">
+          
+          <!-- Step 01: Assessment -->
+          <div class="proc-card">
+            <div class="proc-card-bg">
+              <img src="assets/images/process_01_assessment.jpg" alt="Assessment" class="proc-bg-img">
+              <div class="proc-bg-scrim"></div>
+              <div class="proc-bg-tagline">BETTER<br>VERSION<br>AHEAD</div>
+            </div>
+            
+            <div class="proc-card-content">
+              <div class="proc-card-top">
+                <div class="proc-step-num">01</div>
+                <div class="proc-icon-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><line x1="9" y1="12" x2="11" y2="12"></line><line x1="9" y1="16" x2="15" y2="16"></line></svg>
+                </div>
+              </div>
 
-        <!-- Step 3 -->
-        <div class="process-step-card">
-          <div class="process-step-number">03</div>
-          <h3 class="process-step-title">Training</h3>
-          <p class="process-step-desc">Hands-on coaching, biomechanical cues, form refinement, and high-energy progressive workouts.</p>
-          <div class="process-step-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polygon points="10 8 16 12 10 16 10 8"/>
-            </svg>
-          </div>
-        </div>
+              <div class="proc-card-body">
+                <h3 class="proc-card-title">Assessment</h3>
+                <p class="proc-card-desc">Comprehensive movement screening, posture check, body composition analysis, and lifestyle audit.</p>
+              </div>
 
-        <!-- Step 4 -->
-        <div class="process-step-card">
-          <div class="process-step-number">04</div>
-          <h3 class="process-step-title">Tracking</h3>
-          <p class="process-step-desc">Weekly progress milestones, body metric adjustments, and continual progressive overload tweaks.</p>
-          <div class="process-step-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"/>
-              <line x1="12" y1="20" x2="12" y2="4"/>
-              <line x1="6" y1="20" x2="6" y2="14"/>
-            </svg>
+              <div class="proc-card-footer">
+                <button class="proc-pill-btn" data-open-modal="bookingModal">
+                  KNOW YOUR STARTING POINT
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
 
+          <!-- Step 02: Personalized Plan -->
+          <div class="proc-card">
+            <div class="proc-card-bg">
+              <img src="assets/images/process_02_plan.jpg" alt="Personalized Plan" class="proc-bg-img">
+              <div class="proc-bg-scrim"></div>
+            </div>
+            
+            <div class="proc-card-content">
+              <div class="proc-card-top">
+                <div class="proc-step-num">02</div>
+                <div class="proc-icon-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+              </div>
+
+              <div class="proc-card-body">
+                <h3 class="proc-card-title">Personalized Plan</h3>
+                <p class="proc-card-desc">A tailored training schedule and flexible macronutrient guidance built around your daily routine.</p>
+              </div>
+
+              <div class="proc-card-footer">
+                <button class="proc-pill-btn" data-open-modal="bookingModal">
+                  BUILT FOR YOUR LIFESTYLE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 03: Training -->
+          <div class="proc-card">
+            <div class="proc-card-bg">
+              <img src="assets/images/process_03_training.jpg" alt="Training" class="proc-bg-img">
+              <div class="proc-bg-scrim"></div>
+            </div>
+            
+            <div class="proc-card-content">
+              <div class="proc-card-top">
+                <div class="proc-step-num">03</div>
+                <div class="proc-icon-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"></path></svg>
+                </div>
+              </div>
+
+              <div class="proc-card-body">
+                <h3 class="proc-card-title">Training</h3>
+                <p class="proc-card-desc">Hands-on coaching, biomechanical cues, form refinement, and high-energy progressive workouts.</p>
+              </div>
+
+              <div class="proc-card-footer">
+                <button class="proc-pill-btn" data-open-modal="bookingModal">
+                  TRAIN SMARTER
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 04: Tracking -->
+          <div class="proc-card">
+            <div class="proc-card-bg">
+              <img src="assets/images/process_04_tracking.jpg" alt="Tracking" class="proc-bg-img">
+              <div class="proc-bg-scrim"></div>
+            </div>
+            
+            <div class="proc-card-content">
+              <div class="proc-card-top">
+                <div class="proc-step-num">04</div>
+                <div class="proc-icon-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+              </div>
+
+              <div class="proc-card-body">
+                <h3 class="proc-card-title">Tracking</h3>
+                <p class="proc-card-desc">Weekly progress milestones, body metric adjustments, and continual progressive overload tweaks.</p>
+              </div>
+
+              <div class="proc-card-footer">
+                <button class="proc-pill-btn" data-open-modal="bookingModal">
+                  SEE YOUR PROGRESS
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <!-- Bottom Sub-Bar -->
+      <div class="proc-bottom-bar reveal-on-scroll">
+        <div class="proc-brand-left">
+          <span class="proc-brand-title">R E V O</span>
+          <span class="proc-pipe-separator">|</span>
+          <span class="proc-brand-tagline">STRONGER PEOPLE. BETTER LIVES.</span>
+        </div>
+        <div class="proc-brand-right">
+          <button class="btn btn-primary proc-btn-journey" data-open-modal="bookingModal">
+            Start Your Journey &rarr;
+          </button>
+          <span class="proc-quote-tag">Results Aren't Lucky. They're Planned.</span>
+        </div>
+      </div>
+
     </div>
   </section>
 

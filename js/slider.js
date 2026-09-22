@@ -324,5 +324,16 @@ window.initCarousels = () => {
       scrollStepRatio: 0.85
     });
   }
+
+  // 3. Process Cards Navigation
+  const processTrack = document.getElementById('processCardsGrid');
+  const procNavPrev = document.getElementById('procNavPrev');
+  const procNavNext = document.getElementById('procNavNext');
+  if (processTrack && procNavPrev && procNavNext) {
+    new HorizontalCarousel(processTrack, procNavPrev, procNavNext, {
+      cardSelector: '.proc-card',
+      scrollStepRatio: 0.85
+    });
+  }
 };
 
